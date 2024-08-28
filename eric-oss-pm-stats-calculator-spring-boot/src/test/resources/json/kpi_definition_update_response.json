@@ -1,0 +1,15 @@
+{
+  "name" : "simple_one",
+  "alias" : "alias_simple_table_one",
+  "aggregation_period" : 60,
+  "expression" : "EXPRESSION",
+  "object_type" : "INTEGER",
+  "aggregation_type" : "SUM",
+  "aggregation_elements" : [ "table.column1", "table.column2" ],
+  "filters" : [ "f1", "f2" ],
+  "data_reliability_offset" : 1,
+  "data_lookback_limit" : 1,
+  "inp_data_identifier" : "dataSpace|category|name",
+  "reexport_late_data" : true,
+  "exportable" : true
+}

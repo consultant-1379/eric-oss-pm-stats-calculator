@@ -1,0 +1,302 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+# Default values for eric-oss-pm-stats-calculator-integration.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# As default registry path, the global registry path will be used.
+global:
+  registry:
+    url: "armdocker.rnd.ericsson.se"
+    pullPolicy: "Always"
+  security:
+    tls:
+      enabled: false
+
+replicaCount: 1
+
+imageCredentials:
+  pullSecret:
+
+eric-oss-pm-stats-calculator:
+  hostname: eric-oss-pm-stats-calculator
+  port: 8080
+
+dataSources:
+  eric-pm-kpi-data:
+    nameOverride: eric-pm-kpi-data-v2
+    postgresDatabase: kpi_service_db
+    credentials:
+      kubernetesSecretName: eric-oss-pm-stats-calculator-kpi-data
+    service:
+      port: 5432
+
+schemaregistry:
+  enabled: true
+
+zookeeper:
+  enabled: true
+  fullnameOverride: eric-data-coordinator-zk
+  replicaCount: 1
+  clientPort: 2181
+  persistence:
+    persistentVolumeClaim:
+      enabled: false
+  resources:
+    datacoordinatorzk:
+      requests:
+        cpu: "50m"
+        memory: "100Mi"
+
+kafka:
+  enabled: true
+  fullnameOverride: eric-data-message-bus-kf
+  persistence:
+    persistentVolumeClaim:
+      enabled: false
+  configurationOverrides:
+    auto.create.topics.enable: false
+  createTopics: true
+  kafkaPort: 9092
+  dataCoordinator:
+    clientServiceName: eric-data-coordinator-zk
+  resources:
+    messagebuskf:
+      requests:
+        cpu: 500m
+        memory: 1Gi
+
+dataCatalog:
+  enabled: true
+  nameOverride: eric-oss-data-catalog
+  fullnameOverride: eric-oss-data-catalog
+  database:
+    service: eric-oss-data-catalog-data-v2
+    credentials:
+      kubernetesSecretName: datasource-secret
+      keyForUserId: username
+      keyForUserPw: password
+  spring:
+    kafka:
+      topics:
+        output:
+          replicas: 1
+          partitions: 1
+  replicaCount: 1
+  messaging:
+    kafka:
+      bootstrapServer: eric-data-message-bus-kf:9092
+  imageCredentials:
+    pullSecret: armdocker
+
+dataCatalogData:
+  enabled: true
+  nameOverride: eric-oss-data-catalog-data-v2
+  fullnameOverride: eric-oss-data-catalog-data-v2
+  highAvailability:
+    synchronousModeEnabled: false
+    replicaCount: 1
+  postgresUser: datasource_user
+  postgresDatabase: catalog
+  credentials:
+    kubernetesSecretName: datasource-secret
+    keyForUserId: username
+    keyForUserPw: password
+    keyForSuperPw: super-pwd
+    keyForMetricsPw: metrics-pwd
+    keyForReplicaId: replica-user
+    keyForReplicaPw: replica-pwd
+  service:
+    type: ClusterIP
+    port: 5432
+    externalIPs: []
+  persistentVolumeClaim:
+    enabled: true
+    backup:
+      enabled: false
+  restore:
+    enabled: false
+  #setting resources below to postgres defaults
+  resources:
+    postgres:
+      limits:
+        cpu: "500m"
+        memory: "256Mi"
+      requests:
+        cpu: "100m"
+        memory: "128Mi"
+  metrics:
+    enabled: false
+
+spark:
+  enabled: true
+  nameOverride: eric-pm-kpi-spark-cluster
+  environmentOverrides:
+    SPARK_WORKER_CORES: 4
+    SPARK_WORKER_MEMORY: 8g
+    SPARK_NO_DAEMONIZE: true
+    SPARK_WORKER_OPTS: >-
+      -Dspark.worker.cleanup.enabled=true
+      -Dspark.worker.cleanup.interval=900
+      -Dspark.worker.cleanup.appDataTtl=14400
+      -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.local.only=false
+      -Dcom.sun.management.jmxremote.port=10003
+      -Dcom.sun.management.jmxremote.rmi.port=10003
+      -Dcom.sun.management.jmxremote.ssl=false
+      -Dcom.sun.management.jmxremote.authenticate=false
+      -Djava.rmi.server.hostname=0.0.0.0
+      -Dlog4j.configuration=file:///opt/spark/conf/log4j.properties
+      -Dlog.level=INFO
+  resources:
+    master:
+      requests:
+        cpu: 500m
+        memory: 1Gi
+      limits:
+        cpu: 500m
+        memory: 1Gi
+    worker:
+      requests:
+        cpu: 3000m
+        memory: 4Gi
+      limits:
+        cpu: 3500m
+        memory: 8Gi
+  replicaCount:
+    worker: 1
+  log:
+    streamingMethod: "indirect"
+    outputs:
+      - "stdout"  # backward compatibility
+  jmx:
+    enabled: false
+  jmxMasterWorker:
+    servicePort: 21003
+    rules: "custom"
+    custom.yml: |
+      startDelaySeconds: 0
+      lowercaseOutputName: true
+      lowercaseOutputLabelNames: true
+      rules:
+        - pattern: 'java.lang<type=Memory><HeapMemoryUsage>used'
+          name: java_lang_memory_heapmemoryusage_used
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=Memory><HeapMemoryUsage>committed'
+          name: java_lang_memory_heapmemoryusage_committed
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=Memory><NonHeapMemoryUsage>used'
+          name: java_lang_memory_nonheapmemoryusage_used
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=Memory><NonHeapMemoryUsage>committed'
+          name: java_lang_memory_nonheapmemoryusage_committed
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=Threading><>ThreadCount'
+          name: java_lang_threading_threadcount
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=Threading><>PeakThreadCount'
+          name: java_lang_threading_peakthreadcount
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=GarbageCollector,name=PS MarkSweep><>CollectionTime'
+          name: java_lang_garbagecollector_collectiontime{name="PS MarkSweep",}
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=GarbageCollector,name=PS Scavenge><>CollectionTime'
+          name: java_lang_garbagecollector_collectiontime{name="PS Scavenge",}
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=OperatingSystem><>ProcessCpuTime'
+          name: java_lang_operatingsystem_processcputime
+          labels:
+            jvm_name: "spark-worker"
+        - pattern: 'java.lang<type=OperatingSystem><>OpenFileDescriptorCount'
+          name: java_lang_operatingsystem_openfiledescriptorcount
+          labels:
+            jvm_name: "spark-worker"
+  jmxExecutor:
+    servicePort: 21002
+    rules: "custom"
+    custom.yml: |
+      startDelaySeconds: 0
+      lowercaseOutputName: true
+      lowercaseOutputLabelNames: true
+      rules:
+        - pattern: "metrics<name=(.*)\\.(.*)\\.executor\\.(.*)><>Value"
+          name: spark_executor_$3
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.executor\\.(.*)><>Count"
+          name: spark_executor_$3
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.heap.used><>Value"
+          name: java_lang_memory_heapmemoryusage_used
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.heap.committed><>Value"
+          name: java_lang_memory_heapmemoryusage_committed
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.non-heap.used><>Value"
+          name: java_lang_memory_nonheapmemoryusage_used
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.non-heap.committed><>Value"
+          name: java_lang_memory_nonheapmemoryusage_committed
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.PS-MarkSweep.time><>Value"
+          name: java_lang_garbagecollector_collectiontime
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+            name: "PS MarkSweep"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.PS-Scavenge.time><>Value"
+          name: java_lang_garbagecollector_collectiontime
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+            name: "PS Scavenge"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.PS-MarkSweep.count><>Value"
+          name: java_lang_garbagecollector_collectioncount
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+            name: "PS MarkSweep"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.PS-Scavenge.count><>Value"
+          name: java_lang_garbagecollector_collectioncount
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+            name: "PS Scavenge"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.pools.PS-Eden-Space.usage><>Value"
+          name: java_lang_memorypool_usage_used
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+            name: "PS Eden Space"
+        - pattern: "metrics<name=(.*)\\.(.*)\\.jvm.pools.PS-Old-Gen.usage><>Value"
+          name: java_lang_memorypool_usage_used
+          labels:
+            jvm_name: $1-executor-jvm-$2
+            executor_id: "$2"
+            name: "PS Old Gen"

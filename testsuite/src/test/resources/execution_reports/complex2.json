@@ -1,0 +1,30 @@
+{
+  "scheduled": true,
+  "execution_group": "COMPLEX2",
+  "tables": [
+    {
+      "name": "kpi_complex_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "integer_array_complex",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_60_complex",
+        "sum_float_60_complex",
+        "sum_float_count_60",
+        "sum_integer_float_complex",
+        "integer_array_complex"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "agg_column_1",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

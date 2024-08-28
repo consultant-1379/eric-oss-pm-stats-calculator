@@ -1,0 +1,28 @@
+{
+  "on_demand": {
+    "tabular_parameters": [],
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "alias",
+        "aggregation_elements": [
+          "element.column"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "%s",
+            "expression": "%s",
+            "object_type": "STRING",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "element.column"
+            ],
+            "exportable": true,
+            "group": "Aggregation"
+          }
+        ]
+      }
+    ]
+  }
+}

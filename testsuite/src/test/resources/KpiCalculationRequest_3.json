@@ -1,0 +1,31 @@
+{
+  "source": "TEST",
+  "kpi_names": [
+    "max_integer_1440_kpidb",
+    "aggregate_array_15",
+    "udf_param",
+    "udf_tabular_param"
+  ],
+  "parameters": [
+    {
+      "name": "param.date_for_filter",
+      "value": <DATE_FOR_FILTER>
+    },
+    {
+      "name": "percentile_value",
+      "value": 40
+    },
+    {
+      "name": "filter_param",
+      "value": 10
+    }
+  ],
+  "tabular_parameters": [
+    {
+      "name": "udf_test",
+      "format": "CSV",
+      "header": "agg_column_0,integer",
+      "value": "4,6\n5,7\n6,8\n7,9"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+---
+# Amend the generally used config file for markdown with custom checks. The original can be located:
+# https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/adp-cicd/bob-docbuilder/+/refs/heads/master/markdownlint-adp.yaml
+default: true
+# These rules are set so that the Markdown linter is compatible with the
+# result of Markdown formatted by Pandoc.
+ul-start-left: false
+ul-indent: false
+ol-prefix:
+  style: ordered
+line-length:
+  code_blocks: false
+  tables: false
+  line_length: 150
+code-block-style:
+  style: fenced
+code-fence-style:
+  style: consistent
+# Temporarily disabled due to being incompatble with Gitiles flavored
+# markdown.
+#  - https://github.com/DavidAnson/markdownlint/issues/570
+link-fragments: false
+list-marker-space: false
+headings:
+  siblings_only: true
+no-trailing-punctuation:
+  punctuation: '.,;:!'
+first-heading-h1: false
+first-line-heading: false
+no-inline-html:
+  allowed_elements:
+    - "head"
+    - "link"
+    - "br"
+fenced-code-language: false
+blanks-around-fences: false
+no-multiple-blanks:
+  maximum: 5

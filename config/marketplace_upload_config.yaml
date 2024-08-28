@@ -1,0 +1,21 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+documents:
+  #  List the documents you want to upload to ADP Marketplace.
+  - name: "Service User Guide"
+    filepath: build/doc/html/service-user-guide.zip
+  - name: "Application Developers Guide"
+    filepath: build/doc/html/application-developers-guide.zip
+  - name: "Open API Specification"
+    filepath: src/main/resources/v1/eric-oss-pm-stats-calculator-openapi.yaml
+  - name: "Secure Coding Report"
+    external-link: "https://eridoc.internal.ericsson.com/eridoc/?docbase=eridoca&locateId=0b004cffcca83218#d2"
+    restricted: true

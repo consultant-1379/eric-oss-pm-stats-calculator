@@ -1,0 +1,29 @@
+{
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "in_memory_outside_scope",
+        "aggregation_elements": [ "in_memory_outside_scope.agg_column_0" ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "base_kpi_definition",
+            "expression": "FIRST(kpi_simple_60.integer_simple) / FIRST(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [ "kpi_simple_60.agg_column_0" ],
+            "execution_group": "base_execution_group"
+          },
+          {
+            "name": "level_1",
+            "expression": "FIRST(in_memory_outside_scope.base_kpi_definition) / 10 FROM kpi_inmemory://in_memory_outside_scope",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "outside_execution_group"
+          }
+        ]
+      }
+    ]
+  }
+}

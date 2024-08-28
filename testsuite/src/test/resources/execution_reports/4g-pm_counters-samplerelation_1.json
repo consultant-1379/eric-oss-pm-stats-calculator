@@ -1,0 +1,72 @@
+{
+  "scheduled": true,
+  "execution_group": "4G|PM_COUNTERS|SampleRelation_1",
+  "tables": [
+    {
+      "name": "kpi_simple_fdn_cell_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "simple_fdn_expr",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "simple_fdn_expr"
+      ],
+      "list_of_dimensions": [
+        "moFdn",
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_relation_simple_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "sum_long_single_counter",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_long_single_counter"
+      ],
+      "list_of_dimensions": [
+        "moFdn",
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_predefined_simple_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "array_sum_simple",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "relation_level_agg",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "array_sum_simple",
+        "relation_level_agg"
+      ],
+      "list_of_dimensions": [
+        "moFdn",
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

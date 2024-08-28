@@ -1,0 +1,115 @@
+{
+  "scheduled": false,
+  "execution_group": "ON_DEMAND",
+  "tables": [
+    {
+      "name": "kpi_sector_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "sum_integer_60_join_kpidb",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_60_join_kpidb"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_rolling_aggregation_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "first_float_operator_1440_post_aggregation",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "rolling_max_integer_1440",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "rolling_sum_integer_1440",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "first_float_operator_1440_post_aggregation",
+        "rolling_max_integer_1440",
+        "rolling_sum_integer_1440"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_cell_guid_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "first_integer_aggregate_slice_1440",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "first_integer_aggregate_slice_1440"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_relation_guid_source_guid_target_guid_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "first_float_divideby0_60",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "first_float_divideby0_60"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "agg_column_1",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_execution_id_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "executionid_sum_integer_1440",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "executionid_sum_integer_1440"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "execution_id",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

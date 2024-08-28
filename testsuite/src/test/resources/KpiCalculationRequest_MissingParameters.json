@@ -1,0 +1,7 @@
+{
+  "source": "TEST",
+  "kpi_names": [
+    "first_integer_dim_enrich_1440",
+    "sum_integer_60_join_kpidb"
+  ]
+}

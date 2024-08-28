@@ -1,0 +1,23 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "simple_collection_alias",
+        "aggregation_elements": [
+          "SampleCellFDD_1.nodeFDN",
+          "SampleCellFDD_1.moFdn"
+        ],
+        "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1",
+        "kpi_definitions": [
+          {
+            "name": "collection_id_test",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          }
+        ]
+      }
+    ]
+  }
+}

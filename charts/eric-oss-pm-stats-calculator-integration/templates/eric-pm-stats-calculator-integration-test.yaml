@@ -1,0 +1,54 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator-integration.fullname" . }}
+  labels:
+    app: {{ template "eric-oss-pm-stats-calculator-integration.name" . }}
+  annotations:
+    "helm.sh/hook-weight": "2"
+    "helm.sh/hook": test
+spec:
+  {{- if include "eric-oss-pm-stats-calculator-integration.pullSecrets" . }}
+  imagePullSecrets:
+    - name: {{ template "eric-oss-pm-stats-calculator-integration.pullSecrets" . }}
+  {{- end }}
+  containers:
+    - name: eric-oss-pm-stats-calculator-integration-test
+      image: "{{ template "eric-oss-pm-stats-calculator-integration.imagePath" (merge (dict "imageName" "calculatorIntegration") .) }}"
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: KPI_SERVICE_HOSTNAME
+          value: {{ index .Values "eric-oss-pm-stats-calculator" "hostname" | quote }}
+        - name: KPI_SERVICE_PORT
+          value: {{ index .Values "eric-oss-pm-stats-calculator" "port" | quote }}
+        {{- with index .Values "dataSources" "eric-pm-kpi-data" }}
+        - name: KPI_SERVICE_DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: {{ .credentials.kubernetesSecretName }}
+              key: username
+        - name: KPI_SERVICE_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .credentials.kubernetesSecretName }}
+              key: password
+        - name: KPI_SERVICE_DB_DRIVER
+          value: org.postgresql.Driver
+        - name: KPI_SERVICE_DB_JDBC_CONNECTION
+          value: jdbc:postgresql://{{ .nameOverride }}:{{ .service.port }}/{{ .postgresDatabase }}
+        {{- end }}
+        - name: KAFKA_BOOTSTRAP_SERVER
+          value: eric-data-message-bus-kf:9092
+        - name: PM_MEDIATION_TOPIC
+          value: pmMediation
+  restartPolicy: Never

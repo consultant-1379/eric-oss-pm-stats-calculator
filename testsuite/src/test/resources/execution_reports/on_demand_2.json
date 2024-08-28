@@ -1,0 +1,64 @@
+{
+  "scheduled": false,
+  "execution_group": "ON_DEMAND",
+  "tables": [
+    {
+      "name": "kpi_cell_sector_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "first_integer_dim_enrich_1440",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "first_float_dim_enrich_1440",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "first_integer_dim_enrich_1440",
+        "first_float_dim_enrich_1440"
+      ],
+      "list_of_dimensions": [
+        "moFdn",
+        "nodeFDN",
+        "execution_id",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_cell_guid_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "first_integer_operator_60_stage4",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "first_integer_operator_60_stage2",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "first_integer_operator_60_stage3",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "first_integer_operator_60_stage4",
+        "first_integer_operator_60_stage2",
+        "first_integer_operator_60_stage3"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "scheduled": true,
+  "execution_group": "COMPLEX4",
+  "tables": [
+    {
+      "name": "kpi_complex2_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "sum_integer_integer_arrayindex_complex",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_integer_arrayindex_complex"
+
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_complex_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "sum_float_1440_complex",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_float_1440_complex",
+        "sum_integer_1440_complex_non_triggered"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "agg_column_1",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

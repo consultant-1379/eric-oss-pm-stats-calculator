@@ -1,0 +1,367 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+# Default values for eric-oss-pm-stats-calculator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+#global:
+#  annotations: {}
+#  internalIPFamily:
+#  labels: {}
+#  networkPolicy:
+#    enabled: false
+#  nodeSelector: {}
+#  registry:
+#    imagePullPolicy: IfNotPresent
+#    repoPath:
+#    url:
+#  security:
+#    policyBinding:
+#      create: false
+#    policyReferenceMap:
+#      default-restricted-security-policy: default-restricted-security-policy
+#    privilegedPolicyClusterRoleName:
+#    tls:
+#      enabled: true
+#    serviceMesh:
+#      enabled: true
+#  timezone: UTC
+#  tolerations: []
+#  securityPolicy:
+#    rolekind: "" # { choice='Role, ClusterRole, ""' } [ default="" ]
+#  log:
+#    streamingMethod: "direct"  # Supported values ["indirect", "direct", "dual"]
+
+global:
+  internalIPFamily: ""
+  security:
+    tls:
+      enabled: false  # PM Stats Calculator does not support secure internal communication yet
+  serviceMesh:
+    enabled: false # This functionality is not tested yet
+  log:
+    streamingMethod: "indirect"
+
+networkPolicy:
+  enabled: false
+
+productInfo:
+  # R-State of the product. R State should match helm chart version (3.1.0 -> R2A)
+  # To automate it when packaging the helm chart rstate can be generated
+  # and below value replaced with correct R-State
+  rstate: RSTATE
+
+labels: {}
+nodeSelector: {}
+
+podAnnotations: {}
+
+annotations: {}
+
+tolerations: []
+
+podPriority:
+  priorityClassName: "" # No priority set
+
+imageCredentials:
+  pullSecret:
+  repoPath:
+  calculator:
+    repoPath: # overrides repoPath from eric-product-info.yaml
+    registry:
+      imagePullPolicy: # overrides global image pull policy
+      url: # overrides global registry url
+  jmxExporter:
+    repoPath: # overrides repoPath from eric-product-info.yaml
+    registry:
+      imagePullPolicy: # overrides global image pull policy
+      url: # overrides global registry url
+  kpiData:
+    repoPath: # overrides repoPath from eric-product-info.yaml
+    registry:
+      imagePullPolicy: # overrides global image pull policy
+      url: # overrides global registry url
+
+replicaCount: 1
+
+topologySpreadConstraints: {}
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+service:
+  type: ClusterIP
+  port: 8080
+
+resources:
+  init:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+  calculator:
+    limits:
+      cpu: 3000m
+      memory: 4Gi
+    requests:
+      cpu: 2500m
+      memory: 4Gi
+  jmxExporter:
+    limits:
+      cpu: 0.5
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  istio:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+podDisruptionBudget:
+  # Only one of minAvailable or maxUnavailable can be in effect at a time. If both are set minAvailable takes precedence
+  minAvailable: 1
+  maxUnavailable:
+
+updateStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxUnavailable: 100%
+    maxSurge: 0%
+
+probes:
+  calculator:
+    livenessProbe:
+      failureThreshold: 5
+      initialDelaySeconds: 90
+      periodSeconds: 30
+      timeoutSeconds: 5
+    readinessProbe:
+      failureThreshold: 5
+      initialDelaySeconds: 90
+      periodSeconds: 30
+      timeoutSeconds: 5
+      successThreshold: 1
+  jmxExporter:
+    livenessProbe:
+      failureThreshold: 5
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      timeoutSeconds: 1
+    readinessProbe:
+      failureThreshold: 5
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      timeoutSeconds: 1
+      successThreshold: 1
+
+queueWeight:
+  scheduledCalculation: 1
+  onDemandCalculation: 3
+
+restartPolicy: Always
+endOfExecutionOffset: "30m"
+scheduleIncrement: "15m"
+maxLookBackPeriod: "1d"
+saveEventLogs: "false"
+terminationGracePeriodSeconds: 30
+maximumConcurrentCalculations: 2
+maxNumberOfParallelOnDemandCalculations: 5
+blockScheduledWhenHandlingOnDemand: "false"
+kpiExecutionPeriod: "0 0-53/7 * * * ? *"
+maxHeartbeatToWaitToRecalculateSimples: 5
+
+groupingRules:
+  inputSource: true
+  aggregationPeriod: false
+  aggregationElements: false
+
+retentionPeriod:
+  days: "5"
+  configuredMax: "15"
+  cleanUpJobCronExpression: "0 1 0 1/1 * ? *"
+
+brAgent:
+  enabled: false
+  storage:
+    size: 1Gi
+  backupTypeList:
+    - "PLATFORM"
+  backupRegistrationName: "CalculatorAgent"
+  logicalDBBackupEnable: false
+
+kpiData:
+  enabled: true
+  nameOverride: eric-pm-kpi-data-v2
+  postgresDatabase: kpi_service_db
+  postgresUser: kpi_service_user
+  postgresPassword: # will be randomly generated if left empty
+  postgresSuperPassword: # will be randomly generated if left empty
+  metricsUser: exporter
+  metricsPwd: # will be randomly generated if left empty
+  replicaUser: replica
+  replicaPwd: # will be randomly generated if left empty
+  credentials:
+    kubernetesSecretName: eric-oss-pm-stats-calculator-kpi-data
+    keyForUserId: username
+    keyForUserPw: password
+    keyForSuperPw: super-pwd
+  service:
+    port: 5432
+  highAvailability:
+    synchronousModeEnabled: false
+    replicaCount: 1
+  persistentVolumeClaim:
+    enabled: true
+    size: 2Gi
+  postgresConfig:
+    max_connections: 200
+    effective_cache_size: "750MB"
+    shared_buffers: "500MB"
+    min_wal_size: "500MB"
+    max_wal_size: "1GB"
+  resources:
+    postgres:
+      limits:
+        cpu: 2000m
+        memory: 2Gi
+      requests:
+        cpu: 1750m
+        memory: 2Gi
+  metrics:
+    enabled: true
+  podDisruptionBudget:
+    minAvailable: 0
+
+spark:
+  driver:
+    memory: 1g
+  executor:
+    memory: 4g
+    cores: 2
+    onDemand:
+      memory: 4g
+      cores: 2
+  max:
+    cores: 2
+  hostname: eric-pm-kpi-spark-cluster
+  port: 7077
+  logLevel: INFO
+  parallelism: 2
+  shufflePartitions: 2
+  adaptiveSql: true
+  partitionTableRead: false
+  indexedNumericPartitionColumns: ""
+  scheduler:
+    minRegisteredResourcesRatio: 0.0
+    maxRegisteredResourcesWaitingTime: 30s
+  jmxExecutor:
+    overrideExecutorPort: false
+    startingPort: 10010
+  metricRetentionInSeconds: 900
+
+kafka:
+  hostname: eric-data-message-bus-kf
+  port: 9092
+  portTls: 9093
+  kpiExposureTopic: pm-stats-calculator-json-exposure-control
+  kpiExecutionReportTopic: pm-stats-calculator-json-execution-report
+  bucketSize: 200
+
+jmxExporter:
+  enabled: true
+  destPort: 10002
+  servicePort: 21002
+  rules: "eric-oss-pm-stats-calculator-rules"
+  rulesDirectory: /opt/jmx_exporter/rules
+  configDirectory: /opt/jmx_exporter/config
+  rulesFile: metrics/rules.yml
+  jvmLocalOpts:
+  debug:
+    enabled: false
+    javaLoggingProperties: |
+      handlers=java.util.logging.ConsoleHandler
+      java.util.logging.ConsoleHandler.level=ALL
+      io.prometheus.jmx.level=ALL
+      io.prometheus.jmx.shaded.io.prometheus.jmx.level=ALL
+
+prometheus:
+  path: /kpi-handling/actuator/prometheus
+  scrape: true
+  port: 8080
+
+schemaRegistry:
+  url: eric-oss-schema-registry-sr
+  port: 8081
+
+dataCatalog:
+  url: eric-oss-data-catalog
+  port: 9590
+
+log:
+  streamingMethod: ""
+  logLevel: INFO
+  logControlFile: /logcontrol/logcontrol.json
+  logstash_destination: "eric-log-transformer"
+  logstash_port: 9080
+  logstash_port_tls: 9443
+
+osm2ism:
+  enabled: false # Requires service mesh to be enabled
+  outMeshServices:
+    csac:
+      enabled: false
+      name:
+      intermediateCA:
+        enabled: false
+        name:
+
+appArmorProfile:
+  type: ""
+  localhostProfile: ""
+  eric-oss-pm-stats-calculator:
+    type: ""
+    localhostProfile: ""
+  eric-oss-pm-stats-calculator-jmx-exporter:
+    type: ""
+    localhostProfile: ""
+  eric-oss-pm-stats-calculator-data-init:
+    type: ""
+    localhostProfile: ""
+
+# CNOM settings
+cnom:
+  enabled: true
+
+# Distributed Systems Tracing
+dst:
+  enabled: true
+  collector:
+    host: "http://eric-dst-collector"
+    portZipkinHttp: 9411
+    portOtlpGrpc: 4317
+    portJagerGrpc: 14250
+  # The following values are possible: b3, w3c, composite
+  propagator:
+    type: "b3"
+
+kafkaResourceManager:
+  url: eric-oss-kf-resource-manager
+  port: 8080

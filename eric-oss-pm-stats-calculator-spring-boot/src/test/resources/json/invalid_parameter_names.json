@@ -1,0 +1,43 @@
+{
+  "on_demand": {
+    "parameters": [
+      {
+        "name": "param.validname",
+        "type": "STRING"
+      },
+      {
+        "name": "err,name1",
+        "type": "STRING"
+      },
+      {
+        "name": "err:name2",
+        "type": "STRING"
+      },
+      {
+        "name": "param.overlyComplicatedLongExtendedNameBeyondVarcharFieldSize",
+        "type": "INTEGER"
+      }
+    ],
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "rolling_aggregation",
+        "aggregation_elements": [
+          "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "rolling_sum_integer_1440",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_integer_1440_simple) + '${nonDeclaredParam}' FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "filters": [
+              "kpi_db://kpi_cell_guid_simple_1440.nodeFDN = '${param.validname}'"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

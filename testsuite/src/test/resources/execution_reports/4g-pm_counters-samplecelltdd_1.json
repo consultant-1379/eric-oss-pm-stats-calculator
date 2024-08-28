@@ -1,0 +1,27 @@
+{
+  "scheduled": true,
+  "execution_group": "4G|PM_COUNTERS|SampleCellTDD_1",
+  "tables": [
+    {
+      "name": "kpi_simple_fdd_tdd_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "sum_TDD_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_FDD_simple",
+        "sum_TDD_simple"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "moFdn",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

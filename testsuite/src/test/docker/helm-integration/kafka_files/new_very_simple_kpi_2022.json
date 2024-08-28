@@ -1,0 +1,508 @@
+{
+  "a_new_very_simple_kpi": [
+    {
+      "agg_column_0": null,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 1,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 2,
+      "agg_column_1": 25,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 3,
+      "agg_column_1": 28,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 4,
+      "agg_column_1": 19,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 5,
+      "agg_column_1": 17,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 6,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 7,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 3,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 8,
+      "agg_column_1": 54,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 9,
+      "agg_column_1": 33,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 10,
+      "agg_column_1": 66,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 3,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 11,
+      "agg_column_1": 32,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 3,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 12,
+      "agg_column_1": 12,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 13,
+      "agg_column_1": 67,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 14,
+      "agg_column_1": 42,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 15,
+      "agg_column_1": 99,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 16,
+      "agg_column_1": 76,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 17,
+      "agg_column_1": 45,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 18,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 19,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 20,
+      "agg_column_1": 11,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 21,
+      "agg_column_1": 58,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 3,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 22,
+      "agg_column_1": 86,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 23,
+      "agg_column_1": 33,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 24,
+      "agg_column_1": 14,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 25,
+      "agg_column_1": 44,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 26,
+      "agg_column_1": 70,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 27,
+      "agg_column_1": 34,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 3,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 28,
+      "agg_column_1": 55,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 29,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 30,
+      "agg_column_1": 23,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 31,
+      "agg_column_1": 38,
+      "ropBeginTime": "2022-07-26T23:30:00.000Z",
+      "ropEndTime": "2022-07-26T23:45:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 32,
+      "agg_column_1": 76,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 33,
+      "agg_column_1": 54,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 34,
+      "agg_column_1": 19,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 35,
+      "agg_column_1": 72,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 35,
+      "agg_column_1": 10,
+      "ropBeginTime": "2022-07-26T23:00:00.000Z",
+      "ropEndTime": "2022-07-26T23:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 36,
+      "agg_column_1": 89,
+      "ropBeginTime": "2022-07-26T23:30:00.000Z",
+      "ropEndTime": "2022-07-26T23:45:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 37,
+      "agg_column_1": 21,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 2,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 38,
+      "agg_column_1": 59,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 39,
+      "agg_column_1": 56,
+      "ropBeginTime": "2022-07-26T22:00:00.000Z",
+      "ropEndTime": "2022-07-26T22:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 40,
+      "agg_column_1": 13,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "scheduled": true,
+  "execution_group": "COMPLEX5",
+  "tables": [
+    {
+      "name": "kpi_complex_",
+      "aggregation_period": -1,
+      "kpis": [
+        {
+          "name": "sum_integer_complex",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_complex"
+
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "agg_column_1"
+      ]
+    }
+  ]
+}

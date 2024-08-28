@@ -1,0 +1,430 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}
+  labels:
+    {{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+  annotations:
+    {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "eric-oss-pm-stats-calculator.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name | quote }}
+  strategy:
+    type: {{ .Values.updateStrategy.type | quote }}
+    {{- if and (eq .Values.updateStrategy.type "RollingUpdate") .Values.updateStrategy.rollingUpdate }}
+    rollingUpdate:
+      maxUnavailable: {{ .Values.updateStrategy.rollingUpdate.maxUnavailable | quote }}
+      maxSurge: {{ .Values.updateStrategy.rollingUpdate.maxSurge | quote }}
+    {{- end }}
+  template:
+    metadata:
+      labels:
+        {{- include "eric-oss-pm-stats-calculator.labels" . | nindent 8 }}
+        {{- include "eric-oss-pm-stats-calculator.service-mesh-labels" . | nindent 8 }}
+        {{- include "eric-oss-pm-stats-calculator.dstLabels" . | indent 8 }}
+        {{- include "eric-oss-pm-stats-calculator.broConnection" . | indent 8 }}
+      annotations:
+        checksum/configMetrics: {{ include (print $.Template.BasePath "/configmap-metrics.yaml") . | sha256sum }}
+        {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 8 }}
+        {{- if .Values.brAgent.backupTypeList -}}
+        {{- if (index .Values.brAgent.backupTypeList 0) }}
+        backupType : {{- template "eric-oss-pm-stats-calculator.agent-backupTypes" . }}
+        {{- end }}
+        {{- end }}
+        # These are mandatory annotations required by prometheus, they tell it which port to scrape the metrics on.
+        {{- include "eric-oss-pm-stats-calculator.prometheus" . | nindent 8 }}
+        # These are annotations required by service mesh.
+        {{- include "eric-oss-pm-stats-calculator.service-mesh-annotations" . | nindent 8 }}
+        {{- include "eric-oss-pm-stats-calculator.appArmorProfileAnnotation" . | nindent 8 }}
+    spec:
+      {{- $tolerations := include "eric-oss-pm-stats-calculator.tolerations" . }}
+      {{- with $tolerations }}
+      tolerations:
+      {{- . | nindent 8 }}
+      {{- end }}
+      {{- if .Values.terminationGracePeriodSeconds }}
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
+      {{- end }}
+      {{- if .Values.podPriority.priorityClassName }}
+      priorityClassName: {{ .Values.podPriority.priorityClassName | quote }}
+      {{- end }}
+      serviceAccountName: {{ template "eric-oss-pm-stats-calculator.serviceAccountName" . }}
+      restartPolicy: {{ .Values.restartPolicy | quote }}
+      initContainers:
+        {{- $dbConfig := .Values.kpiData }}
+        - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-data-init
+          image: {{ template "eric-oss-pm-stats-calculator.imagePath" (merge (dict "imageName" "kpiData") .) }}
+          imagePullPolicy: {{ template "eric-oss-pm-stats-calculator.imagePullPolicy" (merge (dict "imageName" "kpiData") .) }}
+          command:
+            - "/scripts/init-db.sh"
+          env:
+          - name: PGHOST
+            value: {{ $dbConfig.nameOverride | quote }}
+          - name: PGPORT
+            value: {{ $dbConfig.service.port | quote }}
+          - name: KPIDATABASE
+            value: {{ $dbConfig.postgresDatabase | quote }}
+          - name: PGUSER
+            value: postgres
+        {{- if (eq (include "eric-oss-pm-stats-calculator.global-security-tls-enabled" .) "false") }}
+          - name: PGPASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ $dbConfig.credentials.kubernetesSecretName | quote }}
+                key: {{ $dbConfig.credentials.keyForSuperPw | quote }}
+        {{- end }}
+          - name: KPI_SERVICE_DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: {{ $dbConfig.credentials.kubernetesSecretName | quote }}
+                key: {{ $dbConfig.credentials.keyForUserId | quote }}
+        {{- if (eq (include "eric-oss-pm-stats-calculator.global-security-tls-enabled" .) "true") }}
+          - name: PGSSLMODE
+            value: verify-full
+          - name: PGSSLCERT
+            value: /opt/mtls/cert/clicert.pem
+          - name: PGSSLKEY
+            value: /opt/mtls/cert/cliprivkey.pem
+          - name: PGSSLROOTCERT
+            value: /opt/mtls/ca/cacertbundle.pem
+        {{- end }}
+          resources:
+            limits:
+              cpu: {{ .Values.resources.init.limits.cpu }}
+              memory: {{ .Values.resources.init.limits.memory }}
+            requests:
+              cpu: {{ .Values.resources.init.requests.cpu }}
+              memory: {{ .Values.resources.init.requests.memory }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            runAsUser: 260454
+            capabilities:
+              drop:
+                - all
+          volumeMounts:
+            - name: scripts
+              mountPath: /scripts
+            - name: tmp
+              mountPath: /tmp
+          {{- if (eq (include "eric-oss-pm-stats-calculator.global-security-tls-enabled" .) "true") }}
+            - name: init-cert
+              mountPath: /opt/mtls/cert
+              readOnly: true
+            - name: init-sip-tls-ca
+              mountPath: /opt/mtls/ca
+              readOnly: true
+          {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ template "eric-oss-pm-stats-calculator.imagePath" (merge (dict "imageName" "calculator") .) }}
+          imagePullPolicy: {{ template "eric-oss-pm-stats-calculator.imagePullPolicy" (merge (dict "imageName" "calculator") .) }}
+          resources:
+            limits:
+              cpu: {{ .Values.resources.calculator.limits.cpu }}
+              memory: {{ .Values.resources.calculator.limits.memory }}
+            requests:
+              cpu: {{ .Values.resources.calculator.requests.cpu }}
+              memory: {{ .Values.resources.calculator.requests.memory }}
+          env:
+          - name : SERVICE_ID
+            value : {{ include "eric-oss-pm-stats-calculator.name" . }}
+          - name: NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name : BR_AGENT
+            value : {{ .Values.brAgent.enabled | quote}}
+          - name : BACKUP_REGISTRATION_NAME
+            value: {{ .Values.brAgent.backupRegistrationName }}
+          - name: TZ
+            value: {{ template "eric-oss-pm-stats-calculator.timezone" . }}
+        {{- if (eq (include "eric-oss-pm-stats-calculator.global-security-tls-enabled" .) "false") }}
+          - name: KPI_SERVICE_DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: {{ $dbConfig.credentials.kubernetesSecretName | quote }}
+                key: {{ $dbConfig.credentials.keyForUserId | quote }}
+          - name: KPI_SERVICE_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ $dbConfig.credentials.kubernetesSecretName  | quote }}
+                key: {{ $dbConfig.credentials.keyForUserPw  | quote }}
+          - name: KPI_SERVICE_DB_ADMIN_USER
+            value: postgres
+          - name: KPI_SERVICE_DB_ADMIN_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ $dbConfig.credentials.kubernetesSecretName | quote }}
+                key: {{ $dbConfig.credentials.keyForSuperPw | quote }}
+          - name: KPI_SERVICE_DB_JDBC_SERVICE_CONNECTION
+            value: jdbc:postgresql://{{ $dbConfig.nameOverride }}:{{ $dbConfig.service.port }}/{{ $dbConfig.postgresDatabase }}
+        {{- else }}
+          - name: KPI_SERVICE_DB_USER
+            value: {{ .Values.kpiData.postgresUser | quote }}
+          - name: KPI_SERVICE_DB_ADMIN_USER
+            value: postgres
+          - name: KPI_SERVICE_DB_JDBC_SERVICE_CONNECTION
+            value: jdbc:postgresql://service-{{ $dbConfig.nameOverride }}:{{ $dbConfig.service.port }}/{{ $dbConfig.postgresDatabase }}
+        {{- end }}
+          - name: KPI_SERVICE_DB_DRIVER
+            value: org.postgresql.Driver
+          - name: KPI_SERVICE_DB_JDBC_CONNECTION
+            value: jdbc:postgresql://{{ $dbConfig.nameOverride }}:{{ $dbConfig.service.port }}/{{ $dbConfig.postgresDatabase }}
+          - name: KPI_SERVICE_KAFKA_BOOTSTRAP_SERVERS
+            value: {{ include "eric-oss-pm-stats-calculator.kafka-bootstrap-server" . }}
+          - name: KPI_SERVICE_KAFKA_EXPOSURE_TOPIC_NAME
+            value: {{ .Values.kafka.kpiExposureTopic }}
+          - name: KPI_SERVICE_KAFKA_EXECUTION_REPORT_TOPIC_NAME
+            value: {{ .Values.kafka.kpiExecutionReportTopic }}
+          - name: KAFKA_BUCKET_SIZE
+            value: {{ .Values.kafka.bucketSize | quote }}
+          - name: SPARK_BLOCKMANAGER_PORT
+            value: {{ include "eric-oss-pm-stats-calculator.spark-blockmanager-port" . | quote }}
+          - name: SPARK_DRIVER_BINDADDRESS
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: SPARK_DRIVER_HOST
+            value: {{ template "eric-oss-pm-stats-calculator.name" . }}
+          - name: SPARK_DRIVER_PORT
+            value: {{ include "eric-oss-pm-stats-calculator.spark-driver-port" . | quote }}
+          - name: SPARK_MASTER_URL
+            value: "spark://{{ .Values.spark.hostname }}:{{ .Values.spark.port }}"
+          - name: SPARK_EXECUTOR_STARTING_PORT
+            value: {{ .Values.spark.jmxExecutor.startingPort | quote }}
+          - name: SPARK_MAX_CORES
+            value: {{ .Values.spark.max.cores | quote }}
+          - name: SPARK_DRIVER_MEMORY
+            value: {{ .Values.spark.driver.memory | quote }}
+          - name: SPARK_EXECUTOR_CORES
+            value: {{ .Values.spark.executor.cores | quote }}
+          - name: SPARK_EXECUTOR_MEMORY
+            value: {{ .Values.spark.executor.memory | quote }}
+          - name: ON_DEMAND_EXECUTOR_CORES
+            value: {{ .Values.spark.executor.onDemand.cores | quote }}
+          - name: ON_DEMAND_EXECUTOR_MEMORY
+            value: {{ .Values.spark.executor.onDemand.memory | quote }}
+          - name: SPARK_PARALLELISM
+            value: {{ .Values.spark.parallelism | quote }}
+          - name: SPARK_SHUFFLE_PARTITIONS
+            value: {{ .Values.spark.shufflePartitions | quote }}
+          - name: SPARK_ADAPTIVE_SQL
+            value: {{ .Values.spark.adaptiveSql | quote }}
+          - name: SPARK_LOG_LEVEL
+            value: {{ .Values.spark.logLevel | quote }}
+          - name: SPARK_MIN_REGISTERED_RESOURCES_RATIO
+            value: {{ .Values.spark.scheduler.minRegisteredResourcesRatio | quote }}
+          - name: SPARK_MAX_REGISTERED_RESOURCES_WAITING_TIME
+            value: {{ .Values.spark.scheduler.maxRegisteredResourcesWaitingTime | quote }}
+          - name: SPARK_METRIC_RETENTION_IN_SECONDS
+            value: {{ .Values.spark.metricRetentionInSeconds | quote }}
+          - name: OVERRIDE_EXECUTOR_JMX_PORT
+            value: {{ .Values.spark.jmxExecutor.overrideExecutorPort | quote  }}
+          - name: RETENTION_PERIOD_DAYS
+            value: {{ .Values.retentionPeriod.days | quote }}
+          - name: RETENTION_PERIOD_CONFIGURED_MAX
+            value: {{ .Values.retentionPeriod.configuredMax | quote }}
+          - name: CRON_RETENTION_PERIOD_CHECK
+            value: {{ .Values.retentionPeriod.cleanUpJobCronExpression | quote }}
+          - name: END_OF_EXECUTION_OFFSET
+            value: {{ .Values.endOfExecutionOffset | quote }}
+          - name: SCHEDULE_INCREMENT
+            value: {{ .Values.scheduleIncrement | quote }}
+          - name: MAX_LOOK_BACK_PERIOD
+            value: {{ .Values.maxLookBackPeriod | quote }}
+          - name: PARTITION_TABLE_READ
+            value: {{ .Values.spark.partitionTableRead | quote }}
+          - name: INDEXED_NUMERIC_PARTITION_COLUMNS
+            value: {{ .Values.spark.indexedNumericPartitionColumns | quote }}
+          - name: SAVE_EVENT_LOGS
+            value: {{ .Values.saveEventLogs | quote }}
+          - name: QUEUE_WEIGHT_SCHEDULED_CALCULATION
+            value: {{ .Values.queueWeight.scheduledCalculation | quote }}
+          - name: QUEUE_WEIGHT_ON_DEMAND_CALCULATION
+            value: {{ .Values.queueWeight.onDemandCalculation | quote }}
+          - name: MAXIMUM_CONCURRENT_CALCULATIONS
+            value: {{ .Values.maximumConcurrentCalculations | quote }}
+          - name: MAX_NUMBER_OF_PARALLEL_ON_DEMAND_CALCULATIONS
+            value: {{ .Values.maxNumberOfParallelOnDemandCalculations | quote }}
+          - name: BLOCK_SCHEDULED_WHEN_HANDLING_ON_DEMAND
+            value: {{ .Values.blockScheduledWhenHandlingOnDemand | quote }}
+          - name: KPI_EXECUTION_PERIOD
+            value: {{ .Values.kpiExecutionPeriod | quote }}
+          - name: MAX_HEARTBEAT_TO_WAIT_TO_RECALCULATE_SIMPLES
+            value: {{ .Values.maxHeartbeatToWaitToRecalculateSimples | quote }}
+          - name: INPUT_SOURCE
+            value: {{ .Values.groupingRules.inputSource | quote }}
+          - name: AGGREGATION_PERIOD
+            value: {{ .Values.groupingRules.aggregationPeriod | quote }}
+          - name: AGGREGATION_ELEMENTS
+            value: {{ .Values.groupingRules.aggregationElements | quote }}
+          - name: SCHEMA_REGISTRY_URL
+            value: "http://{{ .Values.schemaRegistry.url }}:{{ .Values.schemaRegistry.port }}"
+          - name: DATA_CATALOG_URL
+            value: http://{{ .Values.dataCatalog.url }}:{{ .Values.dataCatalog.port }}/catalog/
+          - name: KAFKA_RESOURCE_MANAGER_ADDRESS
+            value: http://{{ .Values.kafkaResourceManager.url }}:{{ .Values.kafkaResourceManager.port }}
+          {{- include "eric-oss-pm-stats-calculator.loggingEnv" . | nindent 10 }}
+          {{- include "eric-oss-pm-stats-calculator.dstEnv" . | indent 10 }}
+          ports:
+            - containerPort: {{ .Values.service.port }}
+              name: http
+          livenessProbe:
+            exec:
+              command: ["/bin/sh", "-c", "getReply=$(curl -s -o /dev/null -w %{http_code} http://127.0.0.1:8080/kpi-handling/calculator-service/health); if [ \"$getReply\" -lt 200 -o \"$getReply\" -ge 400 ]; then exit 1; fi"]
+            initialDelaySeconds: {{ .Values.probes.calculator.livenessProbe.initialDelaySeconds }}
+            failureThreshold: {{ .Values.probes.calculator.livenessProbe.failureThreshold }}
+            periodSeconds: {{ .Values.probes.calculator.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.calculator.livenessProbe.timeoutSeconds }}
+          readinessProbe:
+            exec:
+              command: ["/bin/sh", "-c", "getReply=$(curl -s -o /dev/null -w %{http_code} http://127.0.0.1:8080/kpi-handling/calculator-service/health); if [ \"$getReply\" -lt 200 -o \"$getReply\" -ge 400 ]; then exit 1; fi"]
+            initialDelaySeconds: {{ .Values.probes.calculator.readinessProbe.initialDelaySeconds }}
+            failureThreshold: {{ .Values.probes.calculator.readinessProbe.failureThreshold }}
+            periodSeconds: {{ .Values.probes.calculator.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.calculator.readinessProbe.timeoutSeconds }}
+            successThreshold: {{ .Values.probes.calculator.readinessProbe.successThreshold }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            runAsUser: 174023
+            capabilities:
+              drop:
+                - all
+          volumeMounts:
+            - name : config-volume
+              mountPath : /config
+            - name: tmp
+              mountPath: /tmp
+            - name: backup-restore
+              mountPath: /tmp/bragent/backup
+        {{- if .Values.jmxExporter.enabled }}
+        - name: {{ .Chart.Name }}-jmx-exporter
+          image: {{ template "eric-oss-pm-stats-calculator.imagePath" (merge (dict "imageName" "jmxExporter") .) }}
+          imagePullPolicy: {{ template "eric-oss-pm-stats-calculator.imagePullPolicy" (merge (dict "imageName" "jmxExporter") .) }}
+          env:
+          - name: SERVICE_PORT
+            value: {{ .Values.jmxExporter.servicePort | quote }}
+          - name: DEST_PORT
+            value: {{ .Values.jmxExporter.destPort | quote }}
+          - name: RULES_MODULE
+            value: {{ .Values.jmxExporter.rules | quote }}
+          - name: DEST_HOST
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: JVM_LOCAL_OPTS
+            value: {{ include "eric-oss-pm-stats-calculator.jmx_jvm_local_opts" . | quote }}
+          - name: JMX_PROMETHEUS_EXPORTER_DEVELOPER_DEBUG
+            value: {{ .Values.jmxExporter.debug.enabled | quote }}
+          - name: TZ
+            value: {{ template "eric-oss-pm-stats-calculator.timezone" . }}
+          ports:
+            - containerPort: {{ .Values.jmxExporter.servicePort }}
+              name: http
+          livenessProbe:
+            tcpSocket:
+              port: {{ .Values.jmxExporter.servicePort }}
+            failureThreshold: {{ .Values.probes.jmxExporter.livenessProbe.failureThreshold }}
+            initialDelaySeconds: {{ .Values.probes.jmxExporter.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.jmxExporter.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.jmxExporter.livenessProbe.timeoutSeconds }}
+          readinessProbe:
+            tcpSocket:
+              port: {{ .Values.jmxExporter.servicePort }}
+            failureThreshold: {{ .Values.probes.jmxExporter.readinessProbe.failureThreshold }}
+            initialDelaySeconds: {{ .Values.probes.jmxExporter.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.jmxExporter.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.jmxExporter.readinessProbe.timeoutSeconds }}
+            successThreshold: {{ .Values.probes.jmxExporter.readinessProbe.successThreshold }}
+          resources:
+            limits:
+              cpu: {{ .Values.resources.jmxExporter.limits.cpu }}
+              memory: {{ .Values.resources.jmxExporter.limits.memory }}
+            requests:
+              cpu: {{ .Values.resources.jmxExporter.requests.cpu }}
+              memory: {{ .Values.resources.jmxExporter.requests.memory }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            runAsUser: 273948
+            capabilities:
+              drop:
+                - all
+          volumeMounts:
+            - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-metrics
+              mountPath: {{ .Values.jmxExporter.rulesDirectory }}
+            - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-jmx-logging-properties
+              mountPath: "/opt/jmx_exporter/logging.properties"
+              subPath: "logging.properties"
+            - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-jmx-config
+              mountPath: {{ .Values.jmxExporter.configDirectory }}
+            - name: tmp
+              mountPath: /tmp
+        {{- end }}
+      volumes:
+      - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-metrics
+        configMap:
+          name: {{ template "eric-oss-pm-stats-calculator.name" . }}-metrics-config
+          defaultMode: 0777
+      - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-jmx-logging-properties
+        configMap:
+          defaultMode: 0444
+          name: {{ template "eric-oss-pm-stats-calculator.name" . }}-jmx-logging-properties
+      - name: backup-restore
+        emptyDir:
+          sizeLimit: {{ .Values.brAgent.storage.size | quote }}
+      - name : "config-volume"
+        configMap :
+          name : {{ include "eric-oss-pm-stats-calculator.configmap.name" . }}
+      - name: tmp
+        emptyDir: { }
+      - name: {{ template "eric-oss-pm-stats-calculator.name" . }}-jmx-config
+        emptyDir: { }
+      - name: scripts
+        configMap:
+          name: {{ template "eric-oss-pm-stats-calculator.name" . }}-script
+          defaultMode: 0777
+      {{- if (eq (include "eric-oss-pm-stats-calculator.global-security-tls-enabled" .) "true") }}
+      - name: init-sip-tls-ca
+        secret:
+          secretName: eric-sec-sip-tls-trusted-root-cert
+          defaultMode: 0440
+      - name: init-cert
+        secret:
+          secretName: eric-pm-kpi-data-postgres-cert
+          defaultMode: 0440
+      {{- end }}
+      {{- if include "eric-oss-pm-stats-calculator.pullSecrets" . }}
+      imagePullSecrets:
+        - name: {{ template "eric-oss-pm-stats-calculator.pullSecrets" . }}
+      {{- end }}
+      nodeSelector: {{- include "eric-oss-pm-stats-calculator.nodeSelector" . | indent 6 }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

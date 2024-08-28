@@ -1,0 +1,108 @@
+{
+  "scheduled": true,
+  "execution_group": "4G|PM_COUNTERS|SampleCellFDD_1",
+  "tables": [
+    {
+      "name": "kpi_simple_example_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "sum_float_simple",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "sum_float_simple_hourly",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "max_float_simple_hourly",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "sum_array_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_float_simple",
+        "sum_float_simple_hourly",
+        "max_float_simple_hourly",
+        "sum_array_simple"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "moFdn",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_example_table_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "kpi_sum1",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "kpi_sum2",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "kpi_sum1",
+        "kpi_sum2",
+        "kpi_div"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "moFdn",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+    "name": "kpi_rel_guid_s_guid_t_guid_simple_",
+    "aggregation_period": -1,
+    "kpis": [
+      {
+        "name": "sum_integer_simple",
+        "reexport_late_data": false,
+        "exportable": false
+      }
+    ],
+    "list_of_kpis": [
+      "sum_integer_simple"
+    ],
+    "list_of_dimensions": [
+      "nodeFDN",
+      "moFdn"
+    ]
+    },
+    {
+      "name": "kpi_rel_guid_s_guid_t_guid_simple_filter_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "sum_integer_1440_simple_filter",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_1440_simple_filter"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

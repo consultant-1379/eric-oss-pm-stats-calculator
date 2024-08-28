@@ -1,0 +1,2032 @@
+{
+  "SampleRelation_1": [
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1101
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1201
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            3, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1301
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            4, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2100
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            5, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2200
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            6, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21101
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1103
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1203
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            3, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1303
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            4, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2102
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            5, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2202
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            6, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21103
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1105
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1205
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            3, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1305
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            4, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2104
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            5, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2204
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            6, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21105
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-28T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1107
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 1, 5, 2, 3, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-28T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1207
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            3, 10, 15, 1, 5, 2, 3, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-28T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1307
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            4, 10, 15, 2, 5, 3, 4, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-28T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2106
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            5, 10, 15, 2, 5, 3, 4, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-28T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2206
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            6, 10, 15, 3, 5, 4, 5, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-28T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21107
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1109
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 3, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1209
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 4, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1309
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 5, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2108
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 6, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2208
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 7, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21109
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1111
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 3, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1211
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 4, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1311
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 5, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2110
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 6, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2210
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 7, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21111
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1113
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 3, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1213
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 4, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1313
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 5, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2112
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 6, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2212
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 7, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21113
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1115
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 3, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1215
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 4, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1315
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 5, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2114
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 6, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2214
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 7, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21115
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1117
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 6, 6, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1217
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 7, 7, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1317
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 8, 8, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2116
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 9, 9, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2216
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 10, 10, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21117
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1119
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 6, 6, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1219
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 7, 7, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1319
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 8, 8, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2118
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 9, 9, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2218
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 10, 10, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21119
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1121
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 6, 6, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1221
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 7, 7, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1321
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 8, 8, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2120
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 9, 9, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2220
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 10, 10, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21121
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1123
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 6, 6, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1223
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 7, 7, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1323
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 8, 8, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2122
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 9, 9, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2222
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 10, 10, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21123
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1125
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1225
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            3, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 43
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=3",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 1325
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            4, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 42
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2124
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            5, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 41
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN1,MeContext=LTE01dg2ERBS00001,ManagedElement=LTE01",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2,SampleCellRelation=2",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 2224
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            6, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 40
+          ]
+        }
+      }
+    },
+    {
+      "nodeFDN": "SubNetwork=SN2,MeContext=LTE02dg2ERBS00001,ManagedElement=LTE02",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "ManagedElement=LTE02dg2ERBS00001,SampleCellFDD=1,SampleCellRelation=1",
+      "suspect": false,
+      "pmCounters": {
+        "pmExampleSingleCounter": {
+          "counterValue": 21125
+        },
+        "pmExamplePdfCounter": {
+          "counterValue": [
+            2, 10, 15, 0, 5, 0, 0, 15
+          ]
+        },
+        "pmExampleCompressedPdfCounter": {
+          "counterValue": [
+            2, 5, 4, 10, 44
+          ]
+        }
+      }
+    }
+  ]
+}

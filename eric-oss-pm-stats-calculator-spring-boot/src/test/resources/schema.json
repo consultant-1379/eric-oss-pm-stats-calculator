@@ -1,0 +1,15 @@
+{
+  "databaseName": "name_meta_database",
+  "resource": {
+    "id": "index",
+    "meta": "json"
+  },
+  "task": {
+    "id": "index",
+    "meta": "json"
+  },
+  "model": {
+    "id": "index",
+    "meta": "json"
+  }
+}

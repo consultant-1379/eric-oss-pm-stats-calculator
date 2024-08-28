@@ -1,0 +1,18 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+documents:
+  # List the documents you want to convert to pdf.
+  - name: service-user-guide
+    files:
+      - ../doc/Service_User_Guide/user_guide.md
+      - ../doc/Service_User_Guide/PMSCH_architecture.png
+      - ../doc/Service_User_Guide/pmsc_architecture.png
+      - ../doc/Service_User_Guide/pmsc_deployment_view.png

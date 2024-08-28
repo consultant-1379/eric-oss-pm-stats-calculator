@@ -1,0 +1,40 @@
+{
+  "simple_kpi_same_day": [
+    {
+      "agg_column_0": 1,
+      "agg_column_1": 18,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 2,
+      "agg_column_1": 25,
+      "ropBeginTime": "2022-07-27T00:00:00.000Z",
+      "ropEndTime": "2022-07-27T00:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    },
+    {
+      "agg_column_0": 3,
+      "agg_column_1": 28,
+      "ropBeginTime": "2022-07-27T01:00:00.000Z",
+      "ropEndTime": "2022-07-27T01:15:00.000Z",
+      "pmCounters": {
+        "integerArrayColumn0": "{1,2,3,4,5}",
+        "floatArrayColumn0": "{1.0,2.0,3.0,4.0,1.0}",
+        "integerColumn0": 1,
+        "floatColumn0": 0.2
+      }
+    }
+  ]
+}

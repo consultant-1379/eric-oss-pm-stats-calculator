@@ -1,0 +1,516 @@
+{
+  "source": "TEST",
+  "kpi_definitions": [
+    {
+      "name": "rolling_sum_integer_1440",
+      "alias": "rolling_aggregation",
+      "expression": "SUM(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "rolling_max_integer_1440",
+      "alias": "rolling_aggregation",
+      "expression": "MAX(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "MAX",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_float_operator_1440_post_aggregation",
+      "alias": "rolling_aggregation",
+      "expression": "FIRST(rolling_aggregation.rolling_sum_integer_1440) / FIRST(NULLIF(rolling_aggregation.rolling_max_integer_1440, 0)) FROM kpi_post_agg://rolling_aggregation",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "rolling_aggregation.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "executionid_sum_integer_1440",
+      "alias": "execution_id",
+      "expression": "SUM(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0",
+        "'${param.execution_id}' AS execution_id"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "sum_integer_1440",
+      "alias": "cell_guid",
+      "expression": "SUM(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "sum_integer_1440_simple",
+      "alias": "cell_guid_simple",
+      "expression": "SUM(fact_table_0.integerColumn0)",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": true,
+      "inp_data_identifier": "dataSpace|topic0|fact_table_0"
+    },
+    {
+      "name": "max_long_1440",
+      "alias": "cell_guid",
+      "expression": "MAX(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "LONG",
+      "aggregation_type": "MAX",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_timestamp_1440",
+      "alias": "cell_guid",
+      "expression": "FIRST(fact_table_0.timestampColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "TIMESTAMP",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "arrayindexsum_integerarray_1440",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(fact_table_2.integerArrayColumn0) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER[5]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "percentileindex80_integer_1440",
+      "alias": "cell_guid",
+      "expression": "PERCENTILE_INDEX_80(fact_table_2.integerArrayColumn0) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER",
+      "aggregation_type": "PERCENTILE_INDEX_80",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "percentileindex90_integer_1440",
+      "alias": "cell_guid",
+      "expression": "PERCENTILE_INDEX_90(fact_table_2.integerArrayColumn0) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER",
+      "aggregation_type": "PERCENTILE_INDEX_90",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_integer_aggregate_slice_1440",
+      "alias": "cell_guid",
+      "expression": "FIRST(aggregate(slice( fact_table_2.integerArrayColumn0, 1, 3), 0, (acc, x) -> acc + x)) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "sum_integer_arrayindex_1440",
+      "alias": "cell_guid",
+      "expression": "SUM(fact_table_2.integerArrayColumn0[1] + fact_table_2.integerArrayColumn0[3]) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "sum_integer_arrayindex_1440_simple",
+      "alias": "cell_guid_simple",
+      "expression": "SUM(fact_table_2.integerArrayColumn0[1] + fact_table_2.integerArrayColumn0[3])",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false,
+      "inp_data_identifier": "dataSpace|topic1|fact_table_2"
+    },
+    {
+      "name": "sum_integer_count_60",
+      "alias": "cell_guid",
+      "expression": "COUNT(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "sum_integer_60",
+      "alias": "cell_guid",
+      "expression": "SUM(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_0.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "arrayindexsum_integerarray_60",
+      "alias": "cell_guid",
+      "expression": "ARRAY_INDEX_SUM(fact_table_2.integerArrayColumn0) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER[5]",
+      "aggregation_type": "ARRAY_INDEX_SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_integer_operator_60_stage2",
+      "alias": "cell_guid",
+      "expression": "FIRST(cell_guid.sum_integer_count_60) / FIRST(NULLIF(cell_guid.sum_integer_60, 0)) FROM kpi_inmemory://cell_guid",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_integer_operator_60_stage3",
+      "alias": "cell_guid",
+      "expression": "FIRST(cell_guid.first_integer_operator_60_stage2) / NULLIF(10, 0) FROM kpi_inmemory://cell_guid",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_integer_operator_60_stage4",
+      "alias": "cell_guid",
+      "expression": "FIRST(cell_guid.first_integer_operator_60_stage2) - FIRST(cell_guid.first_integer_operator_60_stage3) FROM kpi_inmemory://cell_guid",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "cell_guid.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_string",
+      "alias": "cell_guid",
+      "expression": "FIRST(dim_table_0.stringColumn0) FROM dim_ds_0://dim_table_0",
+      "object_type": "STRING",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "dim_table_0.agg_column_0"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "first_boolean_1440",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "FIRST(dim_table_1.booleanColumn0) FROM dim_ds_0://dim_table_1",
+      "object_type": "BOOLEAN",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "dim_table_1.agg_column_0",
+        "dim_table_1.agg_column_1",
+        "dim_table_1.agg_column_2"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "sum_integer_operator_1440",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(fact_table_3.integerColumn0) + SUM(fact_table_3.integerColumn0) FROM fact_ds_2://fact_table_3",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_3.agg_column_0",
+        "fact_table_3.agg_column_1",
+        "fact_table_3.agg_column_2"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "sum_float_1440_simple",
+      "alias": "rel_guid_s_guid_t_guid_simple",
+      "expression": "SUM(fact_table_1.floatColumn0)",
+      "object_type": "FLOAT",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_1.agg_column_0",
+        "fact_table_1.agg_column_1",
+        "fact_table_1.agg_column_2"
+      ],
+      "exportable": false,
+      "inp_data_identifier": "dataSpace|topic0|fact_table_1"
+    },
+    {
+      "name": "sum_real_1440",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "SUM(fact_table_3.integerColumn0) FROM fact_ds_2://fact_table_3",
+      "object_type": "REAL",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_3.agg_column_0",
+        "fact_table_3.agg_column_1",
+        "fact_table_3.agg_column_2"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_float_divideby0_60",
+      "alias": "relation_guid_source_guid_target_guid",
+      "expression": "FIRST(fact_table_3.integerColumn0) / NULLIF(0, 0) FROM fact_ds_2://fact_table_3",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_3.agg_column_0",
+        "fact_table_3.agg_column_1",
+        "fact_table_3.agg_column_2"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "first_integer_1440_join_kpidb_filter",
+      "alias": "cell_sector",
+      "expression": "FIRST(kpi_cell_guid_1440.sum_integer_1440) FROM kpi_db://kpi_cell_guid_1440 INNER JOIN dim_ds_0://dim_table_2 AS alias ON kpi_cell_guid_1440.agg_column_0 = alias.agg_column_0 WHERE kpi_cell_guid_1440.agg_column_0 > 0",
+      "object_type": "INTEGER",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "alias.agg_column_0 AS agg_column_0",
+        "alias.agg_column_1 AS agg_column_1"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_guid_1440.TO_DATE(local_timestamp) = '${param.date_for_filter}'"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "sum_integer_60_join",
+      "alias": "cell_sector",
+      "expression": "SUM(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0 INNER JOIN dim_ds_0://dim_table_2 ON fact_table_0.agg_column_0 = dim_table_2.agg_column_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "dim_table_2.agg_column_0",
+        "dim_table_2.agg_column_1"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "max_integer_1440_kpidb",
+      "alias": "sector",
+      "expression": "MAX(kpi_sector_60.sum_integer_60_join_kpidb) FROM kpi_db://kpi_sector_60",
+      "object_type": "INTEGER",
+      "aggregation_type": "MAX",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_sector_60.agg_column_0"
+      ],
+      "filter": [
+        "kpi_db://kpi_sector_60.TO_DATE(local_timestamp) = '${param.date_for_filter}'"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "sum_integer_60_join_kpidb",
+      "alias": "sector",
+      "expression": "SUM(kpi_cell_sector_60.sum_integer_60_join) FROM kpi_db://kpi_cell_sector_60",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_cell_sector_60.agg_column_0"
+      ],
+      "filter": [
+        "kpi_db://kpi_cell_sector_60.TO_DATE(local_timestamp) = '${param.date_for_filter}'"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "sum_operator_integer_kpidb_filter",
+      "alias": "sector",
+      "expression": "SUM(kpi_sector_60.sum_integer_60_join_kpidb) * SUM(kpi_sector_60.sum_integer_60_join_kpidb) FROM kpi_db://kpi_sector_60",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_elements": [
+        "kpi_sector_60.agg_column_0"
+      ],
+      "filter": [
+        "kpi_db://kpi_sector_60.TO_DATE(local_timestamp) = '${param.date_for_filter}'"
+      ],
+      "exportable": true
+    },
+    {
+      "name": "transform_int_array_to_float_array",
+      "alias": "cell_guid",
+      "expression": "FIRST(TRANSFORM(fact_table_2.integerArrayColumn0 , x -> x * fact_table_2.floatColumn0)) FROM fact_ds_2://fact_table_2",
+      "object_type": "FLOAT[5]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_median_float_60",
+      "alias": "cell_guid",
+      "expression": "FIRST(MEDIAN_OF_VALUES( fact_table_2.floatArrayColumn0 )) FROM fact_ds_2://fact_table_2",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "rolling_counter_int_array",
+      "alias": "cell_guid",
+      "expression": "FIRST(APPEND_INTEGER_ARRAY(fact_table_2.integerArrayColumn2, fact_table_2.integerArrayColumn1, 6), true) FROM fact_ds_2://fact_table_2",
+      "object_type": "INTEGER[10]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "rolling_double_array_60",
+      "alias": "cell_guid",
+      "expression": "FIRST(APPEND_DOUBLE_ARRAY_GIVEN_CARDINALITY_AND_LIMIT(fact_table_2.floatArrayColumn2, fact_table_2.floatArrayColumn1, fact_table_2.integerArrayColumn2, 5), true) FROM fact_ds_2://fact_table_2",
+      "object_type": "FLOAT[3]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": false
+    },
+    {
+      "name": "first_calculate_percentile_value_simple",
+      "alias": "cell_guid_simple",
+      "expression": "FIRST(CALCULATE_PERCENTILE_VALUE(fact_table_2.floatArrayColumn0, 0))",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": true,
+      "inp_data_identifier": "dataSpace|topic1|fact_table_2"
+    },
+    {
+      "name": "first_calculate_percentile_bin_simple",
+      "alias": "cell_guid_simple",
+      "expression": "FIRST(CALCULATE_PERCENTILE_BIN(fact_table_2.integerArrayColumn0, 0))",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": true,
+      "inp_data_identifier": "dataSpace|topic1|fact_table_2"
+    },
+    {
+      "name": "first_update_null_time_advanced_kpis_simple",
+      "alias": "cell_guid_simple",
+      "expression": "FIRST(UPDATE_NULL_TIME_ADVANCED_KPIS(fact_table_2.integerArrayColumn0, 5))",
+      "object_type": "INTEGER[5]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": true,
+      "inp_data_identifier": "dataSpace|topic1|fact_table_2"
+    },
+    {
+      "name": "first_add_integer_to_array_with_limit_simple",
+      "alias": "cell_guid_simple",
+      "expression": "FIRST(ADD_INTEGER_TO_ARRAY_WITH_LIMIT(fact_table_2.integerArrayColumn0, 1, 5))",
+      "object_type": "INTEGER[5]",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "fact_table_2.agg_column_0"
+      ],
+      "exportable": true,
+      "inp_data_identifier": "dataSpace|topic1|fact_table_2"
+    },
+    {
+      "name": "fdn_agg_sum_integer_1440",
+      "alias": "fdn_agg",
+      "expression": "SUM(fact_table_0.integerColumn0) FROM fact_ds_1://fact_table_0",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "FDN_PARSE(fact_table_0.agg_column_0, \"region\") AS region"
+      ],
+      "exportable": true
+    }
+  ]
+}

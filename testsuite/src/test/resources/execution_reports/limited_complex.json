@@ -1,0 +1,31 @@
+{
+  "scheduled": true,
+  "execution_group": "LIMITED_COMPLEX",
+  "tables": [
+    {
+      "name": "kpi_limited_complex_15",
+      "aggregation_period": 15,
+      "kpis": [
+        {
+          "name": "first_integer_complex_15",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "copy_array_15",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "first_integer_complex_15",
+        "copy_array_15"
+      ],
+      "list_of_dimensions": [
+        "ossID",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

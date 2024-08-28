@@ -1,0 +1,2462 @@
+{
+  "SampleCellTDD_1": [
+    {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 2.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 3.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 3.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 2.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 2.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 4.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 5.0
+        },
+        "exampleCounter1": {
+          "counterValue": 4.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 5.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 5.5
+        }
+      }
+    }, {
+      "nodeFDN": "node1tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.0
+        },
+        "exampleCounter1": {
+          "counterValue": 4.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 2.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.0
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 4.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.0
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 4.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 3.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 2.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node2tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 3.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo1tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 4.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.0
+        },
+        "exampleCounter1": {
+          "counterValue": 2.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo2tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:00:00.000Z",
+      "ropEndTime": "2023-07-28T22:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690574400,
+      "ropEndTimeInEpoch": 1690575300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 2.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:15:00.000Z",
+      "ropEndTime": "2023-07-28T22:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690575300,
+      "ropEndTimeInEpoch": 1690576200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 4.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:30:00.000Z",
+      "ropEndTime": "2023-07-28T22:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690576200,
+      "ropEndTimeInEpoch": 1690577100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T22:45:00.000Z",
+      "ropEndTime": "2023-07-22T23:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690577100,
+      "ropEndTimeInEpoch": 1690578000,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:00:00.000Z",
+      "ropEndTime": "2023-07-28T23:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690578000,
+      "ropEndTimeInEpoch": 1690578900,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 3.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:15:00.000Z",
+      "ropEndTime": "2023-07-28T23:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690578900,
+      "ropEndTimeInEpoch": 1690579800,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:30:00.000Z",
+      "ropEndTime": "2023-07-28T23:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690579800,
+      "ropEndTimeInEpoch": 1690580700,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-28T23:45:00.000Z",
+      "ropEndTime": "2023-07-29T00:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690580700,
+      "ropEndTimeInEpoch": 1690581600,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.0
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:00:00.000Z",
+      "ropEndTime": "2023-07-29T00:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690581600,
+      "ropEndTimeInEpoch": 1690582500,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 1.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:15:00.000Z",
+      "ropEndTime": "2023-07-29T00:30:00.000Z",
+      "ropBeginTimeInEpoch": 1690582500,
+      "ropEndTimeInEpoch": 1690583400,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 2.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:30:00.000Z",
+      "ropEndTime": "2023-07-29T00:45:00.000Z",
+      "ropBeginTimeInEpoch": 1690583400,
+      "ropEndTimeInEpoch": 1690584300,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.0
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T00:45:00.000Z",
+      "ropEndTime": "2023-07-29T01:00:00.000Z",
+      "ropBeginTimeInEpoch": 1690584300,
+      "ropEndTimeInEpoch": 1690585200,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.0
+        }
+      }
+    }, {
+      "nodeFDN": "node3tdd",
+      "elementType": "currently not in use",
+      "ropBeginTime": "2023-07-29T01:00:00.000Z",
+      "ropEndTime": "2023-07-29T01:15:00.000Z",
+      "ropBeginTimeInEpoch": 1690585200,
+      "ropEndTimeInEpoch": 1690586100,
+      "dnPrefix": "currently not in use",
+      "moFdn": "mo3tdd",
+      "suspect": false,
+      "pmCounters": {
+        "exampleCounter": {
+          "counterValue": 3.5
+        },
+        "exampleCounter1": {
+          "counterValue": 1.5
+        },
+        "exampleCounter2": {
+          "counterValue": 1.5
+        }
+      }
+    }
+  ]
+}

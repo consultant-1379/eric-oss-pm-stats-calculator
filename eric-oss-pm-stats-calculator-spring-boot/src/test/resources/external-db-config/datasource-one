@@ -1,0 +1,4 @@
+kubernetesSecretName: eric-datasource-one-sn
+driver: org.postgresql.Driver
+jdbcUrl: jdbc:postgresql://eric-cm-son-topology-data:5432/datasource-one
+type: DIM

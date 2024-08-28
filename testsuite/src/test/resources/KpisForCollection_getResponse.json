@@ -1,0 +1,37 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "alias": "simple_collection_alias",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "collection_id_test",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": []
+  },
+  "on_demand": {
+    "parameters": [],
+    "tabular_parameters": [],
+    "kpi_output_tables": []
+  }
+}

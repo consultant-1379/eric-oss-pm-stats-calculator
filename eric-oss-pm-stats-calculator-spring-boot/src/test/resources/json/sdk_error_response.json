@@ -1,0 +1,7 @@
+{
+  "userMessage" : "message",
+  "httpStatusCode" : 404,
+  "developerMessage" : "developerMessage",
+  "time" : "2024-05-02T10:00:00",
+  "errorData" : [ "data1", "data2" ]
+}

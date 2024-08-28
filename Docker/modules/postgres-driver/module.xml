@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ~ COPYRIGHT Ericsson 2022
+ ~
+ ~ The copyright to the computer program(s) herein is the property of
+ ~ Ericsson Inc. The programs may be used and/or copied only with written
+ ~ permission from Ericsson Inc. or in accordance with the terms and
+ ~ conditions stipulated in the agreement/contract under which the
+ ~ program(s) have been supplied.
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<module xmlns="urn:jboss:module:1.1" name="org.postgresql">
+
+    <resources>
+        <resource-root path="postgresql-42.5.0.jar"/>
+    </resources>
+
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+        <module name="javax.servlet.api" optional="true"/>
+    </dependencies>
+</module>

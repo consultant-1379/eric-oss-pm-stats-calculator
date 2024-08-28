@@ -1,0 +1,93 @@
+{
+  "name": "son-kpi-model",
+  "namespace": "son",
+  "version": "0.0.4",
+  "element": {
+    "attributes": [
+      {
+        "name": "name",
+        "type": "String",
+        "optional": false,
+        "parameterizable": false
+      },
+      {
+        "name": "alias",
+        "type": "String",
+        "optional": false,
+        "parameterizable": false
+      },
+      {
+        "name": "expression",
+        "type": "String",
+        "optional": false,
+        "parameterizable": true
+      },
+      {
+        "name": "object_type",
+        "type": "String",
+        "optional": false,
+        "parameterizable": false
+      },
+      {
+        "name": "aggregation_type",
+        "type": "String",
+        "optional": false,
+        "parameterizable": true
+      },
+      {
+        "name": "aggregation_period",
+        "type": "int",
+        "optional": true,
+        "parameterizable": false
+      },
+      {
+        "name": "aggregation_elements",
+        "type": "String[]",
+        "optional": false,
+        "parameterizable": true
+      },
+      {
+        "name": "exportable",
+        "type": "boolean",
+        "optional": true,
+        "parameterizable": false
+      },
+      {
+        "name": "filter",
+        "type": "String[]",
+        "optional": true,
+        "parameterizable": true
+      },
+      {
+        "name": "inp_data_identifier",
+        "type": "String",
+        "optional": true,
+        "parameterizable": false
+      },
+      {
+        "name": "execution_group",
+        "type": "String",
+        "optional": true,
+        "parameterizable": false
+      },
+      {
+        "name": "data_reliability_offset",
+        "type": "int",
+        "optional": true,
+        "parameterizable": false
+      },
+      {
+        "name": "data_lookback_limit",
+        "type": "int",
+        "optional": true,
+        "parameterizable": false
+      },
+      {
+        "name": "reexport_late_data",
+        "type": "boolean",
+        "optional": true,
+        "parameterizable": false
+      }
+    ]
+  }
+}

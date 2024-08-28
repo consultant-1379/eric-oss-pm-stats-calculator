@@ -1,0 +1,135 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+modelVersion: "2.0"
+flavor: "ADP 2.0"
+service:
+  # name of the service:
+  name: "PM Stats Calculator"
+
+  # Design Country (set on the source products)
+  design_countries:
+    - HU                 # Hungary
+
+  # Compilation Country (Set on the derivative products)
+  sw_compilation_country: SE
+
+  # Release responsible
+  release_responsible: BCSSJAOD
+
+  #  Design responsible
+  design_responsible: BCSSJAOD
+
+  # Details of the APR product structure:
+  top_product:
+    alias: ["eric-oss-pm-stats-calculator"]
+
+    # APR Product Number
+    number: APR 201 564
+
+    # Description
+    description: "Provides a calculation engine that can process PM statistics from Kafka and create KPIs defined through a Rest API. The service is not able to parse and calculate KPIs based on raw events, but any statistics, counter created from events can be feed into this service for more complex calculation."
+
+    # Includes
+    includes:
+      # Database PG13 Image
+      - munin: CXC 201 3710
+        version: 9.3.0
+        secondPartyProduct: "True"
+
+      # JMX Exporter
+      - munin: CXC 201 2016
+        version: 1.51.0
+        secondPartyProduct: "True"
+
+        # PRI document
+      - eridoc: 109 21-APR 201 564              #ToDo: update
+        revision: A
+
+        # Service User Guide
+      - eridoc: 1553-1/APR 201 564               #ToDo: update
+        revision: A
+
+        # Risk Assessment doc
+      - eridoc: 1/006 64-APR 201 564            #ToDo: update
+        revision: A
+
+        # Test Specification
+      - eridoc: 1/152 41-APR 201 564            #ToDo: update
+        revision: A
+
+        # Test Report
+      - eridoc: 152 83-APR 201 564              #ToDo: update
+        revision: A
+
+        # Vulnerability Analysis Report
+      - eridoc: 1/1597-APR 201 564              #ToDo: update
+        revision: A
+
+        # Characteristic Report
+      - eridoc: 2/152 83-APR 201 564            #ToDo: update
+        revision: A
+
+      # SUSE Licenses
+      - prim: 1/FAL 115 3215
+        rstate: R1A
+      - prim: 3/FAL 115 3215
+        rstate: R1A
+      - prim: 5/FAL 115 3215
+        rstate: R1A
+      - prim: 7/FAL 115 3215
+        rstate: R1A
+
+  # Details of the Source product structure
+  src_products:
+
+    # Source Code Product
+    - label: Source
+      number: CAV 101 0247
+
+  # Details of zero or more derivative product structures, use [] for zero
+  derivative_products:
+
+    # Label describing the product, must be unique per list item
+    - label: "HELM"
+      number: CXD 101 285
+      alias: ["eric-oss-pm-stats-calculator"]
+      derivedFrom:
+        munin: CAV 101 0247
+      includes:
+
+        # Document Database PG Helm Chart
+        - munin: CXC 201 1475
+          version: 9.1.0
+          secondPartyProduct: "True"
+
+    - label: "IMAGE"
+      number: CXU 101 1339
+      description: "PM Stats Calculator Image"
+      includes:
+
+        # Common Base OS
+        - munin: CXC 201 2032
+          version: 5.18.0
+          secondPartyProduct: "True"
+
+        # Common Base OS Repo
+        - munin: CXC 201 2031
+          version: 5.18.0
+          secondPartyProduct: "True"
+
+      uses_foss:
+        - dependencies_file: ./../fossa/dependencies.yaml
+        #- foss_usage: ./../fossa/foss.usage.yaml            # ToDo: update when foss.usage.yaml exists
+        #uses_encryption:
+        #- import: ./../fossa/encryptions.yaml               # ToDo: update when encryption is used
+
+      derivedFrom:
+        munin: CAV 101 0247

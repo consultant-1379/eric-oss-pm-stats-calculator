@@ -1,0 +1,37 @@
+{
+  "topology-objects": [
+    {
+      "id": 1,
+      "type": "ret",
+      "attributes": {
+        "fdn": "SubNetwork\u003dSON,MeContext\u003dnodeName,ManagedElement\u003d1,AntennaUnitGroup\u003d5,AntennaNearUnit\u003d1,RetSubUnit\u003d1",
+        "name": "RET_1",
+        "electricalAntennaTilt": 2.0
+      },
+      "_links": {
+        "self": {
+          "href": "/son-om/cm-topology/v1/topology-objects/ret/1"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "ret",
+      "attributes": {
+        "fdn": "SubNetwork\u003dSON,MeContext\u003dnodeName,ManagedElement\u003d1,AntennaUnitGroup\u003d5,AntennaNearUnit\u003d1,RetSubUnit\u003d2",
+        "name": "RET_2",
+        "electricalAntennaTilt": 7.0
+      },
+      "_links": {
+        "self": {
+          "href": "/son-om/cm-topology/v1/topology-objects/ret/3"
+        }
+      }
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/son-om/cm-topology/v1/topology-objects/ret"
+    }
+  }
+}

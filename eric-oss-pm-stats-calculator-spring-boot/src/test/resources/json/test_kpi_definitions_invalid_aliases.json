@@ -1,0 +1,143 @@
+{
+  "on_demand": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "alias_ondemand_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "FROM expression_1",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "SUM",
+            "exportable": true
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "alias_ondemand_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "FROM expression_1",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "SUM",
+            "exportable": true
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "alias_complex_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "inp_data_identifier": "dataSpace|category|parent_schema",
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "FROM expression_1",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1",
+            "exportable": true,
+            "inp_data_identifier": "dataSpace|category|child_schema"
+          }
+        ]
+      },
+      {
+        "alias": "alias_complex_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "inp_data_identifier": "dataSpace|category|parent_schema",
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "FROM expression_1",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1",
+            "exportable": true,
+            "inp_data_identifier": "dataSpace|category|child_schema"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "alias_simple_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "inp_data_identifier": "dataSpace|category|parent_schema",
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "expression_1",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": true,
+            "inp_data_identifier": "dataSpace|category|child_schema"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "alias_simple_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "inp_data_identifier": "dataSpace|category|parent_schema",
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "expression_1",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": true,
+            "inp_data_identifier": "dataSpace|category|child_schema"
+          }
+        ]
+      },
+      {
+        "alias": "alias_simple_test_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "inp_data_identifier": "dataSpace|category|parent_schema",
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "expression_1",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": true,
+            "inp_data_identifier": "dataSpace|category|child_schema"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scheduled": true,
+  "execution_group": "sdk_complex_group3",
+  "tables": [
+    {
+      "name": "kpi_predefined_complex_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "median_complex_hourly",
+          "reexport_late_data": false,
+          "exportable": false
+        },
+        {
+          "name": "weighted_average_complex_hourly",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "median_complex_hourly",
+        "weighted_average_complex_hourly"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "moFdn",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_complex_fdn_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "cell_level_agg",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "cell_level_agg"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "fdn_parse_mo",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

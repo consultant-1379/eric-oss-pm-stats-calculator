@@ -1,0 +1,4 @@
+kubernetesSecretName: eric-datasource-two-sn
+driver: org.postgresql.Driver
+jdbcUrl: jdbc:postgresql://eric-cm-son-topology-data:5432/datasource-two
+type: FACT

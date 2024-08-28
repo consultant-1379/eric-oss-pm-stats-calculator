@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "fact_table",
+  "namespace": "test-namespace",
+  "fields": [
+    {
+      "name": "nodeFDN",
+      "type": "int"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "name": "pmCounters",
+        "type": "record",
+        "fields": [
+          {
+            "name": "integerColumn0",
+            "type": "int"
+          }
+        ]
+      }
+    }
+  ]
+}

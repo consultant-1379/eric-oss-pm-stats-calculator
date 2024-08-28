@@ -1,0 +1,56 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: eric-oss-pm-stats-calculator
+  title: PM Stats Calculator
+  description: Provides a calculation engine that can process PM statistics from Kafka and create KPIs defined through a Rest API. The service is not able to parse and calculate KPIs based on raw events, but any statistics, counter created from events can be feed into this service for more complex calculation.
+  annotations:
+    backstage.io/source-location: url:https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/OSS/com.ericsson.oss.air/eric-oss-pm-stats-calculator
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=eric-oss-pm-stats-calculator'
+    gerrit/component: OSS/com.ericsson.oss.air/eric-oss-pm-stats-calculator
+    sonarqube.org/project-key: com.ericsson.oss.air:eric-oss-pm-stats-calculator
+    jira.com/project-keys: IDUN
+    jira.com/filter-ids: "223571"
+    jenkins:
+      fem1s11-eiffel216.eiffel.gic.ericsson.se:8443/eric-oss-pm-stats-calculator_PreCodeReview,
+      fem1s11-eiffel216.eiffel.gic.ericsson.se:8443/eric-oss-pm-stats-calculator_Publish
+    spinnaker.io/application-name: pmh-e2e-cicd
+    spinnaker.io/pipelines: eric-oss-pm-stats-calculator-E2E-Flow
+  links:
+    - url: https://eteamspace.internal.ericsson.com/display/IDUN/Team+Velociraptors
+      title: Team Velociraptors Confluence
+      icon: dashboard
+    - url: https://eteamspace.internal.ericsson.com/display/IDUN/Team+Marvin
+      title: Team Marvin Confluence
+      icon: dashboard
+    - url: https://adp.ericsson.se/marketplace/pm-stats-calculator
+      title: ADP
+      icon: dashboard
+  tags:
+    - ericsson-intelligent-controller
+  roles:
+    scrum-master: EZBAJAK
+    product-owner: ekladne
+    microservice-architect: eeadhrv
+    security-master: epicesz
+    line-manager: egabnyi
+  approval:
+    date: 03-03-2024
+    approver: ekladne
+spec:
+  system: eric-oss-pm-stats-calc-handling
+  lifecycle: production
+  owner: velociraptors
+  type: microservice
+  dependsOn:
+    - component:eric-pm-kpi-data

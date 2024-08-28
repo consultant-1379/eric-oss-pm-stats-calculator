@@ -1,0 +1,98 @@
+{
+  "on_demand": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": "REQUIRED",
+        "alias": "REQUIRED",
+        "aggregation_elements": [
+          "REQUIRED"
+        ],
+        "exportable": "OPTIONAL",
+        "kpi_definitions": [
+          {
+            "name": "REQUIRED",
+            "expression": "REQUIRED",
+            "object_type": "REQUIRED",
+            "aggregation_type": "REQUIRED",
+            "aggregation_elements": [
+              "OPTIONAL"
+            ],
+            "exportable": "OPTIONAL",
+            "filters": [
+              "OPTIONAL"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": "OPTIONAL",
+        "alias": "REQUIRED",
+        "aggregation_elements": [
+          "REQUIRED"
+        ],
+        "exportable": "OPTIONAL",
+        "data_reliability_offset": "OPTIONAL",
+        "data_lookback_limit": "OPTIONAL",
+        "reexport_late_data": "OPTIONAL",
+        "kpi_definitions": [
+          {
+            "name": "REQUIRED",
+            "expression": "REQUIRED",
+            "object_type": "REQUIRED",
+            "aggregation_type": "REQUIRED",
+            "aggregation_elements": [
+              "OPTIONAL"
+            ],
+            "exportable": "OPTIONAL",
+            "filters": [
+              "OPTIONAL"
+            ],
+            "data_reliability_offset": "OPTIONAL",
+            "data_lookback_limit": "OPTIONAL",
+            "reexport_late_data": "OPTIONAL",
+            "execution_group": "REQUIRED"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": "OPTIONAL",
+        "alias": "REQUIRED",
+        "aggregation_elements": [
+          "REQUIRED"
+        ],
+        "exportable": "OPTIONAL",
+        "inp_data_identifier": "REQUIRED",
+        "data_reliability_offset": "OPTIONAL",
+        "data_lookback_limit": "OPTIONAL",
+        "reexport_late_data": "OPTIONAL",
+        "kpi_definitions": [
+          {
+            "name": "REQUIRED",
+            "expression": "REQUIRED",
+            "object_type": "REQUIRED",
+            "aggregation_type": "REQUIRED",
+            "aggregation_elements": [
+              "OPTIONAL"
+            ],
+            "exportable": "OPTIONAL",
+            "filters": [
+              "OPTIONAL"
+            ],
+            "data_reliability_offset": "OPTIONAL",
+            "data_lookback_limit": "OPTIONAL",
+            "reexport_late_data": "OPTIONAL",
+            "inp_data_identifier": "OPTIONAL"
+          }
+        ]
+      }
+    ]
+  }
+}

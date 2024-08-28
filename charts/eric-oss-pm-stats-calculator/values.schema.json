@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "podDisruptionBudget": {
+      "properties": {
+        "minAvailable": {
+          "$ref": "#/$defs/pdbValue"
+        },
+        "maxUnavailable": {
+          "$ref": "#/$defs/pdbValue"
+        }
+      },
+      "additionalProperties": false
+    },
+    "log": {
+      "properties": {
+        "outputs": {
+          "type": "array",
+          "contains": {
+            "pattern": "^(stdout|stream)$"
+          }
+        }
+      }
+    },
+    "service": {
+      "properties": {
+        "port": {
+          "$ref": "#/$defs/portValue"
+        }
+      }
+    },
+    "spark": {
+      "properties": {
+        "port": {
+          "$ref": "#/$defs/portValue"
+        }
+      }
+    },
+    "kafka": {
+      "properties": {
+        "port": {
+          "$ref": "#/$defs/portValue"
+        },
+        "portTls": {
+          "$ref": "#/$defs/portValue"
+        }
+      }
+    },
+    "prometheus": {
+      "properties": {
+        "port": {
+          "$ref": "#/$defs/portValue"
+        }
+      }
+    },
+    "schemaRegistry": {
+      "properties": {
+        "port": {
+          "$ref": "#/$defs/portValue"
+        }
+      }
+    },
+    "dataCatalog": {
+      "properties": {
+        "port": {
+          "$ref": "#/$defs/portValue"
+        }
+      }
+    },
+    "networkPolicy": {
+      "properties": {
+        "enabled": {
+          "pattern": "^(true|false)$"
+        }
+      }
+    },
+    "queueWeight": {
+      "properties": {
+        "scheduledCalculation": {
+          "type": "integer"
+        },
+        "onDemandCalculation": {
+          "type": "integer"
+        }
+      }
+    },
+    "maximumConcurrentCalculations": {
+      "type": "integer"
+    },
+    "maxNumberOfParallelOnDemandCalculations": {
+      "type": "integer"
+    },
+    "maxHeartbeatToWaitToRecalculateSimples": {
+      "type": "integer"
+    },
+    "groupingRules": {
+      "type": "object",
+      "properties": {
+        "inputSource": {
+          "type": "boolean"
+        },
+        "aggregationPeriod": {
+          "type": "boolean"
+        },
+        "aggregationElements": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "inputSource",
+        "aggregationPeriod",
+        "aggregationElements"
+      ],
+      "anyOf": [
+        {
+          "properties": {
+            "inputSource": {
+              "const": true
+            }
+          }
+        },
+        {
+          "properties": {
+            "aggregationPeriod": {
+              "const": true
+            }
+          }
+        },
+        {
+          "properties": {
+            "aggregationElements": {
+              "const": true
+            }
+          }
+        }
+      ]
+    },
+    "kpiExecutionPeriod": {
+      "$ref": "#/$defs/cronValue"
+    },
+    "retentionPeriod": {
+      "properties": {
+        "cleanUpJobCronExpression": {
+          "$ref": "#/$defs/cronValue"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "pdbValue": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^(([0-9])|([1-9][0-9])|100)?%$"
+        },
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "portValue": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^((6553[0-5])|(655[0-2][0-9])|(65[0-4][0-9]{2})|(6[0-4][0-9]{3})|([1-5][0-9]{4})|([0-5]{0,5})|([0-9]{1,4}))$"
+        },
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      ]
+    },
+    "cronValue": {
+      "type": "string",
+      "pattern": "(@(annually|yearly|monthly|weekly|daily|hourly|reboot))|(@every (\\d+(ns|us|µs|ms|s|m|h))+)|((((\\d+,)+\\d+|([\\d*]+([/\\-])\\d+)|\\d+|\\*|\\?) ?){5,7})"
+    }
+  }
+}

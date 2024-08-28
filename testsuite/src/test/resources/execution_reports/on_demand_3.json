@@ -1,0 +1,69 @@
+{
+  "scheduled": false,
+  "execution_group": "ON_DEMAND",
+  "tables": [
+    {
+      "name": "kpi_parameter_types_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "udf_param",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "udf_tabular_param",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "udf_param",
+        "udf_tabular_param"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_sector_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "max_integer_1440_kpidb",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "max_integer_1440_kpidb"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_limited_ondemand_15",
+      "aggregation_period": 15,
+      "kpis": [
+        {
+          "name": "aggregate_array_15",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "aggregate_array_15"
+      ],
+      "list_of_dimensions": [
+        "ossID",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

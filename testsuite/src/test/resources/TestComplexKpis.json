@@ -1,0 +1,162 @@
+{
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "complex",
+        "aggregation_elements": [
+          "kpi_simple_60.agg_column_0",
+          "kpi_simple_60.agg_column_1"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_60_complex",
+            "expression": "SUM(kpi_simple_60.integer_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1"
+          },
+          {
+            "name": "sum_float_60_complex",
+            "expression": "SUM(kpi_simple_60.float_simple) from kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1"
+          },
+          {
+            "name": "integer_array_complex",
+            "expression": "FIRST(TRANSFORM(kpi_simple_60.integer_array_simple , x -> x * kpi_simple_60.integer_simple)) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "execution_group": "COMPLEX2"
+          },
+          {
+            "name": "sum_float_count_60",
+            "expression": "COUNT(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1"
+          },
+          {
+            "name": "sum_integer_float_complex",
+            "expression": "SUM(kpi_simple_60.integer_simple) + SUM(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1",
+            "filters": [
+              "kpi_db://kpi_simple_60.aggregation_begin_time BETWEEN (date_trunc('hour', TO_TIMESTAMP('${param.start_date_time}')) - interval 1 day) and date_trunc('hour', TO_TIMESTAMP('${param.end_date_time}'))"
+            ]
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "complex",
+        "aggregation_elements": [
+          "kpi_same_day_simple_60.agg_column_0",
+          "kpi_same_day_simple_60.agg_column_1"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_1440_complex_non_triggered",
+            "expression": "SUM(kpi_same_day_simple_60.integer_simple_same_day) FROM kpi_db://kpi_same_day_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX3"
+          },
+          {
+            "name": "sum_float_1440_complex",
+            "expression": "SUM(kpi_same_day_simple_60.float_simple_same_day) FROM kpi_db://kpi_same_day_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX4"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "complex2",
+        "aggregation_elements": [
+          "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_integer_arrayindex_complex",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) + SUM(kpi_cell_guid_simple_1440.sum_integer_arrayindex_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX4"
+          }
+        ]
+      },
+      {
+        "alias": "complex",
+        "aggregation_elements": [
+          "kpi_same_day_simple_60.agg_column_0",
+          "kpi_same_day_simple_60.agg_column_1"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_complex",
+            "expression": "SUM(kpi_same_day_simple_60.integer_simple_same_day) FROM kpi_db://kpi_same_day_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX5"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 15,
+        "alias": "limited_complex",
+        "data_reliability_offset": 0,
+        "aggregation_elements": [
+          "kpi_limited_15.ossID"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_complex_15",
+            "expression": "FIRST(kpi_limited_15.sum_integer_15) * FIRST(kpi_limited_15.count_integer_15) FROM kpi_db://kpi_limited_15",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "execution_group": "LIMITED_COMPLEX"
+          },
+          {
+            "name": "copy_array_15",
+            "expression": "FIRST(kpi_limited_15.transform_array_15) FROM kpi_db://kpi_limited_15",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "exportable": false,
+            "execution_group": "LIMITED_COMPLEX"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 15,
+        "alias": "limited_complex_dependent",
+        "data_reliability_offset": 0,
+        "aggregation_elements": [
+          "kpi_limited_complex_15.ossID"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "transform_complex_15",
+            "expression": "FIRST(TRANSFORM(kpi_limited_complex_15.copy_array_15, x -> x * kpi_limited_complex_15.first_integer_complex_15)) FROM kpi_db://kpi_limited_complex_15",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "execution_group": "LIMITED_COMPLEX2"
+          }
+        ]
+      }
+    ]
+  }
+}

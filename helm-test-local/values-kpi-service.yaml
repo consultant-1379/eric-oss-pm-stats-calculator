@@ -1,0 +1,62 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+resources:
+  calculator:
+    limits:
+      cpu: 2
+      memory: 3Gi
+    requests:
+      cpu: 1000m
+      memory: 500Mi
+
+probes:
+  calculator:
+    readinessProbe:
+      initialDelaySeconds: 0
+
+kpiData:
+  service :
+    endpoints :
+      postgres :
+        tls :
+          enforced : optional
+  metrics:
+    enabled: false
+  resources:
+    postgres:
+      limits:
+        cpu: "500m"
+        memory: "512Mi"
+      requests:
+        cpu: "100m"
+        memory: "128Mi"
+  log:
+    streamingMethod: "indirect"
+
+spark:
+  partitionTableRead: true
+  indexedNumericPartitionColumns: "agg_column_0"
+
+jmxExporter:
+  enabled: false
+
+kpiExecutionPeriod: "0 0-53/7 * * * ? *"
+
+#Additional values for upgrade
+calculationSchedule: ""
+hourlyCalculationSchedule: ""
+maxLookBackPeriod: "ALL"
+
+schemaRegistry:
+  url: schemaregistry
+
+log:
+  streamingMethod: "indirect"

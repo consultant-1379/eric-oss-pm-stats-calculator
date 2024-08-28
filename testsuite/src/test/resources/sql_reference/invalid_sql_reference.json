@@ -1,0 +1,80 @@
+{
+  "on_demand": {
+    "tabular_parameters": [
+      {
+        "name": "cell_configuration_test",
+        "columns": [
+          {
+            "name": "tabular_parameter_dimension",
+            "type": "STRING"
+          },
+          {
+            "name": "tabular_parameter_agg",
+            "type": "INTEGER"
+          }
+        ]
+      }
+    ],
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "rolling_aggregation",
+        "aggregation_elements": [
+          "cell_configuration_test.invalid_aggregation AS agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "dim_enrich_",
+            "expression": "FIRST(cell_configuration_test.tabular_parameter_dimension) FROM tabular_parameters://cell_configuration_test",
+            "object_type": "STRING",
+            "aggregation_type": "FIRST",
+            "exportable": true
+          }
+        ]
+      },
+      {
+        "aggregation_period": 15,
+        "alias": "limited_ondemand",
+        "aggregation_elements": [
+          "kpi_limited_15.ossID"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "aggregate_array_15_",
+            "alias": "limited_ondemand",
+            "expression": "FIRST(aggregate(kpi_limited_15.transform_array_15, 0, (acc,x) -> acc + x)) FROM kpi_db://kpi_limited_15",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "complex",
+        "aggregation_elements": [
+          "kpi_simple_60.invalid_agg_element"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "kpi_definitions": [
+          {
+            "name": "invalid_agg_element_test_",
+            "expression": "SUM(kpi_simple_60.integer_simple) + SUM(kpi_simple_60.invalid_column) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1",
+            "filters": [
+              "kpi_db://kpi_sector_60.TO_DATE(aggregation_begin_time) = '2023-08-13'"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

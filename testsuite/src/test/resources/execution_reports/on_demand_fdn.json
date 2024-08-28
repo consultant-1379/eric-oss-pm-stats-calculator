@@ -1,0 +1,65 @@
+{
+  "scheduled": false,
+  "execution_group": "ON_DEMAND",
+  "tables": [
+    {
+      "name": "kpi_ondemand_fdn_edge_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "fdn_concat_edge",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "fdn_concat_edge"
+      ],
+      "list_of_dimensions": [
+        "moFdn",
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_ondemand_fdn_agg_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "fdn_sum_agg",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "fdn_sum_agg"
+      ],
+      "list_of_dimensions": [
+        "subnet",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    },
+    {
+      "name": "kpi_on_demand_fdn_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "on_demand_fdn_filter",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "on_demand_fdn_filter"
+      ],
+      "list_of_dimensions": [
+        "moFdn",
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

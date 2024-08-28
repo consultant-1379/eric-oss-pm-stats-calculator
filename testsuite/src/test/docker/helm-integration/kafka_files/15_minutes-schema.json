@@ -1,0 +1,46 @@
+{
+  "type": "record",
+  "name": "limited_agg",
+  "namespace": "5G",
+  "fields": [
+    {
+      "name": "ossID",
+      "type": "int"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "name": "pmCounters",
+        "type": "record",
+        "fields": [
+          {
+            "name": "integerColumn0",
+            "type": "int"
+          },
+          {
+            "name": "integerColumn1",
+            "type": "int"
+          },
+          {
+            "name": "integerArrayColumn",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "int"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

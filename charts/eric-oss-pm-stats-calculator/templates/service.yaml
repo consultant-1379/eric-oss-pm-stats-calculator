@@ -1,0 +1,59 @@
+{{- $serviceMesh := include "eric-oss-pm-stats-calculator.service-mesh-enabled" . | trim -}}
+{{- $tls := include "eric-oss-pm-stats-calculator.global-security-tls-enabled" . | trim -}}
+{{- $osm2ism := include "eric-oss-pm-stats-calculator.osm2ism-enabled" . | trim -}}
+{{- $osmServiceCSAC := include "eric-oss-pm-stats-calculator.osmService-csac-enabled" . | trim -}}
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}
+  labels:
+    {{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+  annotations:
+    {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+spec:
+  ipFamilyPolicy: PreferDualStack
+  type: {{ .Values.service.type }}
+  {{- $global := fromJson (include "eric-oss-pm-stats-calculator.global" .) -}}
+  {{- if $global.internalIPFamily}}
+  ipFamilies: [{{ $global.internalIPFamily | quote }}]
+  {{- end }}
+  ports:
+  - port: {{ .Values.service.port }}
+    protocol: TCP
+    name: http
+  {{- if eq $osm2ism "true" }}
+    targetPort: 9081
+  {{- end }}
+  {{- range $i := until ((mul .Values.maximumConcurrentCalculations 4) | int) }}
+  - port: {{ add (include "eric-oss-pm-stats-calculator.spark-driver-port" . ) $i }}
+    protocol: TCP
+    name: driver-{{ add (include "eric-oss-pm-stats-calculator.spark-driver-port" . ) $i }}
+  - port: {{ add (include "eric-oss-pm-stats-calculator.spark-blockmanager-port" . ) $i }}
+    protocol: TCP
+    name: blockman-{{ add (include "eric-oss-pm-stats-calculator.spark-blockmanager-port" . ) $i }}
+  {{- end }}
+  {{- if eq .Values.jmxExporter.enabled true }}
+  - name: jmx-exporter
+    protocol: TCP
+    appProtocol: http
+    port: {{ .Values.jmxExporter.servicePort }}
+    targetPort: {{ .Values.jmxExporter.servicePort }}
+  {{- end }}
+  {{- if and (eq $serviceMesh "true") (eq $tls "true") (eq $osm2ism "true") (eq $osmServiceCSAC "true")}}
+  - name: https-csac
+    port: 443
+    targetPort: 9080
+  {{- end }}
+  selector:
+    app.kubernetes.io/name: {{ template "eric-oss-pm-stats-calculator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name | quote }}

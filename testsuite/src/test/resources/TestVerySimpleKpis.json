@@ -1,0 +1,70 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "simple",
+        "aggregation_elements": [
+          "a_new_very_simple_kpi.agg_column_0",
+          "a_new_very_simple_kpi.agg_column_1"
+        ],
+        "exportable": true,
+        "inp_data_identifier": "dataSpace|category|a_new_very_simple_kpi",
+        "data_reliability_offset": 0,
+        "data_lookback_limit": 180,
+        "retention_period_in_days": 6,
+        "kpi_definitions": [
+          {
+            "name": "integer_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "float_array_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.floatArrayColumn0)",
+            "object_type": "FLOAT[5]",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "integer_array_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.integerArrayColumn0)",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "float_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.floatColumn0)",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "same_day_simple",
+        "aggregation_elements": [
+          "simple_kpi_same_day.agg_column_0",
+          "simple_kpi_same_day.agg_column_1"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "inp_data_identifier": "dataSpace|category|simple_kpi_same_day",
+        "kpi_definitions": [
+          {
+            "name": "integer_simple_same_day",
+            "expression": "FIRST(simple_kpi_same_day.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "float_simple_same_day",
+            "expression": "FIRST(simple_kpi_same_day.pmCounters.floatColumn0)",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      }
+    ]
+  }
+}

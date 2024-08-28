@@ -1,0 +1,44 @@
+{
+  "properties": [
+    {
+      "name": "pm-stats-calculator.calculation.schedule-increment",
+      "type": "java.time.Duration",
+      "description": "Add proper description once we get to know about this property."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.end-of-execution-offset",
+      "type": "java.time.Duration",
+      "description": "Add proper description once we get to know about this property."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.max-look-back-period",
+      "type": "java.time.Duration",
+      "description": "Add proper description once we get to know about this property. Add information about 'ALL' type."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.indexed-numeric-partition-columns",
+      "type": "java.lang.String",
+      "description": "Add proper description once we get to know about this property."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.partition-table-read",
+      "type": "java.lang.Boolean",
+      "description": "Add proper description once we get to know about this property."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.spark-parallelism",
+      "type": "java.lang.Integer",
+      "description": "Add proper description once we get to know about this property."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.kafka.bucket-size",
+      "type": "java.lang.Integer",
+      "description": "Sets the maximum number of messages loaded at once from Kafka partition."
+    },
+    {
+      "name": "pm-stats-calculator.calculation.schema-registry-url",
+      "type": "java.lang.String",
+      "description": "Sets the URL address to the schema registry."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "retention_period_in_days": 6,
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "alias_value",
+        "aggregation_elements": [
+          "table.column1",
+          "table.column2"
+        ],
+        "inp_data_identifier": "dataSpace|category|parent_schema",
+        "kpi_definitions": [
+          {
+            "name": "definition_one",
+            "expression": "expression_1",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": true,
+            "inp_data_identifier": "dataSpace|category|child_schema"
+          },
+          {
+            "name": "definition_two",
+            "expression": "expression_2",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": false
+          },
+          {
+            "name": "definition_three",
+            "expression": "expression_3",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "table.column3",
+              "table.column4"
+            ],
+            "filters": [
+              "f_1",
+              "f_2"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

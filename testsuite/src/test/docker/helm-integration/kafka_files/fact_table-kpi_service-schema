@@ -1,0 +1,96 @@
+{
+  "namespace": "kpi-service",
+  "type": "record",
+  "name": "fact_table",
+  "fields": [
+    {
+      "name": "nodeFDN",
+      "type": "int"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "name": "pmCounters",
+        "type": "record",
+        "fields": [
+          {
+            "name": "integerArrayColumn0",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "int"
+              }
+            ]
+          },
+          {
+            "name": "integerArrayColumn1",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "int"
+              }
+            ]
+          },
+          {
+            "name": "integerArrayColumn2",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "int"
+              }
+            ]
+          },
+          {
+            "name": "floatArrayColumn0",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "double"
+              }
+            ]
+          },
+          {
+            "name": "floatArrayColumn1",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "double"
+              }
+            ]
+          },
+          {
+            "name": "floatArrayColumn2",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "double"
+              }
+            ]
+          },
+          {
+            "name": "integerColumn0",
+            "type": "int"
+          },
+          {
+            "name": "floatColumn0",
+            "type": "double"
+          }
+        ]
+      }
+    }
+  ]
+}

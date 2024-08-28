@@ -1,0 +1,80 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "dummy_simple",
+        "aggregation_elements": [ "fact_table.nodeFDN" ],
+        "inp_data_identifier": "dataSpace|category|fact_table",
+        "kpi_definitions": [
+          {
+            "name": "dummy_simple",
+            "expression": "SUM(fact_table.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "dummy_complex",
+        "aggregation_elements": [ "kpi_dummy_simple_60.agg_column_1" ],
+        "kpi_definitions": [
+          {
+            "name": "complex_1",
+            "expression": "FIRST(kpi_dummy_simple_60.dummy_simple + kpi_dummy_complex_60.complex_6) FROM kpi_db://kpi_dummy_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          },
+          {
+            "name": "complex_2",
+            "expression": "SUM(kpi_dummy_complex_60.complex_1) FROM kpi_db://kpi_dummy_complex_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          },
+          {
+            "name": "complex_3",
+            "expression": "FIRST(kpi_dummy_complex_60.complex_2 + kpi_dummy_complex_60.complex_4) FROM kpi_db://kpi_dummy_complex_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          },
+          {
+            "name": "complex_4",
+            "expression": "FIRST(kpi_dummy_complex_60.complex_1) FROM kpi_db://kpi_dummy_complex_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          },
+          {
+            "name": "complex_5",
+            "expression": "FIRST(kpi_dummy_complex_60.complex_2) FROM kpi_db://kpi_dummy_complex_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          },
+          {
+            "name": "complex_6",
+            "expression": "FIRST(kpi_dummy_complex_60.complex_7) FROM kpi_db://kpi_dummy_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          },
+          {
+            "name": "complex_7",
+            "expression": "FIRST(kpi_dummy_complex_60.complex_3) FROM kpi_db://kpi_dummy_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "loop_detection"
+          }
+        ]
+      }
+    ]
+  }
+}

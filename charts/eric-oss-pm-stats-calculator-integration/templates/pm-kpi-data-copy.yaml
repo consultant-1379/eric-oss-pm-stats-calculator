@@ -1,0 +1,56 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator-integration.fullname" . }}-kpi-data-copy
+  labels:
+    app: {{ template "eric-oss-pm-stats-calculator-integration.name" . }}
+  annotations:
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook": test
+spec:
+  {{- if include "eric-oss-pm-stats-calculator-integration.pullSecrets" . }}
+  imagePullSecrets:
+    - name: {{ template "eric-oss-pm-stats-calculator-integration.pullSecrets" . }}
+  {{- end }}
+  containers:
+    {{ $dbConfig := index .Values "dataSources" "eric-pm-kpi-data" }}
+    - name: {{ template "eric-oss-pm-stats-calculator-integration.fullname" . }}-kpi-data-copy
+      image: {{ template "eric-oss-pm-stats-calculator-integration.imagePath" (merge (dict "imageName" "datasource") .) }}
+      imagePullPolicy: IfNotPresent
+      command: ['sh', '-c', 'psql -f /scripts/kpi_rolling_aggregate.sql;']
+      env:
+        - name: PGHOST
+          value: {{ $dbConfig.nameOverride }}
+        - name: PGPORT
+          value: {{ $dbConfig.service.port | quote}}
+        - name: PGDATABASE
+          value: {{ $dbConfig.postgresDatabase }}
+        - name: PGUSER
+          valueFrom:
+            secretKeyRef:
+              name: {{ $dbConfig.credentials.kubernetesSecretName }}
+              key: username
+        - name: PGPASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ $dbConfig.credentials.kubernetesSecretName }}
+              key: password
+      volumeMounts:
+      - name: kpi-scripts
+        mountPath: /scripts
+  volumes:
+    - name: kpi-scripts
+      configMap:
+        name: {{ template "eric-oss-pm-stats-calculator-integration.name" . }}-kpi-script
+        defaultMode: 0777
+  restartPolicy: Never

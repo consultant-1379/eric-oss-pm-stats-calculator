@@ -1,0 +1,40 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+{{- $serviceMesh := include "eric-oss-pm-stats-calculator.service-mesh-enabled" . | trim -}}
+{{- $tls := include "eric-oss-pm-stats-calculator.global-security-tls-enabled" . | trim -}}
+{{- $osm2ism := include "eric-oss-pm-stats-calculator.osm2ism-enabled" . | trim -}}
+{{- $osmServiceCSAC := include "eric-oss-pm-stats-calculator.osmService-csac-enabled" . | trim -}}
+{{- $intermediateCA := include "eric-oss-pm-stats-calculator.osmService-csac-issuerRef-enabled" . | trim -}}
+{{- if and (eq $serviceMesh "true") (eq $tls "true") (eq $osm2ism "true") (eq $osmServiceCSAC "true")}}
+apiVersion: siptls.sec.ericsson.com/v1
+kind: InternalCertificate
+metadata:
+  name: {{ include "eric-oss-pm-stats-calculator.name" . }}-{{ include "eric-oss-pm-stats-calculator.osmService-csac-name" . }}-int-cert
+  labels:
+  {{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+spec:
+  kubernetes:
+    generatedSecretName: {{ include "eric-oss-pm-stats-calculator.name" . }}-{{ include "eric-oss-pm-stats-calculator.osmService-csac-name" . }}-secret
+    certificateName: "cert.pem"
+    privateKeyName: "key.pem"
+  certificate:
+    subject:
+      cn: {{ include "eric-oss-pm-stats-calculator.name" . }}
+    {{- if (eq $intermediateCA "true") }}
+    issuer:
+      reference: {{ include "eric-oss-pm-stats-calculator.osmService-csac-issuerRef" . }}
+    {{- end }}
+    extendedKeyUsage:
+      tlsClientAuth: true
+      tlsServerAuth: true
+{{- end }}

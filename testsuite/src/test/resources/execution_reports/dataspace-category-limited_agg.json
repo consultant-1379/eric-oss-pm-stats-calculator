@@ -1,0 +1,38 @@
+{
+  "scheduled": true,
+  "execution_group": "dataSpace|category|limited_agg",
+  "tables": [
+    {
+      "name": "kpi_limited_15",
+      "aggregation_period": 15,
+      "kpis": [
+        {
+          "name": "sum_integer_15",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "count_integer_15",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "transform_array_15",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_15",
+        "count_integer_15",
+        "transform_array_15",
+        "not_calculated_simple_15"
+      ],
+      "list_of_dimensions": [
+        "ossID",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

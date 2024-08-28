@@ -1,0 +1,200 @@
+== PM Stats Calculator New KPI Model Modification Guide
+
+=== Overview
+
+With the introduction of new KPI types and new KPI Definition attributes, in order to increase convenience, reusability and reduce the cost of maintainability, the KPI Definition model is better represented in a hierarchical structure. Interpretation of the existing fields has not changed, and the API change is just about restructuring (and slightly renaming) the existing fields.
+
+The KPI definitions shall be modified to support the new model.
+
+The following guide describes step by step how to modify the existing KPI definitions to align to the new KPI model.
+
+=== Steps creating KPI definitions based on new model:
+
+. {empty}
+create the first hierarchical level:
++
+[source,json]
+----
+{
+  "on_demand": {
+    "kpi_output_tables": [
+      {}
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {}
+    ]
+  },
+   "scheduled_simple": {
+    "kpi_output_tables": [
+      {}
+    ]
+   }
+}
+----
++
+IMPORTANT: It is possible to list multiple KPI types in a json only if there is at least one definition (hence one _kpi_output_table_) under a KPI type.
+
+. {empty}
+collect the *on_demand* KPI definitions from the existing KPIs, grouped by _alias_ and _aggregation_period_
++
+NOTE: *scheduled_complex* and *scheduled_simple* definitions might exist without _aggregation_period_, in that case, those definitions should be grouped by _alias_ only.
+
+. {empty}
+add each _alias_ and _aggregation_period_ pair into the above example under the *on_demand* _kpi_output_tables_ according to the required and optional fields
++
+NOTE: each _alias_ and _aggregation_period_ pair (or _alias_ without _aggregation_period_) should only exist once.
++
+[source,json]
+----
+{
+  "on_demand": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": "REQUIRED",
+        "alias": "REQUIRED",
+        "aggregation_elements": ["REQUIRED"],
+        "exportable": "OPTIONAL",
+        "kpi_definitions": [
+          {}
+		]
+	  }
+	]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {}
+	]
+  },
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {}
+	]
+  }
+}
+----
++
+IMPORTANT: The _is_visible_ attribute has been renamed to _exportable_ and the _filter_ to _filters_.
+It is recommended to define at _kpi_output_tables_ level the most common _aggregation_elements_ from the group of definitions.
+
+. {empty}
+list the corresponding definitions under the _kpi_definitions_
++
+NOTE: The _aggregation_period_ and _alias_ attributes has been removed from _kpi_definitions_ level, those are only defined on _kpi_output_tables_ level, they should be omitted from the definition.
+Attributes marked as "OPTIONAL" can be defined on _kpi_output_tables_ level, in that case if it is not redefined on _kpi_definitions_ level, the KPI definition will inherit the _kpi_output_tables_ value.
++
+[source,json]
+----
+ {
+  "on_demand": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": "REQUIRED",
+        "alias": "REQUIRED",
+        "aggregation_elements": ["REQUIRED"],
+        "exportable": "OPTIONAL",
+        "kpi_definitions": [
+          {
+            "name": "REQUIRED",
+            "expression": "REQUIRED",
+            "object_type": "REQUIRED",
+            "aggregation_type": "REQUIRED",
+            "aggregation_elements": ["OPTIONAL"],
+            "exportable": "OPTIONAL",
+            "filters": ["OPTIONAL"]
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {}
+    ]
+  },
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {}
+    ]
+  }
+}
+----
++
+IMPORTANT: if _aggregation_elements_' column names are different from the ones defined on _kpi_output_tables_ level, map them by using "<aggregation_element_from_definition> AS <aggregation_element_on_kpi_output_table_level>"
++
+eg:
++
+----
+kpi_output_tables:
+    "aggregation_elements": [
+        "guid"
+]
+----
++
+----
+kpi_definitions:
+    "aggregation_elements": [
+        "agg_column_0 AS guid"
+    ]
+----
++
+NOTE: please note the required and optional fields. optional fields are giving the opportunity of overriding attributes defined at the _kpi_output_tables_ level.
++
+If an attribute is optional on all levels, it can be omitted entirely, in which case default values would be applied. See default values in below table.
++
+.Optional attributes on all level and default values (work in progress, to be finalized)
+|===
+|Attribute  |KPI Type |Default Value
+
+|"_exportable_"
+|All types
+|false
+
+|"_data_reliability_offset_"
+|scheduled_complex, scheduled_simple
+|0
+
+| "_data_lookback_limit_"
+|scheduled_complex, scheduled_simple
+|7200
+
+|"_reexport_late_data_"
+|scheduled_complex, scheduled_simple
+|false
+
+|"_aggregation_period_" *
+|scheduled_complex, scheduled_simple
+|
+|===
+*omitting _aggregation_period_ means calculating for the entire source data
++
+eg: if the _exportable_ attribute is set to false on _kpi_output_tables_ level and in one KPI definition it is set to true on _kpi_definitions_ level, only  that specific KPI would get exported. If it is not set on either level the default value - in this case false - would get set and none of the definitions would be exported.
+
+. {empty}
+repeat step from #2 to #4 on the *scheduled_complex* and *scheduled_simple* kpi types if applicable.
++
+[source,json]
+----
+include::new-model-kpi-schema.json[]
+----
++
+IMPORTANT: for *scheduled_simple* kpis the _inp_data_category_ has been removed and can be deleted from definitions.
++
+NOTE: please note the different required and optional fields for different kpi types.
+
+== Examples
+
+Example existing KPI definitions:
+
+[source,json]
+----
+include::old-model-kpi-defs.json[]
+----
+
+Example new KPI definitions from above:
+
+[source,json]
+----
+include::new-model-kpi-defs.json[]
+----

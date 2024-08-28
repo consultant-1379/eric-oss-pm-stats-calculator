@@ -1,0 +1,32 @@
+{
+  "scheduled": true,
+  "execution_group": "dataSpace|category|simple_kpi_same_day",
+  "tables": [
+    {
+      "name": "kpi_same_day_simple_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "integer_simple_same_day",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "float_simple_same_day",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "integer_simple_same_day",
+        "float_simple_same_day"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "agg_column_1",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

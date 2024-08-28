@@ -1,0 +1,24 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "cell_guid_simple",
+        "aggregation_elements": [
+          "fact_table.nodeFDN"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "inp_data_identifier": "dataSpace|category|fact_table",
+        "kpi_definitions": [
+          {
+            "name": "sum_Integer_1440_simple",
+            "expression": "ACOS(fact_table.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          }
+        ]
+      }
+    ]
+  }
+}

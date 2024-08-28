@@ -1,0 +1,130 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+# Only include this file if both cnom and kpiData are enabled
+{{- if and (eq .Values.cnom.enabled true) (eq .Values.kpiData.enabled true) }}
+{{- $postgreSQLName := include "eric-data-document-database-pg.name" .Subcharts.kpiData }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}-cnom-pg-red
+  labels:
+{{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+{{- include "eric-oss-pm-stats-calculator.cnom-labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+data:
+  cnom-pg-red-metrics-config.json: |-
+    {
+      "namespace": "PMH_PMSC_PG_RED",
+      "dashboards": [
+        {
+          "_id": "{{ .Release.Name | replace "-" "_" }}_red_metrics",
+          "title": "PostgreSQL RED Metrics",
+          "apps": ["statusOverview"],
+          "order": 1,
+          "dashboardTreeView": {
+            "tree": [["PM Stats Calculation Handling", "PM Stats Calculator", "RED metrics"]]
+          },
+          "tiles": [
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_tup_deleted"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_tup_fetched"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_tup_inserted"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_tup_returned"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_tup_updated"
+            }
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "_id": "pg_stat_database_tup_deleted",
+          "widgetType": "timeline",
+          "title": "Number of rows deleted",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_tup_deleted" }]
+        },
+        {
+          "_id": "pg_stat_database_tup_fetched",
+          "widgetType": "timeline",
+          "title": "Number of rows fetched",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_tup_fetched" }]
+        },
+        {
+          "_id": "pg_stat_database_tup_inserted",
+          "widgetType": "timeline",
+          "title": "Number of rows inserted",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_tup_inserted" }]
+        },
+        {
+          "_id": "pg_stat_database_tup_returned",
+          "widgetType": "timeline",
+          "title": "Number of rows returned",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_tup_returned" }]
+        },
+        {
+          "_id": "pg_stat_database_tup_updated",
+          "widgetType": "timeline",
+          "title": "Number of rows updated",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_tup_updated" }]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "pg_stat_database_tup_deleted",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_tup_deleted{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_tup_fetched",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_tup_fetched{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_tup_inserted",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_tup_inserted{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_tup_returned",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_tup_returned{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_tup_updated",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_tup_updated{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        }
+      ]
+    }
+{{- end }}

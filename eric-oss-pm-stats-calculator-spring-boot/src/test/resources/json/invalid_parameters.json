@@ -1,0 +1,31 @@
+{
+  "on_demand": {
+    "parameters": [
+      {
+        "name": "definition_name",
+        "type": "STRING"
+      }
+    ],
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "rolling_aggregation",
+        "aggregation_elements": [
+          "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "rolling_sum_integer_1440",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_integer_1440_simple) + '${nonDeclaredParam}' FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "filters": [
+              "kpi_db://kpi_sector_60.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

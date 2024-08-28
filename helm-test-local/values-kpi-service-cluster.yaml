@@ -1,0 +1,46 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+probes:
+  calculator:
+    livenessProbe:
+      initialDelaySeconds: 60
+      periodSeconds: 10
+    readinessProbe:
+      initialDelaySeconds: 60
+      periodSeconds: 10
+
+kpiData:
+  service:
+    endpoints :
+      postgres :
+        tls :
+          enforced : optional
+  metrics:
+    enabled: false
+  log:
+    streamingMethod: "indirect"
+
+spark:
+  partitionTableRead: true
+  indexedNumericPartitionColumns: "aggregation_begin_time"
+
+#Additional values for upgrade
+maxLookBackPeriod: "ALL"
+kpiExecutionPeriod: "0 */4 * * * ? *"
+
+schemaRegistry:
+  url: schemaregistry
+
+log:
+  streamingMethod: "indirect"
+
+dst:
+  enabled: false

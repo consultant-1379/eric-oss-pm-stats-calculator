@@ -1,0 +1,28 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+{{- $global := fromJson (include "eric-oss-pm-stats-calculator.global" .) -}}
+{{- if and $global.networkPolicy .Values.networkPolicy }}
+  {{- if .Values.networkPolicy.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}-default-deny-ingress
+  labels:
+    {{- include "eric-oss-pm-stats-calculator.user-labels" . | indent 4 }}
+    {{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+  annotations:
+    {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+  {{- end }}
+{{- end }}

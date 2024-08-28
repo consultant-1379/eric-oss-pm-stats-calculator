@@ -1,0 +1,40 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+lowercaseOutputName: true
+rules:
+  # Obsolete metric - name translation from value to count
+  - pattern: "pm_stats_calculator_scheduler<name=ONGOING_CALCULATIONS, type=gauges><>Number"
+    name: pm_stats_calculator_scheduler_ongoing_calculations_count
+    type: GAUGE
+
+  - pattern: "pm_stats_calculator_scheduler<name=persisted_calculations_([^.]+), type=gauges><>Number"
+    name: pm_stats_calculator_scheduler_persisted_calculations_count
+    type: GAUGE
+    labels:
+      state: "$1"
+
+  - pattern: "pm_stats_calculator_spark<name=([^.]+)\\.([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})(?:\\.([^.]+))?\\.([^.]+), type=gauges><>Value"
+    name: pm_stats_calculator_spark_$4_value
+    type: GAUGE
+    labels:
+      execution_group: "$1"
+      calculation_id: "$2"
+      calculation_status: "$3"
+
+  - pattern: "pm_stats_calculator_spark<name=([^.]+)\\.([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})(?:\\.([^.]+))?\\.([^.]+), type=gauges><>Number"
+    name: pm_stats_calculator_spark_$4_number
+    type: GAUGE
+    labels:
+      execution_group: "$1"
+      calculation_id: "$2"
+      calculation_status: "$3"
+
+  - pattern: ".*"

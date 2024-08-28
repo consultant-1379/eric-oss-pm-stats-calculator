@@ -1,0 +1,26 @@
+{
+  "scheduled": true,
+  "execution_group": "dataSpace|category|fact_table",
+  "tables": [
+    {
+      "name": "kpi_cell_guid_simple_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "sum_Integer_1440_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "sum_integer_arrayindex_1440_simple",
+        "sum_Integer_1440_simple"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

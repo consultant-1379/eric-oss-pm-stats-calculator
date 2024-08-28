@@ -1,0 +1,396 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "simple_example",
+        "aggregation_elements": [
+          "SampleCellFDD_1.nodeFDN",
+          "SampleCellFDD_1.moFdn"
+        ],
+        "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1",
+        "kpi_definitions": [
+          {
+            "name": "sum_float_simple2_hourly",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_integer_simple1_hourly",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter3.counterValue",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_integer_simple2_hourly",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter4.counterValue",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_integer_simple3_hourly",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter5.counterValue",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_integer_simple4_hourly",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter6.counterValue",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_elements_array_simple",
+            "expression": "SampleCellFDD_1.pmCounters.pdfCounter.counterValue[0] + SampleCellFDD_1.pmCounters.pdfCounter.counterValue[2] + SampleCellFDD_1.pmCounters.pdfCounter.counterValue[4]",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": true
+          },
+          {
+            "name": "array_max_simple",
+            "expression": "ARRAY_MAX(SampleCellFDD_1.pmCounters.pdfCounter.counterValue)",
+            "object_type": "INTEGER",
+            "aggregation_type": "MAX",
+            "exportable": true
+          },
+          {
+            "name": "array_size_simple",
+            "expression": "ARRAY_SIZE(SampleCellFDD_1.pmCounters.pdfCounter.counterValue)",
+            "object_type": "INTEGER",
+            "aggregation_type": "MAX",
+            "exportable": true
+          },
+          {
+            "name": "boolean_example",
+            "expression": "CASE WHEN SUM(SampleCellFDD_1.pmCounters.exampleCounter.counterValue) > 7 THEN true ELSE false END",
+            "object_type": "BOOLEAN",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "simple_fdd_tdd",
+        "aggregation_elements": [
+          "SampleCellFDD_1.nodeFDN",
+          "SampleCellFDD_1.moFdn"
+        ],
+        "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1",
+        "kpi_definitions": [
+          {
+            "name": "sum_FDD_simple",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter1.counterValue + SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_TDD_simple",
+            "expression": "SampleCellTDD_1.pmCounters.exampleCounter1.counterValue + SampleCellTDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellTDD_1",
+            "aggregation_elements": [
+              "SampleCellTDD_1.nodeFDN",
+              "SampleCellTDD_1.moFdn"
+            ]
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "simple_example",
+        "aggregation_elements": [
+          "SampleCellFDD_1.nodeFDN",
+          "SampleCellFDD_1.moFdn"
+        ],
+        "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1",
+        "kpi_definitions": [
+          {
+            "name": "sum_float_simple_daily",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "max_float_simple_daily",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "MAX"
+          },
+          {
+            "name": "numerator",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter1.counterValue + SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "denominator",
+            "expression": "SampleCellFDD_1.pmCounters.exampleCounter3.counterValue + SampleCellFDD_1.pmCounters.exampleCounter4.counterValue",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "single_agg_element",
+        "aggregation_elements": [
+          "kpi_simple_example_60.nodeFDN"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "node_aggregated_kpi",
+            "expression": "kpi_simple_example_60.sum_float_simple_hourly FROM kpi_db://kpi_simple_example_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "execution_group": "complex_execution_group1"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "complex_example",
+        "aggregation_elements": [
+          "kpi_simple_example_60.nodeFDN",
+          "kpi_simple_example_60.moFdn"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "monitoring_kpi",
+            "expression": "100 * kpi_simple_example_1440.numerator/ NULLIF(kpi_simple_example_1440.denominator, 0) FROM kpi_db://kpi_simple_example_1440",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group1",
+            "aggregation_elements": [
+              "kpi_simple_example_1440.nodeFDN",
+              "kpi_simple_example_1440.moFdn"
+            ]
+          },
+          {
+            "name": "threshold_exceeded_time",
+            "expression": "kpi_simple_example_60.aggregation_begin_time FROM kpi_db://kpi_simple_example_60 WHERE kpi_simple_example_60.sum_float_simple_hourly > 6",
+            "object_type": "TIMESTAMP",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group2"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "complex_table_a",
+        "aggregation_elements": [
+          "kpi_simple_example_60.nodeFDN",
+          "kpi_simple_example_60.moFdn"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "complex1",
+            "expression": "kpi_simple_example_60.sum_float_simple_hourly / NULLIF(kpi_simple_example_60.sum_float_simple2_hourly, 0) FROM kpi_db://kpi_simple_example_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group1"
+          },
+          {
+            "name": "complex2",
+            "expression": "kpi_simple_example_60.sum_integer_simple1_hourly / NULLIF(kpi_simple_example_60.sum_integer_simple2_hourly, 0) FROM kpi_db://kpi_simple_example_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group1"
+          },
+          {
+            "name": "complex3",
+            "expression": "kpi_simple_example_60.sum_integer_simple3_hourly / NULLIF(kpi_simple_example_60.sum_integer_simple4_hourly, 0) FROM kpi_db://kpi_simple_example_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group1"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "complex_table_b",
+        "aggregation_elements": [
+          "kpi_complex_table_a_60.nodeFDN",
+          "kpi_complex_table_a_60.moFdn"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "complex4",
+            "expression": "complex_table_a.complex1 * complex_table_a.complex2 FROM kpi_inmemory://complex_table_a",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group1",
+            "aggregation_elements": [
+              "complex_table_a.nodeFDN",
+              "complex_table_a.moFdn"
+            ]
+          },
+          {
+            "name": "complex5",
+            "expression": "kpi_complex_table_a_60.complex1 * kpi_complex_table_a_60.complex3 FROM kpi_db://kpi_complex_table_a_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group2"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "complex_example",
+        "aggregation_elements": [
+          "kpi_simple_fdd_tdd_60.nodeFDN",
+          "kpi_simple_fdd_tdd_60.moFdn"
+        ],
+        "kpi_definitions": [
+          {
+            "name": "fdd_or_tdd_kpi",
+            "expression": "CASE WHEN SUM(kpi_simple_fdd_tdd_60.sum_FDD_simple) IS NULL THEN SUM(kpi_simple_fdd_tdd_60.sum_TDD_simple) ELSE SUM(kpi_simple_fdd_tdd_60.sum_FDD_simple) END FROM kpi_db://kpi_simple_fdd_tdd_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "execution_group": "complex_execution_group1"
+          }
+        ]
+      }
+    ]
+  },
+    "on_demand": {
+      "parameters": [
+        {
+          "name": "param.label",
+          "type": "STRING"
+        },
+        {
+          "name": "threshold_value",
+          "type": "INTEGER"
+        },
+        {
+          "name": "date_for_filter_sdk",
+          "type": "STRING"
+        },
+        {
+          "name": "param.mo_group_to_filter",
+          "type": "STRING"
+        }
+      ],
+      "tabular_parameters": [
+        {
+          "name": "mo_data",
+          "columns": [
+            {
+              "name": "nodeFDN",
+              "type": "STRING"
+            },
+            {
+              "name": "moFdn",
+              "type": "STRING"
+            },
+            {
+              "name": "mo_property",
+              "type": "INTEGER"
+            }
+          ]
+        },
+        {
+          "name": "data_for_grouping",
+          "columns": [
+            {
+              "name": "nodeFDN",
+              "type": "STRING"
+            },
+            {
+              "name": "moFdn",
+              "type": "STRING"
+            },
+            {
+              "name": "mo_group",
+              "type": "STRING"
+            }
+          ]
+        }
+      ],
+      "kpi_output_tables": [
+        {
+          "aggregation_period": 1440,
+          "alias": "ondemand_example1",
+          "aggregation_elements": [
+            "kpi_simple_example_60.nodeFDN",
+            "kpi_simple_example_60.moFdn"
+          ],
+          "kpi_definitions": [
+            {
+              "name": "threshold_exceeded",
+              "expression": "CASE WHEN SUM(kpi_simple_example_60.sum_float_simple) > '${threshold_value}' THEN true ELSE false END FROM kpi_db://kpi_simple_example_60",
+              "object_type": "BOOLEAN",
+              "aggregation_type": "FIRST",
+              "filters": [
+                "kpi_db://kpi_simple_example_60.TO_DATE(aggregation_begin_time) > '${date_for_filter_sdk}'"
+              ]
+            }
+          ]
+        },
+        {
+          "aggregation_period": 1440,
+          "alias": "ondemand_example2",
+          "aggregation_elements": [
+            "kpi_simple_example_60.nodeFDN",
+            "'${param.label}' AS label"
+          ],
+          "kpi_definitions": [
+            {
+              "name": "agg_element_parameter_ondemand",
+              "expression": "kpi_simple_example_60.sum_float_simple FROM kpi_db://kpi_simple_example_60",
+              "object_type": "FLOAT",
+              "aggregation_type": "FIRST",
+              "filters": [
+                "kpi_db://kpi_simple_example_60.TO_DATE(aggregation_begin_time) > '${date_for_filter_sdk}'"
+              ]
+            }
+          ]
+        },
+        {
+          "aggregation_period": 60,
+          "alias": "ondemand_example3",
+          "aggregation_elements": [
+            "kpi_simple_example_60.nodeFDN",
+            "kpi_simple_example_60.moFdn"
+          ],
+          "kpi_definitions": [
+            {
+              "name": "tabular_expression_ondemand",
+              "expression": "kpi_simple_example_60.sum_float_simple / NULLIF(mo_data.mo_property, 0) FROM kpi_db://kpi_simple_example_60 INNER JOIN tabular_parameters://mo_data ON kpi_simple_example_60.nodeFDN = mo_data.nodeFDN",
+              "object_type": "FLOAT",
+              "aggregation_type": "FIRST",
+              "filters": [
+                "kpi_db://kpi_simple_example_60.TO_DATE(aggregation_begin_time) > '${date_for_filter_sdk}'"
+              ]
+            }
+          ]
+        },
+        {
+          "aggregation_period": 60,
+          "alias": "ondemand_example4",
+          "aggregation_elements": [
+            "kpi_simple_example_60.nodeFDN",
+            "data_for_grouping.moFdn"
+          ],
+          "kpi_definitions": [
+            {
+              "name": "tabular_filter_ondemand",
+              "expression": "kpi_simple_example_60.sum_float_simple * 100 FROM kpi_db://kpi_simple_example_60 INNER JOIN tabular_parameters://data_for_grouping ON kpi_simple_example_60.nodeFDN = data_for_grouping.nodeFDN",
+              "object_type": "FLOAT",
+              "aggregation_type": "FIRST",
+              "filters": [
+                "kpi_db://kpi_simple_example_60.TO_DATE(aggregation_begin_time) > '${date_for_filter_sdk}'",
+                "tabular_parameters://data_for_grouping.mo_group = '${param.mo_group_to_filter}'"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+}

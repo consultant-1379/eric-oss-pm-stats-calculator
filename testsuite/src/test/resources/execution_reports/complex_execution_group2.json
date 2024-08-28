@@ -1,0 +1,26 @@
+{
+  "scheduled": true,
+  "execution_group": "complex_execution_group2",
+  "tables": [
+    {
+      "name": "kpi_complex_example_1440",
+      "aggregation_period": 1440,
+      "kpis": [
+        {
+          "name": "max_1440_complex",
+          "reexport_late_data": false,
+          "exportable": false
+        }
+      ],
+      "list_of_kpis": [
+        "max_1440_complex"
+      ],
+      "list_of_dimensions": [
+        "nodeFDN",
+        "moFdn",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

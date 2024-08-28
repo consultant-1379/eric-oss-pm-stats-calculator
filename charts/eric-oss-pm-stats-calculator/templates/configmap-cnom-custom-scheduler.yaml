@@ -1,0 +1,255 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+{{- if .Values.cnom.enabled }}
+{{- $calculatorName := include "eric-oss-pm-stats-calculator.name" . }}
+{{- $podLabel := include "eric-oss-pm-stats-calculator.cnom-pod-label" . }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}-cnom-custom-scheduler-config
+  labels:
+{{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+{{- include "eric-oss-pm-stats-calculator.cnom-labels" . | nindent 4 }}
+  annotations:
+{{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+data:
+  cnom-custom-scheduler-metrics-config.json: |-
+    {
+      "namespace": "PMH_PMSC_CUSTOM_SCHEDULER_{{ $calculatorName | replace "-" "_" | upper }}",
+      "dashboards": [
+        {
+          "_id": "{{ $calculatorName | replace "-" "_" }}_custom_scheduler_metrics",
+          "title": "PM Stats Calculator CUSTOM Scheduler Metrics",
+          "apps": ["statusOverview"],
+          "order": 3,
+          "dashboardTreeView": {
+            "tree": [["PM Stats Calculation Handling", "PM Stats Calculator", "Custom metrics", "PMSC-Scheduler"]]
+          },
+          "tiles": [
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_scheduled_total_calculation_queue_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_persisted_calculations_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_persisted_calculation_results_number"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_ongoing_calculations_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_current_on_demand_calculation_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_on_demand_calculation_queue_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_on_demand_calculation_queue_remaining_weight_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_scheduled_complex_calculation_queue_count"
+            },
+            {
+              "xSize": 5,
+              "widget": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_remaining_weight_count"
+            }
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_total_calculation_queue_count",
+          "widgetType": "timeline",
+          "title": "Total calculation queue count (including scheduled and on demand)",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_scheduled_total_calculation_queue_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_persisted_calculations_count",
+          "widgetType": "donut",
+          "title": "Calculation states in the kpi database (past 15 days)",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_persisted_calculations_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_persisted_calculation_results_number",
+          "title": "Calculated KPI result count",
+          "widgetType": "timeline",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_persisted_calculation_results_number"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_ongoing_calculations_count",
+          "widgetType": "timeline",
+          "title": "Ongoing calculation count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_ongoing_calculations_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_current_on_demand_calculation_count",
+          "widgetType": "timeline",
+          "title": "On demand running calculation count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_current_on_demand_calculation_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_on_demand_calculation_queue_count",
+          "widgetType": "timeline",
+          "title": "On demand calculation queue count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_on_demand_calculation_queue_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_on_demand_calculation_queue_remaining_weight_count",
+          "widgetType": "timeline",
+          "title": "On demand remaining calculation weight count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_on_demand_calculation_queue_remaining_weight_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_count",
+          "widgetType": "timeline",
+          "title": "Scheduled simple calculation queue count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_complex_calculation_queue_count",
+          "widgetType": "timeline",
+          "title": "Scheduled complex calculation queue count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_scheduled_complex_calculation_queue_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_remaining_weight_count",
+          "widgetType": "timeline",
+          "title": "Remaining simple calculation queue weight count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_remaining_weight_count"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_total_calculation_queue_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*', app_kubernetes_io_instance='{{ .Release.Name }}'} + pm_stats_calculator_scheduler_scheduled_complex_calculation_queue_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*', app_kubernetes_io_instance='{{ .Release.Name }}'} + pm_stats_calculator_scheduler_on_demand_calculation_queue_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*', app_kubernetes_io_instance='{{ .Release.Name }}'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_persisted_calculations_count",
+          "sourceType": "prometheus",
+          "query": "sum(pm_stats_calculator_scheduler_persisted_calculations_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*', app_kubernetes_io_instance='{{ .Release.Name }}'}) by (state)",
+          "splitByLabelName": "state"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_persisted_calculation_results_number",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_persisted_calculation_results_number{app='{{ $calculatorName }}', job=~'kubernetes-pods.*', app_kubernetes_io_instance='{{ .Release.Name }}'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_ongoing_calculations_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_ongoing_calculations_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*', app_kubernetes_io_instance='{{ .Release.Name }}'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_current_on_demand_calculation_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_current_on_demand_calculation_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_on_demand_calculation_queue_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_on_demand_calculation_queue_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_on_demand_calculation_queue_remaining_weight_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_on_demand_calculation_queue_remaining_weight_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_complex_calculation_queue_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_scheduled_complex_calculation_queue_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_remaining_weight_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_scheduler_scheduled_simple_calculation_queue_remaining_weight_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        }
+      ]
+    }
+{{- end }}

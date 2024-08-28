@@ -1,0 +1,13 @@
+{
+  "kpi_names": [
+    "fdn_concat_edge",
+    "fdn_sum_agg",
+    "on_demand_fdn_filter"
+  ],
+  "parameters": [
+    {
+      "name": "param.filter",
+      "value": "ManagedElement=LTE01dg2ERBS00001,SampleCellFDD=2"
+    }
+  ]
+}

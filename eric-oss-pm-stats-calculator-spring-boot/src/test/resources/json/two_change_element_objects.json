@@ -1,0 +1,64 @@
+[
+  {
+    "executionId": "RET_3_20180731160432",
+    "sourceOfChange": "alg_RET_3",
+    "status": "PROPOSED",
+    "modifiedBy": "alg_RET_3",
+    "lastModified": 20180727114500,
+    "proposedChanges": [
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 4,
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "12.3"
+          },
+          {
+            "parameterName": "electricalAntennaTilt2",
+            "parameterValue": "10.3"
+          }
+        ]
+      },
+      {
+        "ossId": 1,
+        "objectType": "ret",
+        "nodeType": "radioNode",
+        "guid": 5,
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "4.0"
+          },
+          {
+            "parameterName": "electricalAntennaTilt2",
+            "parameterValue": "5.0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "executionId": "RET_1_20180731160432",
+    "sourceOfChange": "alg_RET_1",
+    "status": "PROPOSED",
+    "modifiedBy": "alg_RET_1",
+    "lastModified": 20180512111200,
+    "proposedChanges": [
+      {
+        "ossId": 3,
+        "objectType": "ret",
+        "nodeType": "erbs",
+        "guid": 1,
+        "parameterChanges": [
+          {
+            "parameterName": "electricalAntennaTilt",
+            "parameterValue": "15.3"
+          }
+        ]
+      }
+    ]
+  }
+]

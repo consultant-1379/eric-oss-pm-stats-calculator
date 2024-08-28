@@ -1,0 +1,1114 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "alias": "simple",
+        "aggregation_period": 60,
+        "retention_period_in_days": 6,
+        "kpi_definitions": [
+          {
+            "name": "integer_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "a_new_very_simple_kpi.agg_column_0",
+              "a_new_very_simple_kpi.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 180,
+            "inp_data_identifier": "dataSpace|category|a_new_very_simple_kpi"
+          },
+          {
+            "name": "float_array_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.floatArrayColumn0)",
+            "object_type": "FLOAT[5]",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "a_new_very_simple_kpi.agg_column_0",
+              "a_new_very_simple_kpi.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 180,
+            "inp_data_identifier": "dataSpace|category|a_new_very_simple_kpi"
+          },
+          {
+            "name": "integer_array_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.integerArrayColumn0)",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "a_new_very_simple_kpi.agg_column_0",
+              "a_new_very_simple_kpi.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 180,
+            "inp_data_identifier": "dataSpace|category|a_new_very_simple_kpi"
+          },
+          {
+            "name": "float_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.floatColumn0)",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "a_new_very_simple_kpi.agg_column_0",
+              "a_new_very_simple_kpi.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 180,
+            "inp_data_identifier": "dataSpace|category|a_new_very_simple_kpi"
+          }
+        ]
+      },
+      {
+        "alias": "relation_simple",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_long_single_counter",
+            "expression": "SampleRelation_1.pmCounters.pmExampleSingleCounter.counterValue",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleRelation_1.nodeFDN",
+              "SampleRelation_1.moFdn"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleRelation_1"
+          }
+        ]
+      },
+      {
+        "alias": "simple_example",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_float_simple",
+            "expression": "SUM(SampleCellFDD_1.pmCounters.exampleCounter.counterValue)",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          },
+          {
+            "name": "sum_float_simple_hourly",
+            "expression": "SUM(SampleCellFDD_1.pmCounters.exampleCounter.counterValue)",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          },
+          {
+            "name": "max_float_simple_hourly",
+            "expression": "MAX(SampleCellFDD_1.pmCounters.exampleCounter.counterValue)",
+            "object_type": "FLOAT",
+            "aggregation_type": "MAX",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          },
+          {
+            "name": "sum_array_simple",
+            "expression": "aggregate(SampleCellFDD_1.pmCounters.pdfCounter.counterValue, 0, (acc, x) -> acc + x)",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          }
+        ]
+      },
+      {
+        "alias": "example_table",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "kpi_sum1",
+            "expression": "SUM(SampleCellFDD_1.pmCounters.pmExampleCounter1.counterValue)",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          },
+          {
+            "name": "kpi_sum2",
+            "expression": "SUM(SampleCellFDD_1.pmCounters.pmExampleCounter2.counterValue)",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleCellFDD_1.nodeFDN",
+              "SampleCellFDD_1.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1"
+          }
+        ]
+      },
+      {
+        "alias": "simple_fdn_cell",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "simple_fdn_expr",
+            "expression": "FDN_PARSE(SampleRelation_1.moFdn,\"SampleCellFDD\")",
+            "object_type": "STRING",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "SampleRelation_1.nodeFDN",
+              "SampleRelation_1.moFdn"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleRelation_1"
+          }
+        ]
+      },
+      {
+        "alias": "predefined_simple",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "array_sum_simple",
+            "expression": "SampleRelation_1.pmCounters.pmExamplePdfCounter.counterValue",
+            "object_type": "INTEGER[]",
+            "aggregation_type": "ARRAY_INDEX_SUM_INTEGER",
+            "aggregation_elements": [
+              "SampleRelation_1.nodeFDN",
+              "SampleRelation_1.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleRelation_1"
+          },
+          {
+            "name": "relation_level_agg",
+            "expression": "SampleRelation_1.pmCounters.pmExampleSingleCounter.counterValue",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "SampleRelation_1.nodeFDN",
+              "SampleRelation_1.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "inp_data_identifier": "4G|PM_COUNTERS|SampleRelation_1"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "alias": "complex",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_60_complex",
+            "expression": "SUM(kpi_simple_60.integer_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "kpi_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX1"
+          },
+          {
+            "name": "sum_float_60_complex",
+            "expression": "SUM(kpi_simple_60.float_simple) from kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "kpi_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX1"
+          },
+          {
+            "name": "integer_array_complex",
+            "expression": "FIRST(TRANSFORM(kpi_simple_60.integer_array_simple , x -> x * kpi_simple_60.integer_simple)) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "kpi_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX2"
+          },
+          {
+            "name": "sum_float_count_60",
+            "expression": "COUNT(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "kpi_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX1"
+          },
+          {
+            "name": "sum_integer_float_complex",
+            "expression": "SUM(kpi_simple_60.integer_simple) + SUM(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "kpi_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [
+              "kpi_db://kpi_simple_60.aggregation_begin_time BETWEEN (date_trunc('hour', TO_TIMESTAMP('${param.start_date_time}')) - interval 1 day) and date_trunc('hour', TO_TIMESTAMP('${param.end_date_time}'))"
+            ],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX1"
+          }
+        ]
+      },
+      {
+        "alias": "complex",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_1440_complex_non_triggered",
+            "expression": "SUM(kpi_same_day_simple_60.integer_simple_same_day) FROM kpi_db://kpi_same_day_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_same_day_simple_60.agg_column_0",
+              "kpi_same_day_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX3"
+          },
+          {
+            "name": "sum_float_1440_complex",
+            "expression": "SUM(kpi_same_day_simple_60.float_simple_same_day) FROM kpi_db://kpi_same_day_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_same_day_simple_60.agg_column_0",
+              "kpi_same_day_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX4"
+          }
+        ]
+      },
+      {
+        "alias": "complex2",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_integer_arrayindex_complex",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) + SUM(kpi_cell_guid_simple_1440.sum_integer_arrayindex_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX4"
+          }
+        ]
+      },
+      {
+        "alias": "complex",
+        "aggregation_period": -1,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_complex",
+            "expression": "SUM(kpi_same_day_simple_60.integer_simple_same_day) FROM kpi_db://kpi_same_day_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_same_day_simple_60.agg_column_0",
+              "kpi_same_day_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "COMPLEX5"
+          }
+        ]
+      },
+      {
+        "alias": "limited_complex",
+        "aggregation_period": 15,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_complex_15",
+            "expression": "FIRST(kpi_limited_15.sum_integer_15) * FIRST(kpi_limited_15.count_integer_15) FROM kpi_db://kpi_limited_15",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_limited_15.ossID"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "LIMITED_COMPLEX"
+          },
+          {
+            "name": "copy_array_15",
+            "expression": "FIRST(kpi_limited_15.transform_array_15) FROM kpi_db://kpi_limited_15",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_limited_15.ossID"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "LIMITED_COMPLEX"
+          }
+        ]
+      },
+      {
+        "alias": "limited_complex_dependent",
+        "aggregation_period": 15,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "transform_complex_15",
+            "expression": "FIRST(TRANSFORM(kpi_limited_complex_15.copy_array_15, x -> x * kpi_limited_complex_15.first_integer_complex_15)) FROM kpi_db://kpi_limited_complex_15",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_limited_complex_15.ossID"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 0,
+            "data_lookback_limit": 7200,
+            "execution_group": "LIMITED_COMPLEX2"
+          }
+        ]
+      },
+      {
+        "alias": "example_table",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "kpi_div",
+            "expression": "kpi_example_table_60.kpi_sum1 / kpi_example_table_60.kpi_sum2 FROM kpi_db://kpi_example_table_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_example_table_60.nodeFDN",
+              "kpi_example_table_60.moFdn"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "execution_group": "complex_execution_group1"
+          }
+        ]
+      },
+      {
+        "alias": "complex_example",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "max_1440_complex",
+            "expression": "MAX(kpi_simple_example_60.max_float_simple_hourly) FROM kpi_db://kpi_simple_example_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "MAX",
+            "aggregation_elements": [
+              "kpi_simple_example_60.nodeFDN",
+              "kpi_simple_example_60.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "execution_group": "complex_execution_group2"
+          }
+        ]
+      },
+      {
+        "alias": "predefined_complex",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "median_complex_hourly",
+            "expression": "MEDIAN_OF_VALUES(kpi_predefined_simple_60.array_sum_simple) FROM kpi_db://kpi_predefined_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_predefined_simple_60.nodeFDN",
+              "kpi_predefined_simple_60.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "execution_group": "sdk_complex_group3"
+          },
+          {
+            "name": "weighted_average_complex_hourly",
+            "expression": "CALCULATE_WEIGHTED_AVERAGE(kpi_predefined_simple_60.array_sum_simple, array(1.5, 0.1, 2.0, 1.0, 0.9, 0.5, 1.5, 0.5)) FROM kpi_db://kpi_predefined_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_predefined_simple_60.nodeFDN",
+              "kpi_predefined_simple_60.moFdn"
+            ],
+            "exportable": false,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "execution_group": "sdk_complex_group3"
+          }
+        ]
+      },
+      {
+        "alias": "complex_fdn",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "cell_level_agg",
+            "expression": "kpi_predefined_simple_60.relation_level_agg FROM kpi_db://kpi_predefined_simple_60",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_predefined_simple_60.nodeFDN",
+              "FDN_PARSE(kpi_predefined_simple_60.moFdn,\"SampleCellFDD\") AS fdn_parse_mo"
+            ],
+            "exportable": true,
+            "filters": [],
+            "reexport_late_data": false,
+            "data_reliability_offset": 15,
+            "data_lookback_limit": 7200,
+            "execution_group": "sdk_complex_group3"
+          }
+        ]
+      }
+    ]
+  },
+  "on_demand": {
+    "parameters": [
+      {
+        "name": "param.execution_id",
+        "type": "STRING"
+      },
+      {
+        "name": "param.date_for_filter",
+        "type": "STRING"
+      },
+      {
+        "name": "percentile_value",
+        "type": "INTEGER"
+      },
+      {
+        "name": "filter_param",
+        "type": "INTEGER"
+      },
+      {
+        "name": "param.fdn_filter",
+        "type": "STRING"
+      },
+      {
+        "name": "param.filter",
+        "type": "STRING"
+      },
+      {
+        "name": "param.label",
+        "type": "STRING"
+      },
+      {
+        "name": "threshold_value",
+        "type": "INTEGER"
+      },
+      {
+        "name": "date_for_filter_sdk",
+        "type": "STRING"
+      },
+      {
+        "name": "param.mo_group_to_filter",
+        "type": "STRING"
+      }
+    ],
+    "tabular_parameters": [
+      {
+        "name": "cell_configuration_test",
+        "columns": [
+          {
+            "name": "nodeFDN",
+            "type": "STRING"
+          },
+          {
+            "name": "moFdn",
+            "type": "STRING"
+          },
+          {
+            "name": "execution_id",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "name": "cell_configuration_test_2",
+        "columns": [
+          {
+            "name": "nodeFDN",
+            "type": "STRING"
+          },
+          {
+            "name": "moFdn",
+            "type": "STRING"
+          },
+          {
+            "name": "execution_id",
+            "type": "STRING"
+          },
+          {
+            "name": "integer_property",
+            "type": "INTEGER"
+          }
+        ]
+      },
+      {
+        "name": "udf_test",
+        "columns": [
+          {
+            "name": "agg_column_0",
+            "type": "STRING"
+          },
+          {
+            "name": "integer",
+            "type": "INTEGER"
+          }
+        ]
+      },
+      {
+        "name": "mo_data",
+        "columns": [
+          {
+            "name": "nodeFDN",
+            "type": "STRING"
+          },
+          {
+            "name": "moFdn",
+            "type": "STRING"
+          },
+          {
+            "name": "mo_property",
+            "type": "INTEGER"
+          }
+        ]
+      },
+      {
+        "name": "data_for_grouping",
+        "columns": [
+          {
+            "name": "nodeFDN",
+            "type": "STRING"
+          },
+          {
+            "name": "moFdn",
+            "type": "STRING"
+          },
+          {
+            "name": "mo_group",
+            "type": "STRING"
+          }
+        ]
+      }
+    ],
+    "kpi_output_tables": [
+      {
+        "alias": "rolling_aggregation",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "rolling_sum_integer_1440",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+            ],
+            "exportable": true,
+            "filters": []
+          },
+          {
+            "name": "rolling_max_integer_1440",
+            "expression": "MAX(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "MAX",
+            "aggregation_elements": [
+              "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+            ],
+            "exportable": false,
+            "filters": []
+          },
+          {
+            "name": "first_float_operator_1440_post_aggregation",
+            "expression": "FIRST(rolling_aggregation.rolling_sum_integer_1440) / FIRST(rolling_aggregation.rolling_max_integer_1440) FROM kpi_post_agg://rolling_aggregation",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "rolling_aggregation.agg_column_0"
+            ],
+            "exportable": false,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "execution_id",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "executionid_sum_integer_1440",
+            "expression": "SUM(kpi_simple_60.integer_simple) from kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "'${param.execution_id}' AS execution_id"
+            ],
+            "exportable": true,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "cell_guid",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_aggregate_slice_1440",
+            "expression": "FIRST(aggregate(slice( kpi_simple_60.integer_array_simple, 1, 3), 0, (acc, x) -> acc + x)) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0"
+            ],
+            "exportable": false,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "cell_guid",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_operator_60_stage2",
+            "expression": "FIRST(kpi_simple_60.integer_simple) / FIRST(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0"
+            ],
+            "exportable": false,
+            "filters": []
+          },
+          {
+            "name": "first_integer_operator_60_stage3",
+            "expression": "FIRST(cell_guid.first_integer_operator_60_stage2) / 10 FROM kpi_inmemory://cell_guid",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "cell_guid.agg_column_0"
+            ],
+            "exportable": false,
+            "filters": []
+          },
+          {
+            "name": "first_integer_operator_60_stage4",
+            "expression": "FIRST(cell_guid.first_integer_operator_60_stage2) - FIRST(cell_guid.first_integer_operator_60_stage3) FROM kpi_inmemory://cell_guid",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "cell_guid.agg_column_0"
+            ],
+            "exportable": false,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "relation_guid_source_guid_target_guid",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "first_float_divideby0_60",
+            "expression": "FIRST(kpi_simple_60.integer_simple) / NULLIF(0,0) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0",
+              "kpi_simple_60.agg_column_1"
+            ],
+            "exportable": true,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "cell_sector",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_dim_enrich_1440",
+            "expression": "FIRST(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440 INNER JOIN tabular_parameters://cell_configuration_test ON kpi_cell_guid_simple_1440.nodeFDN = cell_configuration_test.nodeFDN",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_cell_guid_simple_1440.nodeFDN",
+              "cell_configuration_test.moFdn",
+              "cell_configuration_test.execution_id"
+            ],
+            "exportable": false,
+            "filters": [
+              "kpi_db://kpi_cell_guid_simple_1440.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'",
+              "tabular_parameters://cell_configuration_test.execution_id = '${param.execution_id}'"
+            ]
+          },
+          {
+            "name": "first_float_dim_enrich_1440",
+            "expression": "FIRST(kpi_cell_guid_simple_1440.sum_integer_arrayindex_1440_simple / cell_configuration_test_2.integer_property) FROM kpi_db://kpi_cell_guid_simple_1440 INNER JOIN tabular_parameters://cell_configuration_test_2 ON kpi_cell_guid_simple_1440.nodeFDN = cell_configuration_test_2.nodeFDN",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_cell_guid_simple_1440.nodeFDN",
+              "cell_configuration_test_2.moFdn",
+              "cell_configuration_test_2.execution_id"
+            ],
+            "exportable": false,
+            "filters": [
+              "kpi_db://kpi_cell_guid_simple_1440.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'",
+              "tabular_parameters://cell_configuration_test_2.execution_id = '${param.execution_id}'"
+            ]
+          }
+        ]
+      },
+      {
+        "alias": "sector",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "max_integer_1440_kpidb",
+            "expression": "MAX(kpi_sector_60.sum_integer_60_join_kpidb) FROM kpi_db://kpi_sector_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "MAX",
+            "aggregation_elements": [
+              "kpi_sector_60.agg_column_0"
+            ],
+            "exportable": true,
+            "filters": [
+              "kpi_db://kpi_sector_60.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'"
+            ]
+          }
+        ]
+      },
+      {
+        "alias": "sector",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_60_join_kpidb",
+            "expression": "SUM(kpi_simple_60.integer_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0"
+            ],
+            "exportable": true,
+            "filters": [
+              "kpi_db://kpi_simple_60.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'"
+            ]
+          }
+        ]
+      },
+      {
+        "alias": "parameter_types",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "udf_param",
+            "expression": "FIRST(CALCULATE_PERCENTILE_VALUE(kpi_simple_60.integer_array_simple, '${percentile_value}')) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0"
+            ],
+            "exportable": true,
+            "filters": [
+              "kpi_db://kpi_simple_60.agg_column_0 < '${filter_param}'"
+            ]
+          },
+          {
+            "name": "udf_tabular_param",
+            "expression": "FIRST(ADD_INTEGER_TO_ARRAY_WITH_LIMIT(kpi_simple_60.integer_array_simple, udf_test.integer, 10), true) FROM kpi_db://kpi_simple_60 INNER JOIN tabular_parameters://udf_test ON kpi_simple_60.agg_column_0 = udf_test.agg_column_0",
+            "object_type": "INTEGER[10]",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0"
+            ],
+            "exportable": true,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "limited_ondemand",
+        "aggregation_period": 15,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "aggregate_array_15",
+            "expression": "FIRST(aggregate(kpi_limited_15.transform_array_15, 0, (acc,x) -> acc + x)) FROM kpi_db://kpi_limited_15",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_limited_15.ossID"
+            ],
+            "exportable": true,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "ondemand_fdn_edge",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "fdn_concat_edge",
+            "expression": "CONCAT(FDN_PARSE(kpi_relation_simple_60.nodeFDN, \"SubNetwork\"), ',', FDN_PARSE(kpi_relation_simple_60.moFdn, \"SampleCellFDD\")) FROM kpi_db://kpi_relation_simple_60 WHERE FDN_PARSE(kpi_relation_simple_60.nodeFDN, \"MeContext\") = 'SubNetwork=SN1,MeContext=LTE01dg2ERBS00001'",
+            "object_type": "STRING",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_relation_simple_60.nodeFDN",
+              "kpi_relation_simple_60.moFdn"
+            ],
+            "exportable": true,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "ondemand_fdn_agg",
+        "aggregation_period": 1440,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "fdn_sum_agg",
+            "expression": "kpi_relation_simple_60.sum_long_single_counter FROM kpi_db://kpi_relation_simple_60",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "FDN_PARSE(kpi_relation_simple_60.nodeFDN, \"SubNetwork\") AS subnet"
+            ],
+            "exportable": true,
+            "filters": []
+          }
+        ]
+      },
+      {
+        "alias": "on_demand_fdn",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "on_demand_fdn_filter",
+            "expression": "kpi_predefined_simple_60.relation_level_agg FROM kpi_db://kpi_predefined_simple_60",
+            "object_type": "LONG",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "kpi_predefined_simple_60.nodeFDN",
+              "kpi_predefined_simple_60.moFdn"
+            ],
+            "exportable": true,
+            "filters": [
+              "kpi_db://kpi_predefined_simple_60.FDN_PARSE(moFdn,\"SampleCellFDD\") = '${param.filter}'"
+            ]
+          }
+        ]
+      },
+      {
+        "alias": "ondemand_example3",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "tabular_expression_ondemand",
+            "expression": "kpi_simple_example_60.sum_float_simple / NULLIF(mo_data.mo_property, 0) FROM kpi_db://kpi_simple_example_60 INNER JOIN tabular_parameters://mo_data ON kpi_simple_example_60.nodeFDN = mo_data.nodeFDN",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_example_60.nodeFDN",
+              "kpi_simple_example_60.moFdn"
+            ],
+            "exportable": false,
+            "filters": [
+              "kpi_db://kpi_simple_example_60.TO_DATE(aggregation_begin_time) > '${date_for_filter_sdk}'"
+            ]
+          }
+        ]
+      },
+      {
+        "alias": "ondemand_example4",
+        "aggregation_period": 60,
+        "retention_period_in_days": 5,
+        "kpi_definitions": [
+          {
+            "name": "tabular_filter_ondemand",
+            "expression": "kpi_simple_example_60.sum_float_simple * 100 FROM kpi_db://kpi_simple_example_60 INNER JOIN tabular_parameters://data_for_grouping ON kpi_simple_example_60.nodeFDN = data_for_grouping.nodeFDN",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_example_60.nodeFDN",
+              "data_for_grouping.moFdn"
+            ],
+            "exportable": false,
+            "filters": [
+              "kpi_db://kpi_simple_example_60.TO_DATE(aggregation_begin_time) > '${date_for_filter_sdk}'",
+              "tabular_parameters://data_for_grouping.mo_group = '${param.mo_group_to_filter}'"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

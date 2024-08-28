@@ -1,0 +1,44 @@
+{
+  "scheduled": true,
+  "execution_group": "dataSpace|category|a_new_very_simple_kpi",
+  "tables": [
+    {
+      "name": "kpi_simple_60",
+      "aggregation_period": 60,
+      "kpis": [
+        {
+          "name": "float_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "integer_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "float_array_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        },
+        {
+          "name": "integer_array_simple",
+          "reexport_late_data": false,
+          "exportable": true
+        }
+      ],
+      "list_of_kpis": [
+        "float_simple",
+        "integer_simple",
+        "float_array_simple",
+        "integer_array_simple"
+      ],
+      "list_of_dimensions": [
+        "agg_column_0",
+        "agg_column_1",
+        "aggregation_begin_time",
+        "aggregation_end_time"
+      ]
+    }
+  ]
+}

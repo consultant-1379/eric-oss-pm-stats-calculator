@@ -1,0 +1,44 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+no-fail: false  # Make true to always return code 0; indicating process success; irrespective of the rule violations and failure-threshold
+no-color: false # Make true to disable colorized output
+format: json    # Options [tty|json|checkstyle|codeclimate|gitlab_codeclimate|codacy]
+
+# List of registries to pull images from
+trustedRegistries:
+  - armdocker.rnd.ericsson.se
+
+# List of Rules to be Ignored (rule, # description, default severity)
+ignored:
+  - DL3020 # Use COPY instead of ADD for files and folders., Error
+  - DL3026 # Use only an allowed registry in the FROM image, Error
+  - SC1010 # Use semicolon or linefeed before done (or quote to make it literal)., None
+
+# Override the severity of a rule (rule, # description, default severity)
+override:
+  error:
+    - DL3001 # For some bash commands it makes no sense running them in a Docker container like ssh, vim, shutdown, service, ps, free, top, kill, mount, ifconfig., Info
+    - DL3002 # Last user should not be root., Warning
+  warning:
+    - DL3042 # Avoid cache directory with pip install --no-cache-dir <package>., Warning
+    - DL3033 # Specify version with yum install -y <package>-<version>, Warning
+  info:
+    - DL3032 # yum clean all missing after yum command., Warning
+  style:
+    - DL3015 # Avoid additional packages by specifying --no-install-recommends., Info
+
+# Expected labels in the Dockerfile
+label-schema:
+  author: text
+  version: semver
+strict-labels: true # Warns of additional labels outside the schema. Make false to disable the warning.
+
+failure-threshold: error # Exit with code 1; indicating process failure; when rules with severity equal to or above threshold are violated. Options [error|warning|info|style|ignore|none]

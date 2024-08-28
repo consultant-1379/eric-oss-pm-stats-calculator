@@ -1,0 +1,1044 @@
+{
+  "fact_table": [
+    {
+      "nodeFDN": 2,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 3,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 7,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 10,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 11,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 12,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 15,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 18,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 22,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 25,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 26,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 27,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 32,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 38,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 42,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 43,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 44,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 45,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 46,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 49,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 51,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 55,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 61,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 63,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 64,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 71,
+      "ropBeginTime": "2021-07-11T13:00:00.000Z",
+      "ropEndTime": "2021-07-11T13:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 1,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 3,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 4,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 7,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 8,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 9,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 10,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 11,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 13,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 16,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 17,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 18,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 22,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 23,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 25,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 29,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 30,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 32,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 37,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 46,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 47,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 48,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 55,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 56,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 62,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 71,
+      "ropBeginTime": "2021-07-11T13:15:00.000Z",
+      "ropEndTime": "2021-07-11T13:30:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 3,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 7,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 10,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 11,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 18,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 22,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 24,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 25,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 28,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 32,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 33,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 35,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 36,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 41,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 46,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 55,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 57,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 59,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 60,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 65,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 66,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 67,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 68,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 69,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 70,
+      "ropBeginTime": "2021-07-11T14:30:00.000Z",
+      "ropEndTime": "2021-07-11T14:45:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 71,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 3,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 5,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 6,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 7,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 10,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 11,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 14,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 18,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 19,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 20,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 21,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 22,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 25,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 31,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 32,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 34,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 39,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 40,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 46,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 50,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 52,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 53,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 54,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 55,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 58,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 71,
+      "ropBeginTime": "2021-07-11T14:45:00.000Z",
+      "ropEndTime": "2021-07-11T15:00:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 2,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 3,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 7,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 10,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 11,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 12,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 15,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 18,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 22,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 25,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 26,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 27,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 32,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 38,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 42,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 43,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 44,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 45,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 46,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 49,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 51,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 55,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 61,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 63,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 64,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    },
+    {
+      "nodeFDN": 71,
+      "ropBeginTime": "2021-07-12T00:00:00.000Z",
+      "ropEndTime": "2021-07-12T00:15:00.000Z",
+      "pmCounters": {
+        "integerColumn0": 1
+      }
+    }
+  ]
+}

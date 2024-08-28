@@ -1,0 +1,89 @@
+{
+  "source": "TEST_SOURCE",
+  "kpi_definitions": [
+    {
+      "name": "rolling_sum_integer_1440",
+      "alias": "rolling_aggregation",
+      "expression": "SUM(kpi_cell_guid_simple_1440.sum_integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "kpi_cell_guid_simple_1440.agg_column_0"
+      ],
+      "filter": [
+        "kpi_db://kpi_sector_60.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'"
+      ],
+      "is_visible": true
+    },
+    {
+      "name": "first_float_operator_1440_post_aggregation",
+      "alias": "rolling_aggregation",
+      "expression": "FIRST(rolling_aggregation.rolling_sum_integer_1440) / FIRST(rolling_aggregation.rolling_max_integer_1440) FROM kpi_post_agg://rolling_aggregation",
+      "object_type": "FLOAT",
+      "aggregation_type": "FIRST",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "rolling_aggregation.agg_column_0"
+      ],
+      "is_visible": false
+    },
+    {
+      "name": "sum_integer_60_complex",
+      "alias": "complex",
+      "expression": "SUM(kpi_simple_60.integer_simple) FROM kpi_db://kpi_simple_60",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 60,
+      "aggregation_elements": [
+        "kpi_simple_60.agg_column_0",
+        "kpi_simple_60.agg_column_1"
+      ],
+      "is_visible": true,
+      "execution_group": "COMPLEX1"
+    },
+    {
+      "name": "sum_integer_1440_simple",
+      "alias": "cell_guid_simple",
+      "expression": "SUM(new_fact_table_0.pmCounters.integerColumn0)",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_period": 1440,
+      "aggregation_elements": [
+        "new_fact_table_0.agg_column_0"
+      ],
+      "is_visible": true,
+      "inp_data_category": "pm_data",
+      "inp_data_identifier": "dataSpace|category|new_fact_table_0"
+    },
+    {
+      "name": "sum_integer_simple",
+      "alias": "rel_guid_s_guid_t_guid_simple",
+      "expression": "SUM(new_fact_table_1.pmCounters.integerColumn0)",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_elements": [
+        "new_fact_table_1.agg_column_0",
+        "new_fact_table_1.agg_column_1",
+        "new_fact_table_1.agg_column_2"
+      ],
+      "is_visible": false,
+      "inp_data_category": "pm_data",
+      "inp_data_identifier": "dataSpace|category|new_fact_table_1"
+    },
+    {
+      "name": "sum_integer_simple2",
+      "alias": "rel_guid_s_guid_t_guid_simple",
+      "expression": "SUM(new_fact_table_1.pmCounters.integerColumn0)",
+      "object_type": "INTEGER",
+      "aggregation_type": "SUM",
+      "aggregation_elements": [
+        "new_fact_table_1.agg_column_0",
+        "new_fact_table_1.agg_column_4"
+      ],
+      "is_visible": false,
+      "inp_data_category": "pm_data",
+      "inp_data_identifier": "dataSpace|category|new_fact_table_1"
+    }
+  ]
+}

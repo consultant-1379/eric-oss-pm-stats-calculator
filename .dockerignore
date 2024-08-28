@@ -1,0 +1,8 @@
+*
+
+#exceptions that used in Dockerfile
+!Docker/**
+!eric-oss-pm-stats-calculator-ear/target/**
+!eric-oss-pm-stats-calculator-spark/target/dependency/**
+!eric-oss-pm-stats-calculator-spring-boot/target/**
+!src/main/resources/jmx/*

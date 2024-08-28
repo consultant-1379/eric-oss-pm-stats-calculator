@@ -1,0 +1,14 @@
+{
+  "topics": [
+    {
+      "topic1": {
+        "permission" : "read-only"
+      }
+    },
+    {
+      "topic2": {
+        "permission" : "read-only"
+      }
+    }
+  ]
+}

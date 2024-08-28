@@ -1,0 +1,360 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+{{- if .Values.cnom.enabled }}
+{{- $calculatorName := include "eric-oss-pm-stats-calculator.name" . }}
+{{- $podLabel := include "eric-oss-pm-stats-calculator.cnom-pod-label" . }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}-cnom-custom-post-config
+  labels:
+{{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+{{- include "eric-oss-pm-stats-calculator.cnom-labels" . | nindent 4 }}
+  annotations:
+{{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+data:
+  cnom-custom-api-post-metrics-config.json: |-
+    {
+      "namespace": "PMH_PMSC_CUSTOM_API_POST_{{ $calculatorName | replace "-" "_" | upper }}",
+      "dashboards": [
+        {
+          "_id": "{{ $calculatorName | replace "-" "_" }}_custom_post_metrics",
+          "title": "PM Stats Calculator CUSTOM Metrics",
+          "apps": ["statusOverview"],
+          "order": 3,
+          "dashboardTreeView": {
+            "tree": [["PM Stats Calculation Handling", "PM Stats Calculator", "Custom metrics", "API-POST endpoint"]]
+          },
+          "tiles": [
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_50thpercentile"
+            },
+            {
+              "xSize": 4,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_75thpercentile"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_95thpercentile"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_98thpercentile"
+            },
+            {
+              "xSize": 4,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_999thpercentile"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_99thpercentile"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_count"
+            },
+            {
+              "xSize": 4,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fifteenminuterate"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fiveminuterate"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_max"
+            },
+            {
+              "xSize": 4,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_mean"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_meanrate"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_min"
+            },
+            {
+              "xSize": 4,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_oneminuterate"
+            },
+            {
+              "xSize": 3,
+              "widget": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_stddev"
+            }
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_50thpercentile",
+          "widgetType": "timeline",
+          "title": "Calculation API definition POST endpoint duration (50th percintile)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_50thpercentile"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_75thpercentile",
+          "widgetType": "timeline",
+          "title": "Calculation API definition POST endpoint duration (75th percintile)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_75thpercentile"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_95thpercentile",
+          "widgetType": "timeline",
+          "title": "Calculation API definition POST endpoint duration (95th percintile)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_95thpercentile"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_98thpercentile",
+          "widgetType": "timeline",
+          "title": "Calculation API definition POST endpoint duration (98th percintile)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_98thpercentile"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_999thpercentile",
+          "widgetType": "timeline",
+          "title": "Calculation API definition POST endpoint duration (999th percintile)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_999thpercentile"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_99thpercentile",
+          "widgetType": "timeline",
+          "title": "Calculation API definition POST endpoint duration (99th percintile)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_99thpercentile"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_count",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint duration count",
+          "unit": "count",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_count"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fifteenminuterate",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint duration (15 min iter)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fifteenminuterate"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fiveminuterate",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint duration (5 min iter)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fiveminuterate"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_max",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint maximum duration",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_max"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_mean",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint mean duration",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_mean"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_meanrate",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint meanrate duration",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_meanrate"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_min",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint minimum duration",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_min"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_oneminuterate",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint duration (1 min iter)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_oneminuterate"
+            }
+          ]
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_stddev",
+          "widgetType": "timeline",
+          "title": "API definition POST endpoint duration (Standart deviation)",
+          "unit": "milliseconds",
+          "sources": [
+            {
+              "source": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_stddev"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_50thpercentile",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_50thpercentile{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_75thpercentile",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_75thpercentile{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_95thpercentile",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_95thpercentile{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_98thpercentile",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_98thpercentile{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_999thpercentile",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_999thpercentile{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_99thpercentile",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_99thpercentile{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_count",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_count{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fifteenminuterate",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fifteenminuterate{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fiveminuterate",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_fiveminuterate{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_max",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_max{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_mean",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_mean{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_meanrate",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_meanrate{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_min",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_min{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_oneminuterate",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_oneminuterate{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        },
+        {
+          "_id": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_stddev",
+          "sourceType": "prometheus",
+          "query": "pm_stats_calculator_api_definition_post_endpoint_duration_ms_stddev{app='{{ $calculatorName }}', job=~'kubernetes-pods.*'}",
+          "splitByLabelName": "{{ $podLabel }}"
+        }
+      ]
+    }
+{{- end }}

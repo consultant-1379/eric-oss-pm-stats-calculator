@@ -1,0 +1,2352 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+modelVersion: '2.0'
+dependencies:
+- ID: com.fasterxml.jackson.datatype:jackson-datatype-jsr310+2.13.0
+  additional_info:
+    fossa-attribution:
+      Description: Add-on module to support JSR-310 (Java 8 Date & Time API) data
+        types.
+      Package: com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+      Source: mvn
+      Version: 2.13.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: 'Jackson datatype: JSR310'
+      DownloadURL: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.0/jackson-datatype-jsr310-2.13.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 91/CAX1056158
+    community_link: https://github.com/FasterXML/jackson-core
+    community_name: https://github.com/FasterXML/jackson-core
+    community_url: https://github.com/FasterXML/jackson-core
+    component_comment: ''
+    component_highlevel_description: This project contains core low-level incremental
+      ('streaming') parser and generator abstractions used by Jackson Data Processor.
+      It also includes the default implementation of handler types (parser, generator)
+      that handle JSON format.
+    component_name: jackson-core
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.13.0
+    licenses:
+    - 'FAL1159002/21: GNU Lesser General Public License v2.1 only (LGPL-2.1-only)'
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/FasterXML/jackson-core/archive/refs/tags/jackson-core-2.13.0.zip
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=987648
+    recode: ''
+    retext: ''
+    country: US
+    crypto: N/A
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: com.fasterxml.jackson.datatype_jackson-datatype-jsr310
+    target_sw: linux
+    vendor: mvn
+    version: 2.13.0
+    web_url: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: 'Jackson datatype: JSR310'
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 2.13.0
+  mimer:
+    product_number: CAX1056158
+    product_version_label: 2.13.0
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: com.fasterxml.jackson.datatype:jackson-datatype-jsr310+2.14.0-rc1
+  additional_info:
+    fossa-attribution:
+      Description: Add-on module to support JSR-310 (Java 8 Date & Time API) data
+        types.
+      Package: com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+      Source: mvn
+      Version: 2.14.0-rc1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: 'Jackson datatype: JSR310'
+      DownloadURL: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.0-rc1/jackson-datatype-jsr310-2.14.0-rc1-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310
+    community_name: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310
+    community_url: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Jackson-Datatype-JSR310
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.14.0-rc1
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.0-rc1/jackson-datatype-jsr310-2.14.0-rc1-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: com.fasterxml.jackson.datatype_jackson-datatype-jsr310
+    target_sw: linux
+    vendor: mvn
+    version: 2.14.0-rc1
+    web_url: https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: 'Jackson datatype: JSR310'
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 2.14.0-rc1
+  mimer:
+    product_number: CAX1058821
+    product_version_label: 2.14.0-rc1
+- ID: com.google.guava:guava+31.1-jre
+  additional_info:
+    fossa-attribution:
+      Description: Guava is a suite of core and expanded libraries that include    utility
+        classes, Google's collections, I/O classes, and    much more.
+      Package: com.google.guava:guava
+      Source: mvn
+      Version: 31.1-jre
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - CC0-1.0
+      - cc-pd
+      Title: 'Guava: Google Core Libraries for Java'
+      DownloadURL: https://repo1.maven.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 71/CAX1054600
+    community_link: https://github.com/google/guava
+    community_name: https://github.com/google/guava
+    community_url: https://github.com/google/guava
+    component_comment: ''
+    component_highlevel_description: 'The Guava project contains several of Google''s
+      core libraries that we rely on in our Java-based projects: collections, caching,
+      primitives support, concurrency libraries, common annotations, string processing,
+      I/O, and so forth.'
+    component_name: Guava, Google
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 31.1-JRE
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://repo1.maven.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=1005478
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: com.google.guava_guava
+    target_sw: linux
+    vendor: mvn
+    version: 31.1-jre
+    web_url: https://github.com/google/guava
+  licenses:
+  - Apache-2.0
+  - CC0-1.0
+  - cc-pd
+  linking: Classpath
+  name: 'Guava: Google Core Libraries for Java'
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 31.1-jre
+  mimer:
+    product_number: CAX1054600
+    product_version_label: 31.1-jre
+- ID: com.vladmihalcea:hibernate-types-55+2.16.3
+  additional_info:
+    fossa-attribution:
+      Description: Hibernate ORM 5.5 extra Types
+      Package: com.vladmihalcea:hibernate-types-55
+      Source: mvn
+      Version: 2.16.3
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: hibernate-types-55
+      DownloadURL: https://repo1.maven.org/maven2/com/vladmihalcea/hibernate-types-55/2.16.3/hibernate-types-55-2.16.3-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '4/CTX1029287'
+    community_link: https://repo1.maven.org/maven2/com/vladmihalcea/hibernate-types-55
+    community_name: https://repo1.maven.org/maven2/com/vladmihalcea/hibernate-types-55
+    community_url: https://repo1.maven.org/maven2/com/vladmihalcea/hibernate-types-55
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: hibernate-types-55
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.16.3
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/com/vladmihalcea/hibernate-types-55/2.16.3/hibernate-types-55-2.16.3-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: com.vladmihalcea_hibernate-types-55
+    target_sw: linux
+    vendor: mvn
+    version: 2.16.3
+    web_url: https://repo1.maven.org/maven2/com/vladmihalcea/hibernate-types-55
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: hibernate-types-55
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.16.3
+  mimer:
+    product_number: CTX1029287
+    product_version_label: 2.16.3
+- ID: io.confluent:kafka-avro-serializer+6.1.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.confluent:kafka-avro-serializer
+      Source: mvn
+      Version: 6.1.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: kafka-avro-serializer
+      DownloadURL: http://packages.confluent.io/maven/io/confluent/kafka-avro-serializer/6.1.1/kafka-avro-serializer-6.1.1-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: http://packages.confluent.io/maven/io/confluent/kafka-avro-serializer
+    community_name: http://packages.confluent.io/maven/io/confluent/kafka-avro-serializer
+    community_url: http://packages.confluent.io/maven/io/confluent/kafka-avro-serializer
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: kafka-avro-serializer
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 6.1.1
+    licenses: []
+    src_download_link: http://packages.confluent.io/maven/io/confluent/kafka-avro-serializer/6.1.1/kafka-avro-serializer-6.1.1-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: http_//packages.confluent.io/maven_io.confluent_kafka-avro-serializer
+    target_sw: linux
+    vendor: mvn
+    version: 6.1.1
+    web_url: http://packages.confluent.io/maven/io/confluent/kafka-avro-serializer
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: kafka-avro-serializer
+  primary:
+  - io.confluent:kafka-avro-serializer
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.1.1
+  mimer:
+    product_number: ''
+    product_version_label: 6.1.1
+- ID: io.confluent:kafka-schema-registry-client+6.1.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.confluent:kafka-schema-registry-client
+      Source: mvn
+      Version: 6.1.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - proprietary-license
+      Title: kafka-schema-registry-client
+      DownloadURL: http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client/6.1.1/kafka-schema-registry-client-6.1.1-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: 12/CAX1058886
+    community_link: http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client
+    community_name: http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client
+    community_url: http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: kafka-schema-registry-client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 6.1.1
+    licenses:
+      - FAL1159000
+    src_download_link: http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client/6.1.1/kafka-schema-registry-client-6.1.1-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: http_//packages.confluent.io/maven_io.confluent_kafka-schema-registry-client
+    target_sw: linux
+    vendor: mvn
+    version: 6.1.1
+    web_url: http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client
+  licenses:
+  - Apache-2.0
+  - proprietary-license
+  - FAL1159000
+  linking: Classpath
+  name: kafka-schema-registry-client
+  primary:
+  - io.confluent:kafka-schema-registry-client
+  selected_license: 'FAL 115 9000'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.1.1
+  mimer:
+    product_number: CAX1058886
+    product_version_label: 6.1.1
+- ID: http://packages.confluent.io/maven:org.apache.kafka:kafka_2.13+6.2.0-ccs
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.kafka:kafka_2.13
+      Source: mvn
+      Version: 6.2.0-ccs
+      Hash: ''
+      licenses:
+      - Apache-1.1
+      - Apache-2.0
+      Title: Confluent Server
+      DownloadURL: http://packages.confluent.io/maven/org/apache/kafka/kafka_2.13/6.2.0-ccs/kafka_2.13-6.2.0-ccs-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://kafka.apache.org
+    community_name: https://kafka.apache.org
+    community_url: https://kafka.apache.org
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Confluent Server
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 6.2.0-ccs
+    licenses: []
+    src_download_link: http://packages.confluent.io/maven/org/apache/kafka/kafka_2.13/6.2.0-ccs/kafka_2.13-6.2.0-ccs-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: http_//packages.confluent.io/maven_org.apache.kafka_kafka_2.13
+    target_sw: linux
+    vendor: mvn
+    version: 6.2.0-ccs
+    web_url: https://kafka.apache.org
+  licenses:
+  - Apache-1.1
+  - Apache-2.0
+  linking: Classpath
+  name: Confluent Server
+  primary:
+  - org.apache.kafka:kafka_2.13
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.2.0-ccs
+  mimer:
+    product_number: CAX1058403
+    product_version_label: 6.2.0-ccs
+- ID: com.ericsson.oss.itpf.sdk:sdk-micro-healthcheck+4.43.1
+  additional_info:
+    fossa-attribution:
+      Description: This module implements the SDK Micro Healthcheck API
+      Package: com.ericsson.oss.itpf.sdk:sdk-micro-healthcheck
+      Source: mvn
+      Version: 4.43.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: SDK Micro Healthcheck
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck/4.43.1/sdk-micro-healthcheck-4.43.1.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck
+    community_name: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck
+    community_url: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: SDK Micro Healthcheck
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 4.43.1
+    licenses: []
+    src_download_link: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck/4.43.1/sdk-micro-healthcheck-4.43.1.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: https_//arm.epk.ericsson.se/artifactory/proj-ema-remote_com.ericsson.oss.itpf.sdk_sdk-micro-healthcheck
+    target_sw: linux
+    vendor: mvn
+    version: 4.43.1
+    web_url: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: SDK Micro Healthcheck
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4.43.1
+  mimer:
+    product_number: ''
+    product_version_label: 4.43.1
+- ID: com.ericsson.oss.itpf.sdk:sdk-micro-healthcheck-api+4.1.17
+  additional_info:
+    fossa-attribution:
+      Description: Service Framework Module containing all API artifacts needed for
+        micro healthcheck
+      Package: com.ericsson.oss.itpf.sdk:sdk-micro-healthcheck-api
+      Source: mvn
+      Version: 4.1.17
+      Hash: ''
+      licenses: []
+      Title: SDK Micro Healthcheck API
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck-api/4.1.17/sdk-micro-healthcheck-api-4.1.17.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck-api
+    community_name: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck-api
+    community_url: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck-api
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: SDK Micro Healthcheck API
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 4.1.17
+    licenses: []
+    src_download_link: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck-api/4.1.17/sdk-micro-healthcheck-api-4.1.17.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: https_//arm.epk.ericsson.se/artifactory/proj-ema-remote_com.ericsson.oss.itpf.sdk_sdk-micro-healthcheck-api
+    target_sw: linux
+    vendor: mvn
+    version: 4.1.17
+    web_url: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/com/ericsson/oss/itpf/sdk/sdk-micro-healthcheck-api
+  licenses: []
+  linking: Classpath
+  name: SDK Micro Healthcheck API
+  primary:
+  - this
+  selected_license: SELECT_FROM_LICENSES
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4.1.17
+  mimer:
+    product_number: ''
+    product_version_label: 4.1.17
+- ID: io.dropwizard.metrics:metrics-jmx+4.2.12
+  additional_info:
+    fossa-attribution:
+      Description: A set of classes which allow you to report metrics via JMX.
+      Package: io.dropwizard.metrics:metrics-jmx
+      Source: mvn
+      Version: 4.2.12
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Metrics Integration with JMX
+      DownloadURL: https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jmx/4.2.12/metrics-jmx-4.2.12-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jmx
+    community_name: https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jmx
+    community_url: https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jmx
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Metrics Integration with JMX
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 4.2.12
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jmx/4.2.12/metrics-jmx-4.2.12-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.dropwizard.metrics_metrics-jmx
+    target_sw: linux
+    vendor: mvn
+    version: 4.2.12
+    web_url: https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jmx
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Metrics Integration with JMX
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4.2.12
+  mimer:
+    product_number: ''
+    product_version_label: 4.2.12
+- ID: io.github.resilience4j:resilience4j-circuitbreaker+1.7.1
+  additional_info:
+    fossa-attribution:
+      Description: Resilience4j is a lightweight, easy-to-use fault tolerance library
+        designed for Java8 and functional programming
+      Package: io.github.resilience4j:resilience4j-circuitbreaker
+      Source: mvn
+      Version: 1.7.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: resilience4j
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/io/github/resilience4j/resilience4j-circuitbreaker/1.7.1/resilience4j-circuitbreaker-1.7.1-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: 12/CTX1023585
+    community_link: https://resilience4j.readme.io
+    community_name: https://resilience4j.readme.io
+    community_url: https://resilience4j.readme.io
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: resilience4j
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.7.1
+    licenses: []
+    src_download_link: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/io/github/resilience4j/resilience4j-circuitbreaker/1.7.1/resilience4j-circuitbreaker-1.7.1-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.github.resilience4j_resilience4j-circuitbreaker
+    target_sw: linux
+    vendor: mvn
+    version: 1.7.1
+    web_url: https://resilience4j.readme.io
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: resilience4j
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.7.1
+  mimer:
+    product_number: CTX1023585
+    product_version_label: 1.7.1
+- ID: io.github.resilience4j:resilience4j-retry+1.7.1
+  additional_info:
+    fossa-attribution:
+      Description: Resilience4j is a lightweight, easy-to-use fault tolerance library
+        designed for Java8 and functional programming
+      Package: io.github.resilience4j:resilience4j-retry
+      Source: mvn
+      Version: 1.7.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: resilience4j
+      DownloadURL: https://repo1.maven.org/maven2/io/github/resilience4j/resilience4j-retry/1.7.1/resilience4j-retry-1.7.1-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: 12/CTX1023585
+    community_link: https://resilience4j.readme.io
+    community_name: https://resilience4j.readme.io
+    community_url: https://resilience4j.readme.io
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: resilience4j
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.7.1
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/io/github/resilience4j/resilience4j-retry/1.7.1/resilience4j-retry-1.7.1-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.github.resilience4j_resilience4j-retry
+    target_sw: linux
+    vendor: mvn
+    version: 1.7.1
+    web_url: https://resilience4j.readme.io
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: resilience4j
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.7.1
+  mimer:
+    product_number: CTX1023585
+    product_version_label: 1.7.1
+- ID: io.prometheus:simpleclient+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Core instrumentation library for the simpleclient.
+      Package: io.prometheus:simpleclient
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - CC0-1.0
+      Title: Prometheus Java Simpleclient
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient/0.16.0/simpleclient-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=1015933
+    recode: ''
+    retext: ''
+    country: IE
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+  licenses:
+  - Apache-2.0
+  - CC0-1.0
+  linking: Classpath
+  name: Prometheus Java Simpleclient
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+- ID: io.swagger.core.v3:swagger-annotations+2.2.0
+  additional_info:
+    fossa-attribution:
+      Description: swagger-annotations
+      Package: io.swagger.core.v3:swagger-annotations
+      Source: mvn
+      Version: 2.2.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: swagger-annotations
+      DownloadURL: https://repo1.maven.org/maven2/io/swagger/core/v3/swagger-annotations/2.2.0/swagger-annotations-2.2.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 47/CAX1056692
+    community_link: https://github.com/swagger-api/swagger-core
+    community_name: https://github.com/swagger-api/swagger-core
+    community_url: https://github.com/swagger-api/swagger-core
+    component_comment: ''
+    component_highlevel_description: Examples and server integrations for generating
+      the Swagger API Specification, which enables easy access to your REST API
+    component_name: swagger-core
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.2.0
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/swagger-api/swagger-core/archive/v2.2.0.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=1009957
+    recode: ''
+    retext: ''
+    country: US
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.swagger.core.v3_swagger-annotations
+    target_sw: linux
+    vendor: mvn
+    version: 2.2.0
+    web_url: https://repo1.maven.org/maven2/io/swagger/core/v3/swagger-annotations
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: swagger-annotations
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.2.0
+  mimer:
+    product_number: CAX1056692
+    product_version_label: 2.2.0
+- ID: io.vavr:vavr+1.0.0-alpha-4
+  additional_info:
+    fossa-attribution:
+      Description: Vavr is an object-functional library for Java 8+
+      Package: io.vavr:vavr
+      Source: mvn
+      Version: 1.0.0-alpha-4
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: vavr
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/io/vavr/vavr/1.0.0-alpha-4/vavr-1.0.0-alpha-4-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 7/CTX1024797
+    community_link: https://github.com/vavr-io/vavr
+    community_name: https://github.com/vavr-io/vavr
+    community_url: https://github.com/vavr-io/vavr
+    component_comment: ''
+    component_highlevel_description: VAVR (Vavr, formerly called Javaslang) is a non-commercial,
+      non-profit object-functional library that runs with Java 8+. It aims to reduce
+      the lines of code and increase code quality.
+    component_name: vavr
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.0.0-ALPHA4
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/vavr-io/vavr/archive/vavr-1.0.0-alpha-4.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=996990
+    recode: ''
+    retext: ''
+    country: DE
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.vavr_vavr
+    target_sw: linux
+    vendor: mvn
+    version: 1.0.0-alpha-4
+    web_url: https://www.vavr.io
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: vavr
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.0.0-alpha-4
+  mimer:
+    product_number: CTX1024797
+    product_version_label: 1.0.0-alpha-4
+- ID: org.apache.avro:avro+1.11.1
+  additional_info:
+    fossa-attribution:
+      Description: Avro core components
+      Package: org.apache.avro:avro
+      Source: mvn
+      Version: 1.11.1
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-2-Clause
+      - MIT
+      Title: Apache Avro
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/avro/avro/1.11.1/avro-1.11.1-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: 21/CAX1054634
+    community_link: https://avro.apache.org
+    community_name: https://avro.apache.org
+    community_url: https://avro.apache.org
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Avro, Apache
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.11.1
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/apache/avro/avro/1.11.1/avro-1.11.1-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.avro_avro
+    target_sw: linux
+    vendor: mvn
+    version: 1.11.1
+    web_url: https://avro.apache.org
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - MIT
+  linking: Classpath
+  name: Apache Avro
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.11.1
+  mimer:
+    product_number: CAX1054634
+    product_version_label: 1.11.1
+- ID: org.apache.commons:commons-collections4+4.4
+  additional_info:
+    fossa-attribution:
+      Description: The Apache Commons Collections package contains types that extend
+        and augment the Java Collections Framework.
+      Package: org.apache.commons:commons-collections4
+      Source: mvn
+      Version: '4.4'
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Apache Commons Collections
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 14/CAX1053447
+    community_link: http://commons.apache.org/proper/commons-collections/
+    community_name: http://commons.apache.org/proper/commons-collections/
+    community_url: http://commons.apache.org/proper/commons-collections/
+    component_comment: ''
+    component_highlevel_description: Commons-Collections seek to build upon the JDK
+      classes by providing new interfaces, implementations and utilities.
+    component_name: Commons Collections, Apache
+    component_platform: linux
+    component_programing_language: Java
+    component_version: '4.4'
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: http://mirror.csclub.uwaterloo.ca/apache//commons/collections/source/commons-collections4-4.4-src.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=912809
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.commons_commons-collections4
+    target_sw: linux
+    vendor: mvn
+    version: '4.4'
+    web_url: http://commons.apache.org/proper/commons-collections/
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Apache Commons Collections
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - '4.4'
+  mimer:
+    product_number: CAX1053447
+    product_version_label: '4.4'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: org.apache.commons:commons-text+1.9
+  additional_info:
+    fossa-attribution:
+      Description: Apache Commons Text is a library focused on algorithms working
+        on strings.
+      Package: org.apache.commons:commons-text
+      Source: mvn
+      Version: '1.9'
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Apache Commons Text
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.9/commons-text-1.9-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 7/CTX1020687
+    community_link: https://commons.apache.org/proper/commons-text/
+    community_name: https://commons.apache.org/proper/commons-text/
+    community_url: https://commons.apache.org/proper/commons-text/
+    component_comment: ''
+    component_highlevel_description: Apache Commons Text is a library focused on algorithms
+      working on strings.
+    component_name: Apache Commons Text
+    component_platform: linux
+    component_programing_language: Java
+    component_version: '1.9'
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: http://apache.mirrors.spacedump.net/commons/text/source/commons-text-1.9-src.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=940864
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.commons_commons-text
+    target_sw: linux
+    vendor: mvn
+    version: '1.9'
+    web_url: http://commons.apache.org/proper/commons-text/
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Apache Commons Text
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - '1.9'
+  mimer:
+    product_number: CTX1020687
+    product_version_label: '1.9'
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: org.apache.httpcomponents:httpcore+4.4.15
+  additional_info:
+    fossa-attribution:
+      Description: Apache HttpComponents Core (blocking I/O)
+      Package: org.apache.httpcomponents:httpcore
+      Source: mvn
+      Version: 4.4.15
+      Hash: ''
+      licenses:
+      - Apache-1.1
+      - Apache-2.0
+      Title: Apache HttpCore
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/org/apache/httpcomponents/httpcore/4.4.15/httpcore-4.4.15-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 37/CAX1053847
+    community_link: https://github.com/apache/httpcomponents-core
+    community_name: https://github.com/apache/httpcomponents-core
+    community_url: https://github.com/apache/httpcomponents-core
+    component_comment: ''
+    component_highlevel_description: 'HttpCore is a set of low level HTTP transport
+      components that can be used to build custom client and server side HTTP services
+      with a minimal footprint. HttpCore supports two I/O models: blocking I/O model
+      based on the classic Java I/O and non-blocking, event driven I/O model'
+    component_name: HTTPComponents HttpCore
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 4.4.15
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/apache/httpcomponents-core/archive/rel/v4.4.15.zip
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=996703
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.httpcomponents_httpcore
+    target_sw: linux
+    vendor: mvn
+    version: 4.4.15
+    web_url: http://hc.apache.org/httpcomponents-core-ga
+  licenses:
+  - Apache-1.1
+  - Apache-2.0
+  linking: Classpath
+  name: Apache HttpCore
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 4.4.15
+  mimer:
+    product_number: CAX1053847
+    product_version_label: 'rel/v4.4.15'
+- ID: org.apache.spark:spark-avro_2.12+3.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.spark:spark-avro_2.12
+      Source: mvn
+      Version: 3.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Spark Avro
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/spark/spark-avro_2.12/3.3.0/spark-avro_2.12-3.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://spark.apache.org/
+    community_name: https://spark.apache.org/
+    community_url: https://spark.apache.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Spark Avro
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.3.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/apache/spark/spark-avro_2.12/3.3.0/spark-avro_2.12-3.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.spark_spark-avro_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 3.3.0
+    web_url: https://spark.apache.org/
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Spark Avro
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.3.0
+  mimer:
+    product_number: CTX1020187
+    product_version_label: 3.3.0
+- ID: org.apache.spark:spark-catalyst_2.12+3.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.spark:spark-catalyst_2.12
+      Source: mvn
+      Version: 3.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-2-Clause
+      - BSD-3-Clause
+      - CDDL-1.0
+      - EPL-2.0
+      - LGPL-2.1-only
+      - MIT
+      - MPL-1.1
+      Title: Spark Project Catalyst
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.12/3.3.0/spark-catalyst_2.12-3.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://spark.apache.org/
+    community_name: https://spark.apache.org/
+    community_url: https://spark.apache.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Spark Project Catalyst
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.3.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/apache/spark/spark-catalyst_2.12/3.3.0/spark-catalyst_2.12-3.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.spark_spark-catalyst_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 3.3.0
+    web_url: https://spark.apache.org/
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - CDDL-1.0
+  - EPL-2.0
+  - LGPL-2.1-only
+  - MIT
+  - MPL-1.1
+  linking: Classpath
+  name: Spark Project Catalyst
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.3.0
+  mimer:
+    product_number: ''
+    product_version_label: 3.3.0
+- ID: org.apache.spark:spark-core_2.12+3.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.spark:spark-core_2.12
+      Source: mvn
+      Version: 3.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-2-Clause
+      - BSD-3-Clause
+      - CDDL-1.0
+      - EPL-2.0
+      - GPL-2.0-with-classpath-exception
+      - LGPL-2.1-only
+      - MIT
+      - MPL-1.1
+      Title: Spark Project Core
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/org/apache/spark/spark-core_2.12/3.3.0/spark-core_2.12-3.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://spark.apache.org/
+    community_name: https://spark.apache.org/
+    community_url: https://spark.apache.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Spark Project Core
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.3.0
+    licenses: []
+    src_download_link: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/org/apache/spark/spark-core_2.12/3.3.0/spark-core_2.12-3.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.spark_spark-core_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 3.3.0
+    web_url: https://spark.apache.org/
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - CDDL-1.0
+  - EPL-2.0
+  - GPL-2.0-with-classpath-exception
+  - LGPL-2.1-only
+  - MIT
+  - MPL-1.1
+  linking: Classpath
+  name: Spark Project Core
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.3.0
+  mimer:
+    product_number: CAX1058552
+    product_version_label: 3.3.0
+- ID: org.apache.spark:spark-sql-kafka-0-10_2.12+3.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.spark:spark-sql-kafka-0-10_2.12
+      Source: mvn
+      Version: 3.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Kafka 0.10+ Source for Structured Streaming
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.3.0/spark-sql-kafka-0-10_2.12-3.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: http://spark.apache.org/
+    community_name: http://spark.apache.org/
+    community_url: http://spark.apache.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Kafka 0.10+ Source for Structured Streaming
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.3.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.3.0/spark-sql-kafka-0-10_2.12-3.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.spark_spark-sql-kafka-0-10_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 3.3.0
+    web_url: http://spark.apache.org/
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Kafka 0.10+ Source for Structured Streaming
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.3.0
+  mimer:
+    product_number: ''
+    product_version_label: 3.3.0
+- ID: org.apache.spark:spark-sql_2.12+3.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.spark:spark-sql_2.12
+      Source: mvn
+      Version: 3.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-2-Clause
+      - BSD-3-Clause
+      - CDDL-1.0
+      - EPL-2.0
+      - LGPL-2.1-only
+      - MIT
+      - MPL-1.1
+      Title: Spark Project SQL
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.3.0/spark-sql_2.12-3.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://spark.apache.org/
+    community_name: https://spark.apache.org/
+    community_url: https://spark.apache.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Spark Project SQL
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.3.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/apache/spark/spark-sql_2.12/3.3.0/spark-sql_2.12-3.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.spark_spark-sql_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 3.3.0
+    web_url: https://spark.apache.org/
+  licenses:
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - CDDL-1.0
+  - EPL-2.0
+  - LGPL-2.1-only
+  - MIT
+  - MPL-1.1
+  linking: Classpath
+  name: Spark Project SQL
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.3.0
+  mimer:
+    product_number: ''
+    product_version_label: 3.3.0
+- ID: org.apache.spark:spark-token-provider-kafka-0-10_2.12+3.3.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.apache.spark:spark-token-provider-kafka-0-10_2.12
+      Source: mvn
+      Version: 3.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Kafka 0.10+ Token Provider for Streaming
+      DownloadURL: https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.0/spark-token-provider-kafka-0-10_2.12-3.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://spark.apache.org/
+    community_name: https://spark.apache.org/
+    community_url: https://spark.apache.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Kafka 0.10+ Token Provider for Streaming
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.3.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.0/spark-token-provider-kafka-0-10_2.12-3.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apache.spark_spark-token-provider-kafka-0-10_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 3.3.0
+    web_url: https://spark.apache.org/
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Kafka 0.10+ Token Provider for Streaming
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.3.0
+  mimer:
+    product_number: ''
+    product_version_label: 3.3.0
+- ID: org.hibernate.common:hibernate-commons-annotations+5.1.2.Final
+  additional_info:
+    fossa-attribution:
+      Description: Common reflection code used in support of annotation processing
+      Package: org.hibernate.common:hibernate-commons-annotations
+      Source: mvn
+      Version: 5.1.2.Final
+      Hash: ''
+      licenses: []
+      Title: Hibernate Commons Annotations
+      DownloadURL: https://repo1.maven.org/maven2/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 17/CAX1053559
+    community_link: https://github.com/hibernate/hibernate-commons-annotations/
+    community_name: https://github.com/hibernate/hibernate-commons-annotations/
+    community_url: https://github.com/hibernate/hibernate-commons-annotations/
+    component_comment: ''
+    component_highlevel_description: Common reflection code used in support of annotation
+      processing.
+    component_name: Hibernate Commons Annotations
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 5.1.2.FINAL
+    licenses:
+    - 'FAL1159002/21: GNU Lesser General Public License v2.1 only (LGPL-2.1-only)'
+    src_download_link: https://github.com/hibernate/hibernate-commons-annotations/archive/5.1.2.Final.zip
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=947057
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.hibernate.common_hibernate-commons-annotations
+    target_sw: linux
+    vendor: mvn
+    version: 5.1.2.Final
+    web_url: http://hibernate.org
+  licenses:
+  - LGPL-2.1-only
+  linking: Classpath
+  name: Hibernate Commons Annotations
+  primary:
+  - this
+  selected_license: LGPL-2.1-only
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 5.1.2.Final
+  mimer:
+    product_number: CAX1053559
+    product_version_label: 5.1.2.Final
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: org.hibernate:hibernate-core+5.6.9.Final
+  additional_info:
+    fossa-attribution:
+      Description: Hibernate's core ORM functionality
+      Package: org.hibernate:hibernate-core
+      Source: mvn
+      Version: 5.6.9.Final
+      Hash: ''
+      licenses:
+      - BSD-3-Clause
+      - CC0-1.0
+      - EPL-2.0
+      - LGPL-2.1-only
+      - LGPL-2.1-or-later
+      Title: hibernate-core - relocation
+      DownloadURL: https://repo1.maven.org/maven2/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '111/CAX1054695'
+    community_link: https://hibernate.org/orm
+    community_name: https://hibernate.org/orm
+    community_url: https://hibernate.org/orm
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: hibernate-core - relocation
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 5.6.9.Final
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.hibernate_hibernate-core
+    target_sw: linux
+    vendor: mvn
+    version: 5.6.9.Final
+    web_url: https://hibernate.org/orm
+  licenses:
+  - BSD-3-Clause
+  - CC0-1.0
+  - EPL-2.0
+  - LGPL-2.1-only
+  - LGPL-2.1-or-later
+  linking: Classpath
+  name: hibernate-core - relocation
+  primary:
+  - this
+  selected_license: 'LGPL-2.1-only'
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 5.6.9.Final
+  mimer:
+    product_number: CAX1054695
+    product_version_label: 5.6.9
+- ID: org.jboss.resteasy:jaxrs-api+3.0.12.Final
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.jboss.resteasy:jaxrs-api
+      Source: mvn
+      Version: 3.0.12.Final
+      Hash: ''
+      licenses: []
+      Title: JAX-RS Core API
+      DownloadURL: https://repo1.maven.org/maven2/org/jboss/resteasy/jaxrs-api/3.0.12.Final/jaxrs-api-3.0.12.Final-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: 4/CAX1056750
+    community_link: https://repo1.maven.org/maven2/org/jboss/resteasy/jaxrs-api
+    community_name: https://repo1.maven.org/maven2/org/jboss/resteasy/jaxrs-api
+    community_url: https://repo1.maven.org/maven2/org/jboss/resteasy/jaxrs-api
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: JAX-RS Core API
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.0.12.Final
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/jboss/resteasy/jaxrs-api/3.0.12.Final/jaxrs-api-3.0.12.Final-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.jboss.resteasy_jaxrs-api
+    target_sw: linux
+    vendor: mvn
+    version: 3.0.12.Final
+    web_url: https://repo1.maven.org/maven2/org/jboss/resteasy/jaxrs-api
+  licenses:
+  - 'FAL1159001/4:( GNU General Public License v2.0 w/Classpath exception ( GPL-2.0-with-classpath-exception) )'
+  - 'FAL1159007/11 ( Common Development and Distribution License 1.1 (CDDL-1.1) )'
+  linking: Classpath
+  name: JAX-RS Core API
+  primary:
+  - this
+  selected_license: GPL-2.0-with-classpath-exception
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.0.12.Final
+  mimer:
+    product_number: CAX1056750
+    product_version_label: 3.0.12.Final
+- ID: org.jboss.resteasy:resteasy-client+6.2.0.Final
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.jboss.resteasy:resteasy-client
+      Source: mvn
+      Version: 6.2.0.Final
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: RESTEasy Client
+      DownloadURL: https://repo1.maven.org/maven2/org/jboss/resteasy/resteasy-client/6.2.0.Final/resteasy-client-6.2.0.Final-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://repo1.maven.org/maven2/org/jboss/resteasy/resteasy-client
+    community_name: https://repo1.maven.org/maven2/org/jboss/resteasy/resteasy-client
+    community_url: https://repo1.maven.org/maven2/org/jboss/resteasy/resteasy-client
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: RESTEasy Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 6.2.0.Final
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/jboss/resteasy/resteasy-client/6.2.0.Final/resteasy-client-6.2.0.Final-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.jboss.resteasy_resteasy-client
+    target_sw: linux
+    vendor: mvn
+    version: 6.2.0.Final
+    web_url: https://repo1.maven.org/maven2/org/jboss/resteasy/resteasy-client
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: RESTEasy Client
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.2.0.Final
+  mimer:
+    product_number: CAX1054857
+    product_version_label: 6.2.0.Final
+- ID: org.jgrapht:jgrapht-core+1.5.1
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: org.jgrapht:jgrapht-core
+      Source: mvn
+      Version: 1.5.1
+      Hash: ''
+      licenses:
+      - EPL-2.0
+      - LGPL-2.1-or-later
+      - MIT
+      Title: JGraphT - Core
+      DownloadURL: https://repo1.maven.org/maven2/org/jgrapht/jgrapht-core/1.5.1/jgrapht-core-1.5.1-sources.jar
+  bazaar:
+    register: 'no'
+    prim: ''
+    community_link: https://github.com/jgrapht/jgrapht
+    community_name: https://github.com/jgrapht/jgrapht
+    community_url: https://github.com/jgrapht/jgrapht
+    component_comment: ''
+    component_highlevel_description: JGraphT is a free Java graph library that provides
+      mathematical graph-theory objects and algorithms.
+    component_name: JGraphT
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.5.1
+    licenses:
+    - 'FAL1159002/21: GNU Lesser General Public License v2.1 only (LGPL-2.1-only)'
+    - 'FAL1159013/10: Eclipse Public License 1.0 (EPL-1.0)'
+    src_download_link: https://github.com/jgrapht/jgrapht/archive/jgrapht-1.5.1.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=1011729
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.jgrapht_jgrapht-core
+    target_sw: linux
+    vendor: mvn
+    version: 1.5.1
+    web_url: https://repo1.maven.org/maven2/org/jgrapht/jgrapht-core
+  licenses:
+  - EPL-2.0
+  - LGPL-2.1-or-later
+  - MIT
+  linking: Classpath
+  name: JGraphT - Core
+  primary:
+  - this
+  selected_license: LGPL-2.1-or-later
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 1.5.1
+  mimer:
+    product_number: ''
+    product_version_label: 1.5.1
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: org.projectlombok:lombok+1.18.24
+  additional_info:
+    fossa-attribution:
+      Description: 'Spice up your java: Automatic Resource Management, automatic generation
+        of getters, setters, equals, hashCode and toString, and more!'
+      Package: org.projectlombok:lombok
+      Source: mvn
+      Version: 1.18.24
+      Hash: ''
+      licenses:
+      - MIT
+      Title: Project Lombok
+      DownloadURL: https://repo1.maven.org/maven2/org/projectlombok/lombok/1.18.24/lombok-1.18.24-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 19/CAX1056250
+    community_link: https://github.com/rzwitserloot/lombok
+    community_name: https://github.com/rzwitserloot/lombok
+    community_url: https://github.com/rzwitserloot/lombok
+    component_comment: ''
+    component_highlevel_description: 'Project Lombok is a java library that automatically
+      plugs into your editor and build tools, spicing up your java.
+
+      Never write another getter or equals method again. Early access to future java
+      features such as val, and much more.'
+    component_name: Lombok
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.18.24
+    licenses:
+    - 'FAL1159008: MIT License (MIT)'
+    src_download_link: https://github.com/rzwitserloot/lombok/archive/v1.18.24.tar.gz
+    stako_decision_reason: automatic
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=1007979
+    recode: ''
+    retext: ''
+    country: NL
+    crypto: N/A
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.projectlombok_lombok
+    target_sw: linux
+    vendor: mvn
+    version: 1.18.24
+    web_url: https://projectlombok.org
+  licenses:
+  - MIT
+  linking: Classpath
+  name: Project Lombok
+  primary:
+  - this
+  selected_license: MIT
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.18.24
+  mimer:
+    product_number: CAX1056250
+    product_version_label: 1.18.24
+- ID: org.quartz-scheduler:quartz+2.3.2
+  additional_info:
+    fossa-attribution:
+      Description: Enterprise Job Scheduler
+      Package: org.quartz-scheduler:quartz
+      Source: mvn
+      Version: 2.3.2
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Quartz Enterprise Job Scheduler
+      DownloadURL: https://repo1.maven.org/maven2/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 24/CAX1053199
+    community_link: http://www.quartz-scheduler.org/
+    community_name: http://www.quartz-scheduler.org/
+    community_url: http://www.quartz-scheduler.org/
+    component_comment: ''
+    component_highlevel_description: Quartz is an enterprise-class job scheduler for
+      integration with stand-alone Java applications and full-scale J2EE applications.
+      Advanced features include clustering and participation in container managed
+      transactions. It is highly scalable, very lightweight, and supports very complex
+      scheduling.
+    component_name: Quartz
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.3.2
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/quartz-scheduler/quartz/archive/v2.3.2.zip
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=924643
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.quartz-scheduler_quartz
+    target_sw: linux
+    vendor: mvn
+    version: 2.3.2
+    web_url: https://repo1.maven.org/maven2/org/quartz-scheduler/quartz
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Quartz Enterprise Job Scheduler
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.3.2
+  mimer:
+    product_number: CAX1053199
+    product_version_label: 2.3.2
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: org.scala-lang:scala-library+2.13.9
+  additional_info:
+    fossa-attribution:
+      Description: Standard library for the Scala Programming Language
+      Package: org.scala-lang:scala-library
+      Source: mvn
+      Version: 2.13.9
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - CC0-1.0
+      - MIT
+      Title: Scala Library
+      DownloadURL: https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.9/scala-library-2.13.9-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://www.scala-lang.org/
+    community_name: https://www.scala-lang.org/
+    community_url: https://www.scala-lang.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Scala
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.13.9
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.9/scala-library-2.13.9-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.scala-lang_scala-library
+    target_sw: linux
+    vendor: mvn
+    version: 2.13.9
+    web_url: https://www.scala-lang.org/
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - CC0-1.0
+  - MIT
+  linking: Classpath
+  name: Scala Library
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 2.13.9
+  mimer:
+    product_number: ''
+    product_version_label: 2.13.9
+- ID: org.scala-lang:scala-reflect+2.13.9
+  additional_info:
+    fossa-attribution:
+      Description: Reflection Library for the Scala Programming Language
+      Package: org.scala-lang:scala-reflect
+      Source: mvn
+      Version: 2.13.9
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - MIT
+      Title: Scala Reflect
+      DownloadURL: https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.9/scala-reflect-2.13.9-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://www.scala-lang.org/
+    community_name: https://www.scala-lang.org/
+    community_url: https://www.scala-lang.org/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Scala
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.13.9
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.9/scala-reflect-2.13.9-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.scala-lang_scala-reflect
+    target_sw: linux
+    vendor: mvn
+    version: 2.13.9
+    web_url: https://www.scala-lang.org/
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - MIT
+  linking: Classpath
+  name: Scala Reflect
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 2.13.9
+  mimer:
+    product_number: CTX1035585
+    product_version_label: 2.13.9
+- ID: org.springframework.boot:spring-boot-configuration-processor+2.7.4
+  additional_info:
+    fossa-attribution:
+      Description: Spring Boot Configuration Annotation Processor
+      Package: org.springframework.boot:spring-boot-configuration-processor
+      Source: mvn
+      Version: 2.7.4
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: spring-boot-configuration-processor
+      DownloadURL: https://arm.seli.gic.ericsson.se/artifactory/proj-eof-dev/org/springframework/boot/spring-boot-configuration-processor/2.7.4/spring-boot-configuration-processor-2.7.4-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://spring.io/projects/spring-boot
+    community_name: https://spring.io/projects/spring-boot
+    community_url: https://spring.io/projects/spring-boot
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: spring-boot-configuration-processor
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.7.4
+    licenses: []
+    src_download_link: https://arm.seli.gic.ericsson.se/artifactory/proj-eof-dev/org/springframework/boot/spring-boot-configuration-processor/2.7.4/spring-boot-configuration-processor-2.7.4-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.springframework.boot_spring-boot-configuration-processor
+    target_sw: linux
+    vendor: mvn
+    version: 2.7.4
+    web_url: https://spring.io/projects/spring-boot
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: spring-boot-configuration-processor
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.7.4
+  mimer:
+    product_number: ''
+    product_version_label: 2.7.4
+- ID: org.springframework.boot:spring-boot-starter-data-jpa+2.7.4
+  additional_info:
+    fossa-attribution:
+      Description: Starter for using Spring Data JPA with Hibernate
+      Package: org.springframework.boot:spring-boot-starter-data-jpa
+      Source: mvn
+      Version: 2.7.4
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: spring-boot-starter-data-jpa
+      DownloadURL: https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/2.7.4/spring-boot-starter-data-jpa-2.7.4-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '141/CAX1058168'
+    community_link: https://spring.io/projects/spring-boot
+    community_name: https://spring.io/projects/spring-boot
+    community_url: https://spring.io/projects/spring-boot
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: spring-boot-starter-data-jpa
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.7.4
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/2.7.4/spring-boot-starter-data-jpa-2.7.4-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.springframework.boot_spring-boot-starter-data-jpa
+    target_sw: linux
+    vendor: mvn
+    version: 2.7.4
+    web_url: https://spring.io/projects/spring-boot
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: spring-boot-starter-data-jpa
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 2.7.4
+  mimer:
+    product_number: CAX1058168
+    product_version_label: 2.7.4
+- ID: org.springframework.plugin:spring-plugin-metadata+2.0.0.RELEASE
+  additional_info:
+    fossa-attribution:
+      Description: Extension package for metadata based plugins
+      Package: org.springframework.plugin:spring-plugin-metadata
+      Source: mvn
+      Version: 2.0.0.RELEASE
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Spring Plugin - Metadata Extension
+      DownloadURL: https://repo1.maven.org/maven2/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 2/CAX1058434
+    community_link: https://github.com/spring-projects/spring-plugin
+    community_name: https://github.com/spring-projects/spring-plugin
+    community_url: https://github.com/spring-projects/spring-plugin
+    component_comment: ''
+    component_highlevel_description: Spring Plugin provides a more pragmatic approach
+      to plugin development by providing the core flexibility of having plugin implementations
+      extending a core system's functionality but of course not delivering core OSGi
+      features like dynamic class loading or runtime installation and deployment of
+      plugins
+    component_name: spring-plugin
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 2.0.0.RELEASE
+    licenses:
+    - 'FAL1159004/20: Apache License 2.0 (Apache-2.0)'
+    src_download_link: https://github.com/spring-projects/spring-plugin/archive/2.0.0.RELEASE.zip
+    stako_decision_reason: automatic
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://bazaar.internal.ericsson.com/b-view-component.php?componentid=926311
+    recode: ''
+    retext: ''
+    country: US
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.springframework.plugin_spring-plugin-metadata
+    target_sw: linux
+    vendor: mvn
+    version: 2.0.0.RELEASE
+    web_url: https://repo1.maven.org/maven2/org/springframework/plugin/spring-plugin-metadata
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: Spring Plugin - Metadata Extension
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 2.0.0.RELEASE
+  mimer:
+    product_number: CAX1058434
+    product_version_label: 2.0.0.RELEASE
+  alerts:
+  - Stako is 'ESW3', BAZAAR component is not recommended to be used
+- ID: za.co.absa:abris_2.12+6.3.0
+  additional_info:
+    fossa-attribution:
+      Description: Provides seamless integration between Avro and Spark Structured
+        APIs.
+      Package: za.co.absa:abris_2.12
+      Source: mvn
+      Version: 6.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: abris
+      DownloadURL: https://repo1.maven.org/maven2/za/co/absa/abris_2.12/6.3.0/abris_2.12-6.3.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_link: https://github.com/AbsaOSS/ABRiS
+    community_name: https://github.com/AbsaOSS/ABRiS
+    community_url: https://github.com/AbsaOSS/ABRiS
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: abris
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 6.3.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/za/co/absa/abris_2.12/6.3.0/abris_2.12-6.3.0-sources.jar
+    stako_decision_reason: automatic
+    stako: DO_NOT_EDIT_MANUALLY
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: za.co.absa_abris_2.12
+    target_sw: linux
+    vendor: mvn
+    version: 6.3.0
+    web_url: https://github.com/AbsaOSS/ABRiS
+  licenses:
+  - Apache-2.0
+  linking: Classpath
+  name: abris
+  primary:
+  - this
+  selected_license: Apache-2.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 6.3.0
+  mimer:
+    product_number: CTX1029750
+    product_version_label: 6.3.0

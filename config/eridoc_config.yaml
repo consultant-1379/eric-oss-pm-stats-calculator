@@ -1,0 +1,28 @@
+#
+# COPYRIGHT Ericsson 2023
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+repository: eridoca
+folderId: 0b004cffcca83216
+# https://eridoc.internal.ericsson.com/eridoc/?docbase=eridoca&locateId=0b004cffcca83216 - PM Stats Calculator folder
+documents:
+  # List the documents you want to upload to Eridoc.
+  - title: "Service Users Guide - PM Stats Calculator"
+    folderId: 0b004cffcca83217
+    # https://eridoc.internal.ericsson.com/eridoc/?docbase=eridoca&locateId=0b004cffcca83217 - Generic Documents PM Stats Calculator subfolder
+    file: "./build/doc/pdf/service-user-guide/user_guide.pdf"
+    class-prefix: "1"
+    decimal-class: "1553"
+    individual-number: "APR 201 564/1"
+    strategy: latest
+    eri_document_type: "User Guide"
+    format: "pdf"
+    eri_audience: "Workgroup Members - Searchable"
+    eri_category: "Research & Development"
+    eri_conf_class: "Ericsson Internal"

@@ -1,0 +1,31 @@
+{
+  "source": "TEST",
+  "kpi_names": [
+    "rolling_sum_integer_1440",
+    "rolling_max_integer_1440",
+    "first_float_operator_1440_post_aggregation"
+  ],
+  "parameters": [
+    {
+      "name": "param.execution_id",
+      "value": "TEST_1"
+    },
+    {
+      "name": "param.date_for_filter",
+      "value": "2023-06-06"
+    }
+  ],
+  "tabular_parameters": [
+    {
+      "name": "tabular_parameter1",
+      "format": "CSV",
+      "value": "12"
+    },
+    {
+      "name": "tabular_parameter2",
+      "format": "CSV",
+      "header": "header1",
+      "value": "10"
+    }
+  ]
+}

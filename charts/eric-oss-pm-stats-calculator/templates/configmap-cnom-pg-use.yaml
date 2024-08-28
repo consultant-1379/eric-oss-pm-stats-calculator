@@ -1,0 +1,298 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+# Only include this file if both cnom and kpiData are enabled
+{{- if and (eq .Values.cnom.enabled true) (eq .Values.kpiData.enabled true) }}
+{{- $postgreSQLName := include "eric-data-document-database-pg.name" .Subcharts.kpiData }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator.name" . }}-cnom-pg-use
+  labels:
+{{- include "eric-oss-pm-stats-calculator.labels" . | nindent 4 }}
+{{- include "eric-oss-pm-stats-calculator.cnom-labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-pm-stats-calculator.annotations" . | nindent 4 }}
+data:
+  cnom-pg-use-metrics-config.json: |-
+    {
+      "namespace": "PMH_PMSC_PG_USE",
+      "dashboards": [
+        {
+          "_id": "{{ .Release.Name | replace "-" "_" }}_use_metrics",
+          "title": "PostgreSQL USE Metrics",
+          "apps": ["statusOverview"],
+          "order": 0,
+          "dashboardTreeView": {
+            "tree": [["PM Stats Calculation Handling", "PM Stats Calculator", "USE metrics"]]
+          },
+          "tiles": [
+            {
+              "xSize": 5,
+              "widget": "process_virtual_memory_bytes"
+            },
+            {
+              "xSize": 5,
+              "widget": "process_cpu_seconds_total"
+            },
+            {
+              "xSize": 5,
+              "widget": "go_memstats_heap_inuse_bytes"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_database_size_bytes"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_blks_hit"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_bgwriter_buffers_alloc_total"
+            },
+            {
+              "xSize": 5,
+              "widget": "process_resident_memory_bytes"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_statio_user_tables_heap_blocks_hit"
+            },
+            {
+              "xSize": 5,
+              "widget": "process_open_fds"
+            },
+            {
+              "xSize": 5,
+              "widget": "go_threads"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_numbackends"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_volume_stats_available_bytes"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_blks_read"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_blk_read_time"
+            },
+            {
+              "xSize": 5,
+              "widget": "pg_stat_database_blk_write_time"
+            }
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "_id": "process_virtual_memory_bytes",
+          "widgetType": "timeline",
+          "title": "Pod virtual memory usage",
+          "unit": "bytes",
+          "sources": [{ "source": "process_virtual_memory_bytes" }]
+        },
+        {
+          "_id": "process_cpu_seconds_total",
+          "widgetType": "timeline",
+          "title": "Pod CPU load",
+          "unit": "sec",
+          "sources": [{ "source": "process_cpu_seconds_total" }]
+        },
+        {
+          "_id": "go_memstats_heap_inuse_bytes",
+          "widgetType": "timeline",
+          "title": "Heap memory in use",
+          "unit": "bytes",
+          "sources": [{ "source": "go_memstats_heap_inuse_bytes" }]
+        },
+        {
+          "_id": "pg_database_size_bytes",
+          "widgetType": "timeline",
+          "title": "Disk space used by the database",
+          "unit": "bytes",
+          "sources": [{ "source": "pg_database_size_bytes" }]
+        },
+        {
+          "_id": "pg_stat_database_blks_hit",
+          "widgetType": "timeline",
+          "title": "Number of times disk blocks were found already in the buffer cache",
+          "unit": "count",
+          "sources": [{"source": "pg_stat_database_blks_hit"}]
+        },
+        {
+          "_id": "pg_stat_bgwriter_buffers_alloc_total",
+          "widgetType": "timeline",
+          "title": "Postgre state bgwriter buffers alloc total",
+          "sources": [{"source": "pg_stat_bgwriter_buffers_alloc_total"}]
+        },
+        {
+          "_id": "process_resident_memory_bytes",
+          "widgetType": "timeline",
+          "title": "Pod RSS memory usage",
+          "unit": "bytes",
+          "sources": [{"source": "process_resident_memory_bytes"}]
+        },
+        {
+          "_id": "pg_statio_user_tables_heap_blocks_hit",
+          "widgetType": "timeline",
+          "title": "Postgre statio user table heap blocks hit",
+          "sources": [{"source": "pg_statio_user_tables_heap_blocks_hit"}]
+        },
+        {
+          "_id": "process_open_fds",
+          "widgetType": "timeline",
+          "title": "Number of open file descriptors",
+          "unit": "count",
+          "sources": [{ "source": "process_open_fds" }]
+        },
+        {
+          "_id": "go_threads",
+          "widgetType": "timeline",
+          "title": "Threads count",
+          "unit": "count",
+          "sources": [{ "source": "go_threads" }]
+        },
+        {
+          "_id": "pg_stat_database_numbackends",
+          "widgetType": "timeline",
+          "title": "Number of backends currently connected to this database",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_numbackends" }]
+        },
+        {
+          "_id": "pg_volume_stats_available_bytes",
+          "widgetType": "timeline",
+          "title": "Total number of available bytes on the volume",
+          "unit": "bytes",
+          "sources": [{ "source": "pg_volume_stats_available_bytes" }]
+        },
+        {
+          "_id": "pg_stat_database_blks_read",
+          "widgetType": "timeline",
+          "title": "Number of disk blocks read in this database",
+          "unit": "count",
+          "sources": [{ "source": "pg_stat_database_blks_read" }]
+        },
+        {
+          "_id": "pg_stat_database_blk_read_time",
+          "widgetType": "timeline",
+          "title": "Time spent reading data file blocks by backends in this database",
+          "unit": "millisecond",
+          "sources": [{ "source": "pg_stat_database_blk_read_time" }]
+        },
+        {
+          "_id": "pg_stat_database_blk_write_time",
+          "widgetType": "timeline",
+          "title": "Time spent writing data file blocks by backends in this database",
+          "unit": "millisecond",
+          "sources": [{ "source": "pg_stat_database_blk_write_time" }]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "process_virtual_memory_bytes",
+          "sourceType": "prometheus",
+          "query": "sum(process_virtual_memory_bytes{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "process_cpu_seconds_total",
+          "sourceType": "prometheus",
+          "query": "sum(process_cpu_seconds_total{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "go_memstats_heap_inuse_bytes",
+          "sourceType": "prometheus",
+          "query": "sum(go_memstats_heap_inuse_bytes{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_database_size_bytes",
+          "sourceType": "prometheus",
+          "query": "sum(pg_database_size_bytes{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_blks_hit",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_blks_hit{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_bgwriter_buffers_alloc_total",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_bgwriter_buffers_alloc_total{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "process_resident_memory_bytes",
+          "sourceType": "prometheus",
+          "query": "sum(process_resident_memory_bytes{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_statio_user_tables_heap_blocks_hit",
+          "sourceType": "prometheus",
+          "query": "sum(pg_statio_user_tables_heap_blocks_hit{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "process_open_fds",
+          "sourceType": "prometheus",
+          "query": "sum(process_open_fds{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "go_threads",
+          "sourceType": "prometheus",
+          "query": "sum(go_threads{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_numbackends",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_numbackends{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_volume_stats_available_bytes",
+          "sourceType": "prometheus",
+          "query": "sum(pg_volume_stats_available_bytes{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_blks_read",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_blks_read{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_blk_read_time",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_blk_read_time{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        },
+        {
+          "_id": "pg_stat_database_blk_write_time",
+          "sourceType": "prometheus",
+          "query": "sum(pg_stat_database_blk_write_time{app_kubernetes_io_instance='{{.Release.Name}}',app='{{ $postgreSQLName }}'}) by (app)",
+          "splitByLabelName": "app"
+        }
+      ]
+    }
+{{- end }}

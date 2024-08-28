@@ -1,0 +1,323 @@
+{
+  "type": "record",
+  "name": "SampleCellFDD_1",
+  "namespace": "4G.RAN.PM_COUNTERS",
+  "fields": [
+    {
+      "name": "nodeFDN",
+      "type": "string"
+    },
+    {
+      "name": "elementType",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "ropEndTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "dnPrefix",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "moFdn",
+      "type": "string"
+    },
+    {
+      "name": "suspect",
+      "type": "boolean"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "type": "record",
+        "name": "pmCounters",
+        "fields": [
+          {
+            "name": "exampleCounter",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "float"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCounter1",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter1",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "float"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCounter2",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter2",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "float"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCounter3",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter3",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "int"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCounter4",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter4",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "int"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCounter5",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter5",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "int"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCounter6",
+            "type": {
+              "type": "record",
+              "name": "exampleCounter6",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "int"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmExampleCounter1",
+            "type": {
+              "type": "record",
+              "name": "pmExampleCounter1",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "long"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmExampleCounter2",
+            "type": {
+              "type": "record",
+              "name": "pmExampleCounter2",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "long"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pdfCounter",
+            "type": {
+              "type": "record",
+              "name": "pdfCounter",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "pdf"
+                },
+                {
+                  "name": "counterValue",
+                  "type": {
+                    "type": "array",
+                    "items": "int"
+                  }
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "exampleCompressed",
+            "type": {
+              "type": "record",
+              "name": "exampleCompressed",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "compressedPdf"
+                },
+                {
+                  "name": "counterValue",
+                  "type": {
+                    "type": "array",
+                    "items": "float"
+                  }
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

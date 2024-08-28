@@ -1,0 +1,14 @@
+{
+  "id": "1",
+  "type": "ret",
+  "attributes": {
+    "electricalAntennaTilt": 7.0,
+    "fdn": "SubNetwork\u003dSON,MeContext\u003dnodeName,ManagedElement\u003d1,AntennaUnitGroup\u003d5,AntennaNearUnit\u003d1",
+    "name": "RET_1"
+  },
+  "_links": {
+    "self": {
+      "href": "/son-om/cm-topology/v1/topology-objects/ret/1"
+    }
+  }
+}

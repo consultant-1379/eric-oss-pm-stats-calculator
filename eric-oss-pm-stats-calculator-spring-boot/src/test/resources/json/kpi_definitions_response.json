@@ -1,0 +1,121 @@
+{
+  "scheduled_simple" : {
+    "kpi_output_tables" : [ {
+      "alias" : "alias_simple_table_1",
+      "aggregation_period" : 60,
+      "retention_period_in_days" : 7,
+      "kpi_definitions" : [ {
+        "name" : "simple_one",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ],
+        "reexport_late_data" : true,
+        "data_reliability_offset" : 1,
+        "data_lookback_limit" : 1,
+        "inp_data_identifier" : "dataSpace|category|name"
+      }, {
+        "name" : "simple_two",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ],
+        "reexport_late_data" : true,
+        "data_reliability_offset" : 1,
+        "data_lookback_limit" : 1,
+        "inp_data_identifier" : "dataSpace|category|name"
+      } ]
+    }, {
+      "alias" : "alias_simple_table_2",
+      "aggregation_period" : 60,
+      "retention_period_in_days" : 7,
+      "kpi_definitions" : [ {
+        "name" : "simple_three",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ],
+        "reexport_late_data" : true,
+        "data_reliability_offset" : 1,
+        "data_lookback_limit" : 1,
+        "inp_data_identifier" : "dataSpace|category|name"
+      } ]
+    } ]
+  },
+  "scheduled_complex" : {
+    "kpi_output_tables" : [ {
+      "alias" : "alias_complex_table_1",
+      "aggregation_period" : 60,
+      "retention_period_in_days" : 7,
+      "kpi_definitions" : [ {
+        "name" : "complex_one",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ],
+        "reexport_late_data" : true,
+        "data_reliability_offset" : 1,
+        "data_lookback_limit" : 1,
+        "execution_group" : "name"
+      }, {
+        "name" : "complex_two",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ],
+        "reexport_late_data" : true,
+        "data_reliability_offset" : 1,
+        "data_lookback_limit" : 1,
+        "execution_group" : "name"
+      } ]
+    } ]
+  },
+  "on_demand" : {
+    "parameters" : [ {
+      "name" : "execution_id",
+      "type" : "STRING"
+    } ],
+    "tabular_parameters" : [ {
+      "name" : "cell_configuration",
+      "columns" : [ {
+        "name" : "target_throughput_r",
+        "type" : "FLOAT"
+      }, {
+        "name" : "min_rops_for_reliability",
+        "type" : "Integer"
+      } ]
+    } ],
+    "kpi_output_tables" : [ {
+      "alias" : "alias_on_demand_table_1",
+      "aggregation_period" : 60,
+      "retention_period_in_days" : 7,
+      "kpi_definitions" : [ {
+        "name" : "on_demand_one",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ]
+      }, {
+        "name" : "on_demand_two",
+        "expression" : "EXPRESSION",
+        "object_type" : "INTEGER",
+        "aggregation_type" : "SUM",
+        "aggregation_elements" : [ "table.column1", "table.column2" ],
+        "exportable" : true,
+        "filters" : [ "f1", "f2" ]
+      } ]
+    } ]
+  }
+}

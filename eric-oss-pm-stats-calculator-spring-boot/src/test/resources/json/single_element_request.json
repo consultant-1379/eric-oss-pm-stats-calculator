@@ -1,0 +1,70 @@
+{
+  "on_demand": {
+    "tabular_parameters": [],
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "rolling_aggregation",
+        "aggregation_elements": [
+          "fact_table_0.agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "dim_enrich_1",
+            "expression": "FIRST(cell_configuration_test.tabular_parameter_dimension) FROM tabular_parameters://cell_configuration_test",
+            "object_type": "STRING",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "cell_configuration_test.tabular_parameter_agg AS agg_column_0"
+            ],
+            "exportable": true
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "complex",
+        "aggregation_elements": [
+          "kpi_simple_60.agg_column_0",
+          "kpi_simple_60.agg_column_1"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_60_complex",
+            "expression": "SUM(kpi_simple_60.integer_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX1"
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "cell_guid_simple",
+        "aggregation_elements": [
+          "fact_table_2.agg_column_0"
+        ],
+        "exportable": true,
+        "inp_data_identifier": "dataSpace|topic1|fact_table_2",
+        "kpi_definitions": [
+          {
+            "name": "first_add_integer_to_array_with_limit_simple",
+            "expression": "FIRST(ADD_INTEGER_TO_ARRAY_WITH_LIMIT(fact_table_2.integerArrayColumn0, 1, 5))",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      }
+    ]
+  }
+}

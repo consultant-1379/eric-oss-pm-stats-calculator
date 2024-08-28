@@ -1,0 +1,140 @@
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Java #
+*/war/WEB-INF/classes
+*.class
+
+# Mobile Tools for Java (J2ME)
+*.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+*hs_err_pid*
+
+# Maven #
+*target/
+*pom.xml.tag
+*pom.xml.releaseBackup
+*pom.xml.versionsBackup
+*pom.xml.next
+*release.properties
+*dependency-reduced-pom.xml
+*buildNumber.properties
+*.mvn/timing.properties
+
+# Eclipse #
+*.metadata
+*bin/
+*tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+*.settings
+*.loadpath
+*.recommenders
+
+# Eclipse Core
+*.project
+
+# External tool builders
+*.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+*.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+*.classpath
+
+# Java annotation processor (APT)
+*.factorypath
+
+# PDT-specific (PHP Development Tools)
+*.buildpath
+
+# sbteclipse plugin
+*.target
+
+# Tern plugin
+*.tern-project
+
+# TeXlipse plugin
+*.texlipse
+
+# STS (Spring Tool Suite)
+*.springBeans
+
+# Code Recommenders
+*.recommenders/
+
+# PMD #
+*.pmd
+
+artifacts/
+coverage-reports/
+deployment/
+
+# Loggers
+*default_*.log
+*.log.*
+*.log
+
+# lock file
+charts/*/charts/
+charts/*/requirements.lock
+charts/*/Chart.lock
+
+helm-test-local/token.txt
+helm-test-local/eric-oss-pm-stats-calculator-*.tgz
+
+# RequiredKpis.json is copied from eric-oss-pm-stats-calculator-jar to the below locations as part of build.
+*eric-oss-pm-stats-calculator-spark/src/test/resources/RequiredKpis.json
+
+# NewRequiredKpis.json is copied from eric-oss-pm-stats-calculator-jar to the below locations as part of build.
+/eric-oss-pm-stats-calculator-ejb/src/test/resources/NewRequiredKpis.json
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+.project
+
+### BOB Temporary Files/Folders ###
+.bob.env
+.bob/
+.bob*/
+k8s-logs/
+build
+
+### SonarQube Working Directory ###
+?/
+
+### Spinnaker Temporary Properties ###
+artifact.properties
+
+### REST2HTML Artifacts ###
+rest2html*.zip
+rest_conversion_log.txt
+**/*.zip
+
+### index.html & openapi sha256 files
+src/main/resources/v1/index.html
+src/main/resources/v1/.openapi-generator/*openapi.yaml.sha256

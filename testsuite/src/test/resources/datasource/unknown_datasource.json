@@ -1,0 +1,24 @@
+{
+  "scheduled_complex": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 60,
+        "alias": "unknown_datasource",
+        "aggregation_elements": [
+          "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "kpi_definitions": [
+          {
+            "name": "test_kpi_definition",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM random_datasource://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "execution_group": "COMPLEX4"
+          }
+        ]
+      }
+    ]
+  }
+}

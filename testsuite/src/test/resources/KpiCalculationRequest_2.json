@@ -1,0 +1,34 @@
+{
+  "source": "TEST",
+  "kpi_names": [
+    "first_integer_dim_enrich_1440",
+    "first_float_dim_enrich_1440",
+    "first_integer_operator_60_stage2",
+    "first_integer_operator_60_stage3",
+    "first_integer_operator_60_stage4"
+  ],
+  "parameters": [
+    {
+      "name": "param.execution_id",
+      "value": "TEST_1"
+    },
+    {
+      "name": "param.date_for_filter",
+      "value": <DATE_FOR_FILTER>
+    }
+  ],
+  "tabular_parameters": [
+    {
+      "name": "cell_configuration_test",
+      "format": "CSV",
+      "header": "nodeFDN,moFdn,execution_id",
+      "value": "1,1,TEST_1\n2,2,TEST_1\nnode1,3,TEST_2"
+    },
+    {
+      "name": "cell_configuration_test_2",
+      "format": "CSV",
+      "header": "nodeFDN,moFdn,execution_id,integer_property",
+      "value": "14,1,TEST_1,1\n2,2,TEST_1,4\n3,3,TEST_2,3"
+    }
+  ]
+}

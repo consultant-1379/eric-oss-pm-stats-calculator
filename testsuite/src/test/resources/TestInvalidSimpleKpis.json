@@ -1,0 +1,35 @@
+{
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "cell_guid_simple",
+        "aggregation_elements": [
+          "new_fact_table_0.nodeFDN"
+        ],
+        "exportable": true,
+        "data_reliability_offset": 0,
+        "inp_data_identifier": "eric-data-message-bus-kf:9092|topic0|invalid_fact_table_1",
+        "kpi_definitions": [
+          {
+            "name": "sum_Integer_1440_simple",
+            "expression": "SUM(new_fact_table_0.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          },
+          {
+            "name": "sum_integer_arrayindex_1440_simple",
+            "expression": "SUM(new_fact_table_2.pmCounters.integerArrayColumn0[1] + new_fact_table_2.pmCounters.integerArrayColumn0[3])",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "new_fact_table_2.invalid_agg_element"
+            ],
+            "exportable": false,
+            "inp_data_identifier": "category|new_fact_table_2"
+          }
+        ]
+      }
+    ]
+  }
+}

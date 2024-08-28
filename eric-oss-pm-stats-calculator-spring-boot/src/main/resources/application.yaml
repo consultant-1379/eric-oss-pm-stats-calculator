@@ -1,0 +1,106 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+spring:
+  jmx :
+    enabled : true
+  sleuth:
+    enabled: true
+    trace-id128: true
+    supports-join: false
+    zipkin:
+      baseUrl: ${ERIC_ZIPKIN_ENDPOINT}
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: ${KPI_SERVICE_DB_DRIVER}
+    url: ${KPI_SERVICE_DB_JDBC_CONNECTION}
+    username: ${KPI_SERVICE_DB_USER}
+    password: ${KPI_SERVICE_DB_PASSWORD:}
+  flyway:
+    enabled: false
+
+management:
+  server:
+    port : 8080
+  endpoint:
+    metrics.enabled: "true"
+    prometheus.enabled: "true"
+    health:
+      show-details: "always"
+      show-components: "always"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    enable.jvm: "true"
+    export :
+      prometheus :
+        enabled : "true"
+    web :
+      server :
+        request :
+          autotime :
+            enabled : true
+  info.env.enabled: "true"
+
+server:
+  servlet:
+    context-path: /kpi-handling
+  port : 8080
+
+logging:
+  config: ${LOGBACK_CONFIG_FILE:classpath:logback-json.xml}
+  # Format for endpoints is a sequence with ',' as a delimiter
+  endpoints:
+    exclude: /actuator/health, /actuator/prometheus, /ping, /metrics, /actuator/id-(.*), /metrics/prometheus
+
+pm-stats-calculator:
+  retention-configured-max: ${RETENTION_PERIOD_CONFIGURED_MAX:30}
+  retention-period-days: ${RETENTION_PERIOD_DAYS:5}
+  kpi-execution-period: ${KPI_EXECUTION_PERIOD}
+  cron-retention-period-check: ${CRON_RETENTION_PERIOD_CHECK:0 1 0 1/1 * ? *}
+  max-number-of-parallel-on-demand-calculations: ${MAX_NUMBER_OF_PARALLEL_ON_DEMAND_CALCULATIONS:5}
+  block-scheduled-when-handling-on-demand: ${BLOCK_SCHEDULED_WHEN_HANDLING_ON_DEMAND:false}
+  max-heartbeat-to-wait-to-recalculate-simples: ${MAX_HEARTBEAT_TO_WAIT_TO_RECALCULATE_SIMPLES:5}
+  queue-weight-on-demand-calculation: ${QUEUE_WEIGHT_ON_DEMAND_CALCULATION:3}
+  queue-weight-scheduled-calculation: ${QUEUE_WEIGHT_SCHEDULED_CALCULATION:3}
+  input-source: ${INPUT_SOURCE}
+  aggregation-period: ${AGGREGATION_PERIOD}
+  aggregation-elements: ${AGGREGATION_ELEMENTS}
+  kpi-service-db-user: ${KPI_SERVICE_DB_USER}
+  kpi-service-db-password: ${KPI_SERVICE_DB_PASSWORD}
+  kpi-service-db-driver: ${KPI_SERVICE_DB_DRIVER}
+  kpi-service-db-jdbc-connection: ${KPI_SERVICE_DB_JDBC_CONNECTION}
+  kafka-bootstrap-servers: ${KPI_SERVICE_KAFKA_BOOTSTRAP_SERVERS}
+  kafka-exposure-topic-name: ${KPI_SERVICE_KAFKA_EXPOSURE_TOPIC_NAME}
+  kafka-execution-report-topic-name: ${KPI_SERVICE_KAFKA_EXECUTION_REPORT_TOPIC_NAME}
+  spark-master-url: ${SPARK_MASTER_URL}
+  data-catalog-url: ${DATA_CATALOG_URL}
+  maximum-concurrent-calculations: ${MAXIMUM_CONCURRENT_CALCULATIONS:2}
+  spark-executor-starting-port: ${SPARK_EXECUTOR_STARTING_PORT:10010}
+  schema-registry-url: ${SCHEMA_REGISTRY_URL}
+  kafka-resource-manager-address: ${KAFKA_RESOURCE_MANAGER_ADDRESS}
+  spark-metric-retention-in-seconds: ${SPARK_METRIC_RETENTION_IN_SECONDS:900}
+
+ericsson:
+  tracing:
+    enabled: ${ERIC_TRACING_ENABLED:true}
+    exporter:
+      endpoint: ${ERIC_EXPORTER_ENDPOINT:http://eric-dst-collector:4317}
+    sampler:
+      jaeger_remote:
+        endpoint: ${ERIC_SAMPLER_JAEGER_REMOTE_ENDPOINT:http://eric-dst-collector:14250}
+    propagator:
+      type: ${ERIC_PROPAGATOR_TYPE:b3}
+    endpoints:
+      exclude: /actuator/health, /actuator/prometheus, /ping, /metric

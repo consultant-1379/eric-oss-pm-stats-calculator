@@ -1,0 +1,18 @@
+{
+  "name": "collection_id_test",
+  "alias": "simple_collection_alias",
+  "aggregation_period": 60,
+  "expression": "SampleCellFDD_1.pmCounters.exampleCounter2.counterValue",
+  "object_type": "FLOAT",
+  "aggregation_type": "SUM",
+  "aggregation_elements": [
+    "SampleCellFDD_1.nodeFDN",
+    "SampleCellFDD_1.moFdn"
+  ],
+  "filters": [],
+  "data_reliability_offset": 0,
+  "data_lookback_limit": 7200,
+  "inp_data_identifier": "4G|PM_COUNTERS|SampleCellFDD_1",
+  "reexport_late_data": false,
+  "exportable": true
+}

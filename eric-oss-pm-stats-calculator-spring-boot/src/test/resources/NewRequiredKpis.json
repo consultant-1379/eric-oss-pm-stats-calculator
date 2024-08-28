@@ -1,0 +1,347 @@
+{
+  "on_demand": {
+    "tabular_parameters": [
+      {
+        "name": "cell_configuration_test",
+        "columns": [
+          {
+            "name": "nodeFDN",
+            "type": "STRING"
+          },
+          {
+            "name": "moFdn",
+            "type": "STRING"
+          },
+          {
+            "name": "execution_id",
+            "type": "STRING"
+          }
+        ]
+      },
+      {
+        "name": "cell_configuration_test_2",
+        "columns": [
+          {
+            "name": "nodeFDN",
+            "type": "STRING"
+          },
+          {
+            "name": "moFdn",
+            "type": "STRING"
+          },
+          {
+            "name": "execution_id",
+            "type": "STRING"
+          },
+          {
+            "name": "integer_property",
+            "type": "INTEGER"
+          }
+        ]
+      }
+    ],
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "rolling_aggregation",
+        "aggregation_elements": [
+          "kpi_cell_guid_simple_1440.nodeFDN AS agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "rolling_sum_integer_1440",
+            "expression": "SUM(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": true
+          },
+          {
+            "name": "rolling_max_integer_1440",
+            "expression": "MAX(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440",
+            "object_type": "INTEGER",
+            "aggregation_type": "MAX"
+          },
+          {
+            "name": "first_float_operator_1440_post_aggregation",
+            "expression": "FIRST(rolling_aggregation.rolling_sum_integer_1440) / FIRST(rolling_aggregation.rolling_max_integer_1440) FROM kpi_post_agg://rolling_aggregation",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "rolling_aggregation.agg_column_0"
+            ]
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "execution_id",
+        "aggregation_elements": [
+          "kpi_simple_60.agg_column_0",
+          "'${param.execution_id}' AS execution_id"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "executionid_sum_integer_1440",
+            "expression": "SUM(kpi_simple_60.integer_simple) from kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "cell_guid",
+        "aggregation_elements": [
+          "kpi_simple_60.agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_aggregate_slice_1440",
+            "expression": "FIRST(aggregate(slice( kpi_simple_60.integer_array_simple, 1, 3), 0, (acc, x) -> acc + x)) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "cell_guid",
+        "aggregation_elements": [
+          "cell_guid.agg_column_0"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_operator_60_stage2",
+            "expression": "FIRST(kpi_simple_60.integer_simple) / FIRST(kpi_simple_60.float_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_simple_60.agg_column_0"
+            ]
+          },
+          {
+            "name": "first_integer_operator_60_stage3",
+            "expression": "FIRST(cell_guid.first_integer_operator_60_stage2) / 10 FROM kpi_inmemory://cell_guid",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "first_integer_operator_60_stage4",
+            "expression": "FIRST(cell_guid.first_integer_operator_60_stage2) - FIRST(cell_guid.first_integer_operator_60_stage3) FROM kpi_inmemory://cell_guid",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "relation_guid_source_guid_target_guid",
+        "aggregation_elements": [
+          "kpi_simple_60.agg_column_0",
+          "kpi_simple_60.agg_column_1"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "first_float_divideby0_60",
+            "expression": "FIRST(kpi_simple_60.integer_simple) / NULLIF(0,0) FROM kpi_db://kpi_simple_60",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "cell_sector",
+        "aggregation_elements": [
+          "kpi_cell_guid_simple_1440.nodeFDN",
+          "cell_configuration_test.moFdn",
+          "cell_configuration_test.execution_id"
+        ],
+        "exportable": false,
+        "kpi_definitions": [
+          {
+            "name": "first_integer_dim_enrich_1440",
+            "expression": "FIRST(kpi_cell_guid_simple_1440.sum_Integer_1440_simple) FROM kpi_db://kpi_cell_guid_simple_1440 INNER JOIN tabular_parameters://cell_configuration_test ON kpi_cell_guid_simple_1440.nodeFDN = cell_configuration_test.nodeFDN",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST",
+            "filters": [
+              "kpi_db://kpi_cell_guid_simple_1440.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'",
+              "tabular_parameters://cell_configuration_test.execution_id = '${param.execution_id}'"
+            ]
+          },
+          {
+            "name": "first_float_dim_enrich_1440",
+            "expression": "FIRST(kpi_cell_guid_simple_1440.sum_integer_arrayindex_1440_simple / cell_configuration_test_2.integer_property) FROM kpi_db://kpi_cell_guid_simple_1440 INNER JOIN tabular_parameters://cell_configuration_test_2 ON kpi_cell_guid_simple_1440.nodeFDN = cell_configuration_test_2.nodeFDN",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST",
+            "aggregation_elements": [
+              "kpi_cell_guid_simple_1440.nodeFDN",
+              "cell_configuration_test_2.moFdn",
+              "cell_configuration_test_2.execution_id"
+            ],
+            "filters": [
+              "kpi_db://kpi_cell_guid_simple_1440.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'",
+              "tabular_parameters://cell_configuration_test_2.execution_id = '${param.execution_id}'"
+            ]
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "sector",
+        "aggregation_elements": [
+          "kpi_sector_60.agg_column_0"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "max_integer_1440_kpidb",
+            "expression": "MAX(kpi_sector_60.sum_integer_60_join_kpidb) FROM kpi_db://kpi_sector_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "MAX",
+            "filters": [
+              "kpi_db://kpi_sector_60.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'"
+            ]
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "sector",
+        "aggregation_elements": [
+          "kpi_simple_60.agg_column_0"
+        ],
+        "exportable": true,
+        "kpi_definitions": [
+          {
+            "name": "sum_integer_60_join_kpidb",
+            "expression": "SUM(kpi_simple_60.integer_simple) FROM kpi_db://kpi_simple_60",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "filters": [
+              "kpi_db://kpi_simple_60.TO_DATE(aggregation_begin_time) = '${param.date_for_filter}'"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scheduled_simple": {
+    "kpi_output_tables": [
+      {
+        "aggregation_period": 1440,
+        "alias": "cell_guid_simple",
+        "aggregation_elements": [
+          "fact_table_2.nodeFDN"
+        ],
+        "exportable": true,
+        "inp_data_identifier": "dataSpace|topic1|fact_table_2",
+        "kpi_definitions": [
+          {
+            "name": "sum_Integer_1440_simple",
+            "expression": "SUM(fact_table_0.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "aggregation_elements": [
+              "fact_table_0.agg_column_0"
+            ],
+            "inp_data_identifier": "dataSpace|topic0|fact_table_0"
+          },
+          {
+            "name": "sum_integer_arrayindex_1440_simple",
+            "expression": "SUM(fact_table_2.integerArrayColumn0[1] + fact_table_2.integerArrayColumn0[3])",
+            "object_type": "INTEGER",
+            "aggregation_type": "SUM",
+            "exportable": false
+          },
+          {
+            "name": "first_calculate_percentile_value_simple",
+            "expression": "FIRST(CALCULATE_PERCENTILE_VALUE(fact_table_2.floatArrayColumn0, 0))",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "first_calculate_percentile_bin_simple",
+            "expression": "FIRST(CALCULATE_PERCENTILE_BIN(fact_table_2.integerArrayColumn0, 0))",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "first_update_null_time_advanced_kpis_simple",
+            "expression": "FIRST(UPDATE_NULL_TIME_ADVANCED_KPIS(fact_table_2.integerArrayColumn0, 5))",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "first_add_integer_to_array_with_limit_simple",
+            "expression": "FIRST(ADD_INTEGER_TO_ARRAY_WITH_LIMIT(fact_table_2.integerArrayColumn0, 1, 5))",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 1440,
+        "alias": "rel_guid_s_guid_t_guid_simple",
+        "aggregation_elements": [
+          "fact_table_1.agg_column_0",
+          "fact_table_1.agg_column_1",
+          "fact_table_1.agg_column_2"
+        ],
+        "exportable": false,
+        "inp_data_identifier": "dataSpace|topic0|fact_table_1",
+        "kpi_definitions": [
+          {
+            "name": "sum_float_1440_simple",
+            "expression": "SUM(fact_table_1.floatColumn0)",
+            "object_type": "FLOAT",
+            "aggregation_type": "SUM"
+          }
+        ]
+      },
+      {
+        "aggregation_period": 60,
+        "alias": "simple",
+        "aggregation_elements": [
+          "a_new_very_simple_kpi.agg_column_0",
+          "a_new_very_simple_kpi.agg_column_1"
+        ],
+        "exportable": true,
+        "inp_data_identifier": "dataSpace|category|a_new_very_simple_kpi",
+        "data_reliability_offset": 0,
+        "data_lookback_limit": 180,
+        "kpi_definitions": [
+          {
+            "name": "integer_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.integerColumn0)",
+            "object_type": "INTEGER",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "float_array_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.floatArrayColumn0)",
+            "object_type": "FLOAT[5]",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "integer_array_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.integerArrayColumn0)",
+            "object_type": "INTEGER[5]",
+            "aggregation_type": "FIRST"
+          },
+          {
+            "name": "float_simple",
+            "expression": "FIRST(a_new_very_simple_kpi.pmCounters.floatColumn0)",
+            "object_type": "FLOAT",
+            "aggregation_type": "FIRST"
+          }
+        ]
+      }
+    ]
+  }
+}

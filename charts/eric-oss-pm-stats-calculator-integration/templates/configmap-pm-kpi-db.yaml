@@ -1,0 +1,24 @@
+#
+# COPYRIGHT Ericsson 2022
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+# Script to initialize the database
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "eric-oss-pm-stats-calculator-integration.name" . }}-kpi-script
+  labels:
+    app.kubernetes.io/name: {{ include "eric-oss-pm-stats-calculator-integration.name" . }}
+    app.kubernetes.io/version: {{ include "eric-oss-pm-stats-calculator-integration.version" . }}
+    helm.sh/chart: {{ template "eric-oss-pm-stats-calculator-integration.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name | quote }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  kpi_rolling_aggregate.sql: |-
+{{ .Files.Get "scripts/kpi_rolling_aggregate_data.sql" | indent 4 }}

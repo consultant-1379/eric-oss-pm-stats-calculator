@@ -1,0 +1,52 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+# The copyright to the computer program(s) herein is the property of
+# Ericsson Inc. The programs may be used and/or copied only with written
+# permission from Ericsson Inc. or in accordance with the terms and
+# conditions stipulated in the agreement/contract under which the
+# program(s) have been supplied.
+#
+
+apiVersion: v2
+appVersion: "1.0"
+version: 0.0.0
+name: eric-oss-pm-stats-calculator-integration
+description: A Helm chart for installing PM Stats Calculator Test
+type: application
+
+maintainers:
+  - name: Team Velociraptors
+    email: PDLVELOCIR@pdl.internal.ericsson.com
+
+dependencies:
+  - alias: schemaregistry
+    name: eric-oss-schema-registry-sr
+    repository: https://arm.seli.gic.ericsson.se/artifactory/proj-ec-son-drop-helm/
+    version: 1.1.13+13
+    condition: schemaregistry.enabled
+  - alias: zookeeper
+    condition: zookeeper.enabled
+    name: eric-data-coordinator-zk
+    repository: https://arm.sero.gic.ericsson.se/artifactory/proj-adp-gs-all-helm
+    version: 1.44.0+17
+  - alias: kafka
+    condition: kafka.enabled
+    name: eric-data-message-bus-kf
+    repository: https://arm.sero.gic.ericsson.se/artifactory/proj-adp-gs-all-helm
+    version: 2.8.0+61
+  - alias: dataCatalog
+    condition: dataCatalog.enabled
+    name: eric-oss-data-catalog
+    repository: https://arm.seli.gic.ericsson.se/artifactory/proj-eric-oss-released-helm-local
+    version: 1.56.0-3
+  - alias: dataCatalogData
+    name: eric-data-document-database-pg
+    repository: https://arm.sero.gic.ericsson.se/artifactory/proj-adp-gs-all-helm
+    version: 9.3.0+30
+    condition: dataCatalogData.enabled
+  - alias: spark
+    condition: spark.enabled
+    name: eric-data-engine-sk
+    repository: https://arm.seli.gic.ericsson.se/artifactory/proj-ec-son-drop-helm
+    version: 1.2.0-70
